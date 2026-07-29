@@ -9,6 +9,10 @@
     "packages/*"
   ],
   "scripts": {
+    "assets:sync:css": "npm run assets:sync --workspace @beautice/react-css",
+    "dev:css": "npm run dev --workspace @beautice/react-css",
+    "build:css": "npm run build --workspace @beautice/react-css",
+    "test:visual:css": "node ./scripts/capture-visual.mjs",
     "reference:extract": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/extract-reference-screens.ps1",
     "reference:inventory": "node ./scripts/build-asset-manifest.mjs",
     "reference:build": "npm run reference:extract && npm run reference:inventory",
@@ -16,5 +20,10 @@
   },
   "engines": {
     "node": ">=20.19.0"
+  },
+  "devDependencies": {
+    "pixelmatch": "^7.2.0",
+    "playwright-core": "^1.62.0",
+    "pngjs": "^7.0.0"
   }
 }

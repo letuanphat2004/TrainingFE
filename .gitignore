@@ -12,3 +12,8 @@ test-results/
 playwright-report/
 screenshots/actual/
 screenshots/diff/
+tests/visual/actual/
+tests/visual/diff/
+
+# Demo assets are reproducibly synced from the preserved source directory.
+apps/01-react-css/public/assets/

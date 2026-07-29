@@ -1,0 +1,395 @@
+{
+  "generatedAt": "2026-07-29T10:58:06.184Z",
+  "baseUrl": "http://127.0.0.1:5175",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "routes": [
+    {
+      "id": "home-1",
+      "route": "/",
+      "status": 200,
+      "consoleErrors": [],
+      "horizontalOverflow": 0,
+      "documentHeight": 4989,
+      "heading": "Clinic & beautyconsultant",
+      "sections": [
+        {
+          "className": "home-one-hero",
+          "top": 0,
+          "height": 800
+        },
+        {
+          "className": "home-services section",
+          "top": 800,
+          "height": 950
+        },
+        {
+          "className": "home-about section",
+          "top": 1750,
+          "height": 760
+        },
+        {
+          "className": "home-team section",
+          "top": 2510,
+          "height": 917
+        },
+        {
+          "className": "home-contact section",
+          "top": 3428,
+          "height": 857
+        },
+        {
+          "className": "site-footer",
+          "top": 4284,
+          "height": 705
+        }
+      ],
+      "reference": {
+        "width": 1440,
+        "height": 4989
+      },
+      "actual": {
+        "width": 1440,
+        "height": 4989
+      },
+      "heightDelta": 0,
+      "differentPixels": 461475,
+      "totalPixels": 7184160,
+      "similarity": 0.9358
+    },
+    {
+      "id": "home-2",
+      "route": "/home-2",
+      "status": 200,
+      "consoleErrors": [],
+      "horizontalOverflow": 0,
+      "documentHeight": 4897,
+      "heading": "Your beauty centerplace",
+      "sections": [
+        {
+          "className": "home-two-hero image-overlay",
+          "top": 0,
+          "height": 920
+        },
+        {
+          "className": "section home-two-about",
+          "top": 920,
+          "height": 650
+        },
+        {
+          "className": "section home-two-services",
+          "top": 1570,
+          "height": 666
+        },
+        {
+          "className": "stats-banner image-overlay",
+          "top": 2236,
+          "height": 600
+        },
+        {
+          "className": "section home-two-blog",
+          "top": 2836,
+          "height": 950
+        },
+        {
+          "className": "request-call",
+          "top": 3786,
+          "height": 407
+        },
+        {
+          "className": "site-footer",
+          "top": 4192,
+          "height": 705
+        }
+      ],
+      "reference": {
+        "width": 1440,
+        "height": 4897
+      },
+      "actual": {
+        "width": 1440,
+        "height": 4897
+      },
+      "heightDelta": 0,
+      "differentPixels": 1242034,
+      "totalPixels": 7051680,
+      "similarity": 0.8239
+    },
+    {
+      "id": "about",
+      "route": "/about",
+      "status": 200,
+      "consoleErrors": [],
+      "horizontalOverflow": 0,
+      "documentHeight": 4803,
+      "heading": "We are a leading beauty clinic that hasbeen around since 2002",
+      "sections": [
+        {
+          "className": "section about-intro",
+          "top": 125,
+          "height": 900
+        },
+        {
+          "className": "section about-team",
+          "top": 1025,
+          "height": 850
+        },
+        {
+          "className": "wide-video image-overlay",
+          "top": 1875,
+          "height": 529
+        },
+        {
+          "className": "section vision-mission",
+          "top": 2404,
+          "height": 1074
+        },
+        {
+          "className": "section clients",
+          "top": 3478,
+          "height": 621
+        },
+        {
+          "className": "site-footer",
+          "top": 4098,
+          "height": 705
+        }
+      ],
+      "reference": {
+        "width": 1440,
+        "height": 4803
+      },
+      "actual": {
+        "width": 1440,
+        "height": 4803
+      },
+      "heightDelta": 0,
+      "differentPixels": 1492503,
+      "totalPixels": 6916320,
+      "similarity": 0.7842
+    },
+    {
+      "id": "services",
+      "route": "/services",
+      "status": 200,
+      "consoleErrors": [],
+      "horizontalOverflow": 0,
+      "documentHeight": 4419,
+      "heading": "We focus on your beauty",
+      "sections": [
+        {
+          "className": "section services-gallery",
+          "top": 125,
+          "height": 922
+        },
+        {
+          "className": "section service-details",
+          "top": 1047,
+          "height": 1530
+        },
+        {
+          "className": "wide-video wide-video--interactive image-overlay",
+          "top": 2577,
+          "height": 529
+        },
+        {
+          "className": "section faq-section",
+          "top": 3106,
+          "height": 609
+        },
+        {
+          "className": "site-footer",
+          "top": 3714,
+          "height": 705
+        }
+      ],
+      "reference": {
+        "width": 1440,
+        "height": 4419
+      },
+      "actual": {
+        "width": 1440,
+        "height": 4419
+      },
+      "heightDelta": 0,
+      "differentPixels": 1278521,
+      "totalPixels": 6363360,
+      "similarity": 0.7991
+    },
+    {
+      "id": "gallery",
+      "route": "/gallery",
+      "status": 200,
+      "consoleErrors": [],
+      "horizontalOverflow": 0,
+      "documentHeight": 3155,
+      "heading": "Check out the collection picturesfrom our clinic",
+      "sections": [
+        {
+          "className": "section gallery-section",
+          "top": 125,
+          "height": 1250
+        },
+        {
+          "className": "gallery-video image-overlay",
+          "top": 1375,
+          "height": 628
+        },
+        {
+          "className": "section gallery-cta",
+          "top": 2003,
+          "height": 448
+        },
+        {
+          "className": "site-footer",
+          "top": 2450,
+          "height": 705
+        }
+      ],
+      "reference": {
+        "width": 1440,
+        "height": 3155
+      },
+      "actual": {
+        "width": 1440,
+        "height": 3155
+      },
+      "heightDelta": 0,
+      "differentPixels": 693796,
+      "totalPixels": 4543200,
+      "similarity": 0.8473
+    },
+    {
+      "id": "team",
+      "route": "/team",
+      "status": 200,
+      "consoleErrors": [],
+      "horizontalOverflow": 0,
+      "documentHeight": 4419,
+      "heading": "We are Professional",
+      "sections": [
+        {
+          "className": "section team-primary",
+          "top": 125,
+          "height": 907
+        },
+        {
+          "className": "section assistance",
+          "top": 1032,
+          "height": 1153
+        },
+        {
+          "className": "wide-video image-overlay",
+          "top": 2185,
+          "height": 529
+        },
+        {
+          "className": "section testimonials",
+          "top": 2714,
+          "height": 1001
+        },
+        {
+          "className": "site-footer",
+          "top": 3714,
+          "height": 705
+        }
+      ],
+      "reference": {
+        "width": 1440,
+        "height": 4419
+      },
+      "actual": {
+        "width": 1440,
+        "height": 4419
+      },
+      "heightDelta": 0,
+      "differentPixels": 1363697,
+      "totalPixels": 6363360,
+      "similarity": 0.7857
+    },
+    {
+      "id": "blog",
+      "route": "/blog",
+      "status": 200,
+      "consoleErrors": [],
+      "horizontalOverflow": 0,
+      "documentHeight": 4550,
+      "heading": "Blog",
+      "sections": [
+        {
+          "className": "blog-hero image-overlay",
+          "top": 125,
+          "height": 285
+        },
+        {
+          "className": "section blog-content",
+          "top": 410,
+          "height": 3436
+        },
+        {
+          "className": "site-footer",
+          "top": 3845,
+          "height": 705
+        }
+      ],
+      "reference": {
+        "width": 1440,
+        "height": 4550
+      },
+      "actual": {
+        "width": 1440,
+        "height": 4550
+      },
+      "heightDelta": 0,
+      "differentPixels": 1147377,
+      "totalPixels": 6552000,
+      "similarity": 0.8249
+    },
+    {
+      "id": "contact",
+      "route": "/contact",
+      "status": 200,
+      "consoleErrors": [],
+      "horizontalOverflow": 0,
+      "documentHeight": 3155,
+      "heading": "Contact service for ourcustomers",
+      "sections": [
+        {
+          "className": "section contact-main",
+          "top": 125,
+          "height": 1051
+        },
+        {
+          "className": "contact-map",
+          "top": 1176,
+          "height": 417
+        },
+        {
+          "className": "section contact-cards",
+          "top": 1593,
+          "height": 858
+        },
+        {
+          "className": "site-footer",
+          "top": 2450,
+          "height": 705
+        }
+      ],
+      "reference": {
+        "width": 1440,
+        "height": 3155
+      },
+      "actual": {
+        "width": 1440,
+        "height": 3155
+      },
+      "heightDelta": 0,
+      "differentPixels": 181389,
+      "totalPixels": 4543200,
+      "similarity": 0.9601
+    }
+  ]
+}
