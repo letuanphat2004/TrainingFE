@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T10:58:06.184Z",
+  "generatedAt": "2026-07-29T12:21:59.318Z",
   "baseUrl": "http://127.0.0.1:5175",
   "viewport": {
     "width": 1440,
@@ -306,7 +306,7 @@
         "height": 4419
       },
       "heightDelta": 0,
-      "differentPixels": 1363697,
+      "differentPixels": 1363698,
       "totalPixels": 6363360,
       "similarity": 0.7857
     },
@@ -344,7 +344,7 @@
         "height": 4550
       },
       "heightDelta": 0,
-      "differentPixels": 1147377,
+      "differentPixels": 1147420,
       "totalPixels": 6552000,
       "similarity": 0.8249
     },
