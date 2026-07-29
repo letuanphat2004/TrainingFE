@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { AssetImage } from "../components/common/AssetImage.jsx";
-import { ContactForm } from "../components/common/ContactForm.jsx";
-import { PlayButton } from "../components/common/PlayButton.jsx";
-import { SectionHeading } from "../components/common/SectionHeading.jsx";
-import { ServiceCards } from "../components/common/ServiceCards.jsx";
-import { TeamCards } from "../components/common/TeamCards.jsx";
-import { Footer } from "../components/layout/Footer.jsx";
-import { Header } from "../components/layout/Header.jsx";
+import { AssetImage } from "../components/common/AssetImage";
+import { ContactForm } from "../components/common/ContactForm";
+import { PlayButton } from "../components/common/PlayButton";
+import { SectionHeading } from "../components/common/SectionHeading";
+import { ServiceCards } from "../components/common/ServiceCards";
+import { TeamCards } from "../components/common/TeamCards";
+import { Footer } from "../components/layout/Footer";
+import { Header } from "../components/layout/Header";
 
 export function HomeOnePage() {
   return (

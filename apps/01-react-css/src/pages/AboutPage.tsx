@@ -1,10 +1,15 @@
-import { AssetImage } from "../components/common/AssetImage.jsx";
-import { PlayButton } from "../components/common/PlayButton.jsx";
-import { SectionHeading } from "../components/common/SectionHeading.jsx";
-import { TeamCards } from "../components/common/TeamCards.jsx";
-import { Footer } from "../components/layout/Footer.jsx";
-import { Header } from "../components/layout/Header.jsx";
-import { asset } from "../lib/assets.js";
+import { AssetImage } from "../components/common/AssetImage";
+import { PlayButton } from "../components/common/PlayButton";
+import { SectionHeading } from "../components/common/SectionHeading";
+import { TeamCards } from "../components/common/TeamCards";
+import { Footer } from "../components/layout/Footer";
+import { Header } from "../components/layout/Header";
+import { asset } from "../lib/assets";
+import type { BackgroundImageStyle } from "../types";
+
+const businessVideoStyle: BackgroundImageStyle = {
+  "--background-image": `url('${asset("unsplash_NPjNtTExSJ4.png")}')`,
+};
 
 export function AboutPage() {
   return (
@@ -47,9 +52,7 @@ export function AboutPage() {
 
       <section
         className="wide-video image-overlay"
-        style={{
-          "--background-image": `url('${asset("unsplash_NPjNtTExSJ4.png")}')`,
-        }}
+        style={businessVideoStyle}
       >
         <div className="wide-video__copy">
           <p className="eyebrow">Business Slogan</p>

@@ -11,6 +11,7 @@ const baseUrl = process.env.BEAUTICE_BASE_URL ?? "http://127.0.0.1:5173";
 const chromePath =
   process.env.CHROME_PATH ??
   "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+const minimumSimilarity = 0.75;
 
 const screens = JSON.parse(
   readFileSync(
@@ -189,7 +190,10 @@ const failures = report.routes.filter(
   (route) =>
     route.status !== 200 ||
     route.consoleErrors.length > 0 ||
-    route.horizontalOverflow > 0,
+    route.horizontalOverflow > 0 ||
+    route.heightDelta !== 0 ||
+    route.actual.width !== route.reference.width ||
+    route.similarity < minimumSimilarity,
 );
 
 if (failures.length > 0) {
@@ -198,5 +202,7 @@ if (failures.length > 0) {
   );
   process.exitCode = 1;
 } else {
-  console.log("All 8 routes passed HTTP, console and overflow smoke checks.");
+  console.log(
+    `All 8 routes passed HTTP, console, overflow, dimensions and similarity >= ${minimumSimilarity}.`,
+  );
 }

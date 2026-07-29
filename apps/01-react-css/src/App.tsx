@@ -1,4 +1,4 @@
-import { AppRoutes } from "./router/index.jsx";
+import { AppRoutes } from "./router";
 
 export function App() {
   return <AppRoutes />;

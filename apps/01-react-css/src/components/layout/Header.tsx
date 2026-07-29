@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { navigation } from "../../data.js";
-import { AssetImage } from "../common/AssetImage.jsx";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { navigation } from "../../data";
+import { AssetImage } from "../common/AssetImage";
 
-export function Header({ dark = false, overlay = false }) {
+interface HeaderProps {
+  dark?: boolean;
+  overlay?: boolean;
+}
+
+export function Header({ dark = false, overlay = false }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { pathname } = useLocation();
   const logo = dark ? "Site Header.png" : "Site Header-1.png";
-
-  useEffect(() => {
-    setIsMenuOpen(false);
-  }, [pathname]);
 
   return (
     <header

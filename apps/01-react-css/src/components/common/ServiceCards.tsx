@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
-import { services } from "../../data.js";
-import { AssetImage } from "./AssetImage.jsx";
+import { services } from "../../data";
+import { AssetImage } from "./AssetImage";
 
-export function ServiceCards({ compact = false }) {
+interface ServiceCardsProps {
+  compact?: boolean;
+}
+
+export function ServiceCards({ compact = false }: ServiceCardsProps) {
   return (
     <div className={`service-grid ${compact ? "service-grid--compact" : ""}`}>
       {services.map((service) => (

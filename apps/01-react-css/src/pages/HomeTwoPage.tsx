@@ -1,22 +1,32 @@
+import type { FormEvent } from "react";
 import { Link } from "react-router-dom";
-import { AssetImage } from "../components/common/AssetImage.jsx";
-import { BlogCards } from "../components/common/BlogCards.jsx";
-import { PlayButton } from "../components/common/PlayButton.jsx";
-import { SectionHeading } from "../components/common/SectionHeading.jsx";
-import { ServiceCards } from "../components/common/ServiceCards.jsx";
-import { Footer } from "../components/layout/Footer.jsx";
-import { Header } from "../components/layout/Header.jsx";
-import { asset } from "../lib/assets.js";
+import { AssetImage } from "../components/common/AssetImage";
+import { BlogCards } from "../components/common/BlogCards";
+import { PlayButton } from "../components/common/PlayButton";
+import { SectionHeading } from "../components/common/SectionHeading";
+import { ServiceCards } from "../components/common/ServiceCards";
+import { Footer } from "../components/layout/Footer";
+import { Header } from "../components/layout/Header";
+import { asset } from "../lib/assets";
+import type { BackgroundImageStyle } from "../types";
 
 const statistics = [
   ["handshake 1.png", "100%", "trusted clinic"],
   ["brotherhood 1.png", "99%", "customer love"],
   ["earth 1.png", "75+", "asian branch"],
   ["doctor 1.png", "1.200+", "licensed worker"],
-];
+] as const;
+
+const heroStyle: BackgroundImageStyle = {
+  "--background-image": `url('${asset("unsplash_Pe9IXUuC6QU-1.png")}')`,
+};
+
+const statisticsStyle: BackgroundImageStyle = {
+  "--background-image": `url('${asset("unsplash_eflLpWC1Geo.png")}')`,
+};
 
 export function HomeTwoPage() {
-  function handleCallRequest(event) {
+  function handleCallRequest(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     event.currentTarget.reset();
   }
@@ -25,9 +35,7 @@ export function HomeTwoPage() {
     <main className="page page--home-two">
       <section
         className="home-two-hero image-overlay"
-        style={{
-          "--background-image": `url('${asset("unsplash_Pe9IXUuC6QU-1.png")}')`,
-        }}
+        style={heroStyle}
       >
         <Header dark overlay />
         <div className="container home-two-hero__content">
@@ -87,9 +95,7 @@ export function HomeTwoPage() {
 
       <section
         className="stats-banner image-overlay"
-        style={{
-          "--background-image": `url('${asset("unsplash_eflLpWC1Geo.png")}')`,
-        }}
+        style={statisticsStyle}
       >
         <div className="container stats-banner__content">
           <div>

@@ -9,16 +9,26 @@
     "dev": "vite",
     "prebuild": "npm run assets:sync",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src vite.config.ts --max-warnings 0"
   },
   "dependencies": {
     "@fontsource/poppins": "^5.2.6",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "react-router-dom": "^7.18.2"
+    "react-router-dom": "7.18.2"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.2.0",
+    "eslint": "^10.8.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.3",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.65.0",
     "vite": "^7.0.6"
   }
 }

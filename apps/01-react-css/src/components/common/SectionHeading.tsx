@@ -1,9 +1,18 @@
+import type { ReactNode } from "react";
+
+interface SectionHeadingProps {
+  eyebrow: string;
+  title: ReactNode;
+  description?: string;
+  centered?: boolean;
+}
+
 export function SectionHeading({
   eyebrow,
   title,
   description = "",
   centered = true,
-}) {
+}: SectionHeadingProps) {
   return (
     <div
       className={`section-heading ${centered ? "section-heading--center" : ""}`}

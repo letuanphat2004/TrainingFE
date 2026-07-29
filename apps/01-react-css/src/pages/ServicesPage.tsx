@@ -1,36 +1,43 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { AssetImage } from "../components/common/AssetImage.jsx";
-import { PlayButton } from "../components/common/PlayButton.jsx";
-import { SectionHeading } from "../components/common/SectionHeading.jsx";
-import { Footer } from "../components/layout/Footer.jsx";
-import { Header } from "../components/layout/Header.jsx";
-import { asset } from "../lib/assets.js";
+import { AssetImage } from "../components/common/AssetImage";
+import { PlayButton } from "../components/common/PlayButton";
+import { SectionHeading } from "../components/common/SectionHeading";
+import { Footer } from "../components/layout/Footer";
+import { Header } from "../components/layout/Header";
+import { asset } from "../lib/assets";
+import type { BackgroundImageStyle } from "../types";
 
 const serviceImages = [
   "unsplash_5TJ0Hoy5FLY.png",
   "unsplash_ZOT2Mewzmh8.png",
   "unsplash_gzfIO69Q6eM.png",
   "unsplash_pTrhfmj2jDA.png",
-];
+] as const;
 
 const serviceRows = [
   ["Animation1.png", "Beauty Consultation", "We services beauty consultation"],
   ["Animation2.png", "Skin Treatments", "Skin care and treatment by expert"],
   ["Animation3.png", "Beauty Product", "We present quality beauty products"],
-];
+] as const;
 
 const questions = [
   "Is beauty consultation handled thoroughly?",
   "Can I be beautiful in an instant time?",
   "Are there any side effects to the treatment methods or treatments at this clinic?",
   "Do professionals have accreditation in their respective fields?",
-];
+] as const;
+
+const treatmentsVideoStyle: BackgroundImageStyle = {
+  "--background-image": `url('${asset("unsplash_NPjNtTExSJ4.png")}')`,
+};
 
 function ServicesAccordion() {
-  const [openItems, setOpenItems] = useState(() => new Set([0]));
+  const [openItems, setOpenItems] = useState<Set<number>>(
+    () => new Set([0]),
+  );
 
-  function toggleItem(index) {
+  function toggleItem(index: number) {
     setOpenItems((current) => {
       const next = new Set(current);
       if (next.has(index)) {
@@ -124,9 +131,7 @@ export function ServicesPage() {
 
       <section
         className="wide-video wide-video--interactive image-overlay"
-        style={{
-          "--background-image": `url('${asset("unsplash_NPjNtTExSJ4.png")}')`,
-        }}
+        style={treatmentsVideoStyle}
       >
         <div className="container wide-video__row">
           <div>

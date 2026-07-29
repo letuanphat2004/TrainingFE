@@ -1,14 +1,14 @@
-import { AssetImage } from "../components/common/AssetImage.jsx";
-import { ContactForm } from "../components/common/ContactForm.jsx";
-import { SectionHeading } from "../components/common/SectionHeading.jsx";
-import { Footer } from "../components/layout/Footer.jsx";
-import { Header } from "../components/layout/Header.jsx";
+import { AssetImage } from "../components/common/AssetImage";
+import { ContactForm } from "../components/common/ContactForm";
+import { SectionHeading } from "../components/common/SectionHeading";
+import { Footer } from "../components/layout/Footer";
+import { Header } from "../components/layout/Header";
 
 const contacts = [
   ["●", "Address", "101 Baker Street, NY"],
   ["☎", "Phone", "+896 120 5889"],
   ["✉", "Mail", "mail@company.com"],
-];
+] as const;
 
 export function ContactPage() {
   return (

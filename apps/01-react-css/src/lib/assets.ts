@@ -1,3 +1,3 @@
-export function asset(fileName) {
+export function asset(fileName: string): string {
   return `/assets/${encodeURIComponent(fileName)}`;
 }

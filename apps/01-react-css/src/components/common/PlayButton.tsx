@@ -1,7 +1,11 @@
 import { useState } from "react";
-import { AssetImage } from "./AssetImage.jsx";
+import { AssetImage } from "./AssetImage";
 
-export function PlayButton({ label = "Watch Video" }) {
+interface PlayButtonProps {
+  label?: string;
+}
+
+export function PlayButton({ label = "Watch Video" }: PlayButtonProps) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (

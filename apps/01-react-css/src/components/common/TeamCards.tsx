@@ -1,6 +1,6 @@
-import { professionals } from "../../data.js";
-import { AssetImage } from "./AssetImage.jsx";
-import { SocialLinks } from "./SocialLinks.jsx";
+import { professionals } from "../../data";
+import { AssetImage } from "./AssetImage";
+import { SocialLinks } from "./SocialLinks";
 
 export function TeamCards() {
   return (

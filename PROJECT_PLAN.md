@@ -501,7 +501,7 @@ Script root dự kiến:
 - [x] Chốt structure và phiên bản chiến lược.
 - [x] Lập kế hoạch.
 - [x] Phase 0 — workspace và design contract.
-- [ ] Phase 1 — Demo 01: HTML → React JS → React TS.
+- [x] Phase 1 — Demo 01: HTML → React JS → React TS.
 - [ ] Phase 2 — Tailwind.
 - [ ] Phase 3 — MUI.
 - [ ] Phase 4 — CSS-in-JS/twin.
@@ -517,3 +517,17 @@ Script root dự kiến:
 - Tài liệu file structure, design inventory, ADR và visual checklist đã được viết.
 - `npm run validate:phase0` đã vượt qua.
 - Figma connector trả `INVALID_ARGUMENT` cho node gốc/metadata; PNG gốc là nguồn chuẩn hiện tại.
+
+### Kết quả Phase 1
+
+- Demo 01 tại `apps/01-react-css` đã có đủ 8 route: Home 1, Home 2, About, Services, Gallery, Team, Blog và Contact.
+- Mốc HTML/CSS/JavaScript thuần được lưu tại commit `427966b`.
+- Mốc React JavaScript được lưu tại commit `a454cba`.
+- Mã nguồn cuối đã chuyển toàn bộ sang React TypeScript (`.ts`/`.tsx`) và tiếp tục sử dụng CSS thuần.
+- Router, page, layout, component, data, type và style đã được tách theo đúng structure đã thống nhất.
+- Không dùng `any`; props, form event, dữ liệu lặp và CSS custom property đều có type.
+- `npm run typecheck:css`, `npm run lint:css` và `npm run build:css` đã vượt qua.
+- Responsive smoke test vượt `40/40` tổ hợp route/viewport và `6/6` kiểm tra tương tác.
+- Visual test 1440px vượt cả 8 route: HTTP/console/overflow/kích thước sạch, `heightDelta = 0`, similarity từ `0.7838` đến `0.9601`.
+- Tài liệu HTML → React, JavaScript → TypeScript, nhiệm vụ file và checklist visual đã được cập nhật.
+- Figma connector vẫn trả `INVALID_ARGUMENT`; 8 PNG desktop local tiếp tục là nguồn đối chiếu chuẩn. Không có layer Figma nào được suy diễn.

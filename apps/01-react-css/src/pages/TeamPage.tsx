@@ -1,22 +1,27 @@
 import { useState } from "react";
-import { AssetImage } from "../components/common/AssetImage.jsx";
-import { SectionHeading } from "../components/common/SectionHeading.jsx";
-import { TeamCards } from "../components/common/TeamCards.jsx";
-import { Footer } from "../components/layout/Footer.jsx";
-import { Header } from "../components/layout/Header.jsx";
-import { assistants } from "../data.js";
-import { asset } from "../lib/assets.js";
+import { AssetImage } from "../components/common/AssetImage";
+import { SectionHeading } from "../components/common/SectionHeading";
+import { TeamCards } from "../components/common/TeamCards";
+import { Footer } from "../components/layout/Footer";
+import { Header } from "../components/layout/Header";
+import { assistants } from "../data";
+import { asset } from "../lib/assets";
+import type { BackgroundImageStyle } from "../types";
 
 const testimonials = [
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus metus tincidunt laoreet ultrices condimentum ac integer aliquam.",
   "The professional team made every treatment clear, comfortable and easy to understand from the first consultation.",
   "I received thoughtful service and a result that felt natural. The clinic team listened carefully to every concern.",
-];
+] as const;
+
+const satisfactionVideoStyle: BackgroundImageStyle = {
+  "--background-image": `url('${asset("unsplash_rE6FqsyyqwM.png")}')`,
+};
 
 function TestimonialSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  function move(direction) {
+  function move(direction: number) {
     setActiveIndex(
       (current) =>
         (current + direction + testimonials.length) % testimonials.length,
@@ -35,7 +40,7 @@ function TestimonialSlider() {
       </button>
       <article>
         <AssetImage fileName="unsplash_W7b3eDUb_2I.png" alt="Customer" />
-        <p>{testimonials[activeIndex]}</p>
+        <p>{testimonials[activeIndex] ?? ""}</p>
         <div className="stars" aria-label="5 out of 5 stars">
           ★★★★★
         </div>
@@ -95,9 +100,7 @@ export function TeamPage() {
 
       <section
         className="wide-video image-overlay"
-        style={{
-          "--background-image": `url('${asset("unsplash_rE6FqsyyqwM.png")}')`,
-        }}
+        style={satisfactionVideoStyle}
       >
         <div className="wide-video__copy">
           <h2>

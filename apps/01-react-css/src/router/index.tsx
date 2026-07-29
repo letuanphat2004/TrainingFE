@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import { AboutPage } from "../pages/AboutPage.jsx";
-import { BlogPage } from "../pages/BlogPage.jsx";
-import { ContactPage } from "../pages/ContactPage.jsx";
-import { GalleryPage } from "../pages/GalleryPage.jsx";
-import { HomeOnePage } from "../pages/HomeOnePage.jsx";
-import { HomeTwoPage } from "../pages/HomeTwoPage.jsx";
-import { NotFoundPage } from "../pages/NotFoundPage.jsx";
-import { ServicesPage } from "../pages/ServicesPage.jsx";
-import { TeamPage } from "../pages/TeamPage.jsx";
+import { AboutPage } from "../pages/AboutPage";
+import { BlogPage } from "../pages/BlogPage";
+import { ContactPage } from "../pages/ContactPage";
+import { GalleryPage } from "../pages/GalleryPage";
+import { HomeOnePage } from "../pages/HomeOnePage";
+import { HomeTwoPage } from "../pages/HomeTwoPage";
+import { NotFoundPage } from "../pages/NotFoundPage";
+import { ServicesPage } from "../pages/ServicesPage";
+import { TeamPage } from "../pages/TeamPage";
 
 function RouteEffects() {
   const { pathname } = useLocation();

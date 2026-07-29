@@ -19,10 +19,6 @@
   gap: 80px;
 }
 
-.split-layout--reverse > :first-child {
-  order: 1;
-}
-
 .split-layout--contact {
   grid-template-columns: 0.9fr 1.1fr;
 }

@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
-import { AssetImage } from "../components/common/AssetImage.jsx";
-import { PlayButton } from "../components/common/PlayButton.jsx";
-import { SectionHeading } from "../components/common/SectionHeading.jsx";
-import { Footer } from "../components/layout/Footer.jsx";
-import { Header } from "../components/layout/Header.jsx";
-import { galleryImages } from "../data.js";
-import { asset } from "../lib/assets.js";
+import { AssetImage } from "../components/common/AssetImage";
+import { PlayButton } from "../components/common/PlayButton";
+import { SectionHeading } from "../components/common/SectionHeading";
+import { Footer } from "../components/layout/Footer";
+import { Header } from "../components/layout/Header";
+import { galleryImages } from "../data";
+import { asset } from "../lib/assets";
+import type { BackgroundImageStyle } from "../types";
+
+const tourVideoStyle: BackgroundImageStyle = {
+  "--background-image": `url('${asset("unsplash_eflLpWC1Geo.png")}')`,
+};
 
 export function GalleryPage() {
   return (
@@ -49,9 +54,7 @@ export function GalleryPage() {
 
       <section
         className="gallery-video image-overlay"
-        style={{
-          "--background-image": `url('${asset("unsplash_eflLpWC1Geo.png")}')`,
-        }}
+        style={tourVideoStyle}
       >
         <div>
           <SectionHeading

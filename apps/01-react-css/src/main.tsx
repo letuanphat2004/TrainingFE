@@ -6,9 +6,15 @@ import "@fontsource/poppins/500.css";
 import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
 import "./styles/index.css";
-import { App } from "./App.jsx";
+import { App } from "./App";
 
-createRoot(document.querySelector("#root")).render(
+const rootElement = document.querySelector<HTMLElement>("#root");
+
+if (!rootElement) {
+  throw new Error("Missing #root element.");
+}
+
+createRoot(rootElement).render(
   <StrictMode>
     <BrowserRouter>
       <App />

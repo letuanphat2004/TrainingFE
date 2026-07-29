@@ -1,4 +1,12 @@
-export const navigation = [
+import type {
+  Assistant,
+  BlogPost,
+  NavigationItem,
+  Professional,
+  Service,
+} from "./types";
+
+export const navigation: NavigationItem[] = [
   { label: "Home", path: "/", homeMenu: true },
   { label: "About", path: "/about" },
   { label: "Service", path: "/services" },
@@ -6,7 +14,7 @@ export const navigation = [
   { label: "Blog", path: "/blog" },
 ];
 
-export const services = [
+export const services: Service[] = [
   {
     eyebrow: "Beauty Consultation",
     title: "Beauty consultation",
@@ -33,7 +41,7 @@ export const services = [
   },
 ];
 
-export const professionals = [
+export const professionals: Professional[] = [
   {
     role: "Surgeon",
     name: "Bryan Nevallii",
@@ -51,7 +59,7 @@ export const professionals = [
   },
 ];
 
-export const assistants = [
+export const assistants: Assistant[] = [
   {
     name: "Lina Gustav",
     role: "Pharmacist",
@@ -69,7 +77,7 @@ export const assistants = [
   },
 ];
 
-export const blogPosts = [
+export const blogPosts: BlogPost[] = [
   {
     category: "Consultation",
     title: "How much does a consultation cost at our clinic?",
@@ -87,7 +95,7 @@ export const blogPosts = [
   },
 ];
 
-export const galleryImages = [
+export const galleryImages: string[] = [
   "unsplash_FVh_yqLR9eA.png",
   "unsplash_3ewkNkfJj2k-1.png",
   "unsplash_xayCTz6N2nM.png",

@@ -1,7 +1,11 @@
-import { blogPosts } from "../../data.js";
-import { AssetImage } from "./AssetImage.jsx";
+import { blogPosts } from "../../data";
+import { AssetImage } from "./AssetImage";
 
-export function BlogCards({ large = false }) {
+interface BlogCardsProps {
+  large?: boolean;
+}
+
+export function BlogCards({ large = false }: BlogCardsProps) {
   return (
     <div className={large ? "blog-list" : "blog-grid"}>
       {blogPosts.map((post) => (

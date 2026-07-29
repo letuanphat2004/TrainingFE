@@ -1,9 +1,10 @@
 import { useState } from "react";
+import type { FormEvent } from "react";
 
 export function ContactForm() {
   const [status, setStatus] = useState("");
 
-  function handleSubmit(event) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     event.currentTarget.reset();
     setStatus("Thank you. Our team will contact you shortly.");

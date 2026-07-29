@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { AssetImage } from "../common/AssetImage.jsx";
+import { AssetImage } from "../common/AssetImage";
 
 const footerSocials = [
   ["facebook-f.png", "Facebook"],
@@ -7,7 +7,7 @@ const footerSocials = [
   ["linkedin-in.png", "LinkedIn"],
   ["youtube.png", "YouTube"],
   ["Instagram.png", "Instagram"],
-];
+] as const;
 
 export function Footer() {
   return (

@@ -1,5 +1,7 @@
 # Checkpoint Phase 1
 
+> Đây là checkpoint lịch sử trước khi bắt đầu chuyển React. Trạng thái mới nhất nằm trong `PROJECT_PLAN.md` và README gốc.
+
 Cap nhat: 29/07/2026
 
 ## Trang thai chung
@@ -94,4 +96,3 @@ npm run test:visual:css
 - 100 asset goc: thu muc `Beautice - Clinic & Beauty Consultation Website Design (Community)`.
 - Asset manifest: `reference/manifests/assets.generated.json`.
 - Figma connector truoc do tra `INVALID_ARGUMENT`, vi vay PNG local dang la nguon doi chieu chinh. Khong suy dien layer Figma khong doc duoc.
-

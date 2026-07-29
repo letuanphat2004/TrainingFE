@@ -1,12 +1,16 @@
-import { AssetImage } from "./AssetImage.jsx";
+import { AssetImage } from "./AssetImage";
 
 const socialNetworks = [
   ["Twitter.png", "Twitter"],
   ["facebook-f.png", "Facebook"],
   ["Instagram.png", "Instagram"],
-];
+] as const;
 
-export function SocialLinks({ dark = false }) {
+interface SocialLinksProps {
+  dark?: boolean;
+}
+
+export function SocialLinks({ dark = false }: SocialLinksProps) {
   return (
     <div className={`social-links ${dark ? "social-links--dark" : ""}`}>
       {socialNetworks.map(([fileName, label]) => (

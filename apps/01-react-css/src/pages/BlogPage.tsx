@@ -1,15 +1,29 @@
-import { AssetImage } from "../components/common/AssetImage.jsx";
-import { BlogCards } from "../components/common/BlogCards.jsx";
-import { SocialLinks } from "../components/common/SocialLinks.jsx";
-import { Footer } from "../components/layout/Footer.jsx";
-import { Header } from "../components/layout/Header.jsx";
-import { blogPosts } from "../data.js";
-import { asset } from "../lib/assets.js";
+import type { FormEvent } from "react";
+import { AssetImage } from "../components/common/AssetImage";
+import { BlogCards } from "../components/common/BlogCards";
+import { SocialLinks } from "../components/common/SocialLinks";
+import { Footer } from "../components/layout/Footer";
+import { Header } from "../components/layout/Header";
+import { blogPosts } from "../data";
+import { asset } from "../lib/assets";
+import type { BackgroundImageStyle } from "../types";
 
-const tags = ["beauty", "cute", "skin", "glow", "style", "clinic", "great"];
+const tags = [
+  "beauty",
+  "cute",
+  "skin",
+  "glow",
+  "style",
+  "clinic",
+  "great",
+] as const;
+
+const blogHeroStyle: BackgroundImageStyle = {
+  "--background-image": `url('${asset("unsplash_QA9fRIi6sFw.png")}')`,
+};
 
 export function BlogPage() {
-  function preventSubmit(event) {
+  function preventSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
   }
 
@@ -18,9 +32,7 @@ export function BlogPage() {
       <Header />
       <section
         className="blog-hero image-overlay"
-        style={{
-          "--background-image": `url('${asset("unsplash_QA9fRIi6sFw.png")}')`,
-        }}
+        style={blogHeroStyle}
       >
         <div className="container">
           <h1>Blog</h1>
