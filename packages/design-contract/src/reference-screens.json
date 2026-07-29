@@ -1,0 +1,74 @@
+[
+  {
+    "id": "home-1",
+    "route": "/",
+    "label": "Home 1",
+    "file": "reference/screens/desktop/home-1.png",
+    "width": 1440,
+    "height": 4989,
+    "crop": { "x": 0, "y": 14, "width": 1440, "height": 4989 }
+  },
+  {
+    "id": "home-2",
+    "route": "/home-2",
+    "label": "Home 2",
+    "file": "reference/screens/desktop/home-2.png",
+    "width": 1440,
+    "height": 4897,
+    "crop": { "x": 1700, "y": 14, "width": 1440, "height": 4897 }
+  },
+  {
+    "id": "about",
+    "route": "/about",
+    "label": "About",
+    "file": "reference/screens/desktop/about.png",
+    "width": 1440,
+    "height": 4803,
+    "crop": { "x": 3400, "y": 14, "width": 1440, "height": 4803 }
+  },
+  {
+    "id": "services",
+    "route": "/services",
+    "label": "Services",
+    "file": "reference/screens/desktop/services.png",
+    "width": 1440,
+    "height": 4419,
+    "crop": { "x": 5100, "y": 0, "width": 1440, "height": 4419 }
+  },
+  {
+    "id": "gallery",
+    "route": "/gallery",
+    "label": "Gallery",
+    "file": "reference/screens/desktop/gallery.png",
+    "width": 1440,
+    "height": 3155,
+    "crop": { "x": 6800, "y": 0, "width": 1440, "height": 3155 }
+  },
+  {
+    "id": "team",
+    "route": "/team",
+    "label": "Team",
+    "file": "reference/screens/desktop/team.png",
+    "width": 1440,
+    "height": 4419,
+    "crop": { "x": 8500, "y": 0, "width": 1440, "height": 4419 }
+  },
+  {
+    "id": "blog",
+    "route": "/blog",
+    "label": "Blog",
+    "file": "reference/screens/desktop/blog.png",
+    "width": 1440,
+    "height": 4550,
+    "crop": { "x": 10200, "y": 0, "width": 1440, "height": 4550 }
+  },
+  {
+    "id": "contact",
+    "route": "/contact",
+    "label": "Contact",
+    "file": "reference/screens/desktop/contact.png",
+    "width": 1440,
+    "height": 3155,
+    "crop": { "x": 11900, "y": 0, "width": 1440, "height": 3155 }
+  }
+]

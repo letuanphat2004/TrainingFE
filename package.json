@@ -1,0 +1,20 @@
+{
+  "name": "beautice-learning-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Seven complete implementations of the Beautice website using different React styling approaches.",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "reference:extract": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/extract-reference-screens.ps1",
+    "reference:inventory": "node ./scripts/build-asset-manifest.mjs",
+    "reference:build": "npm run reference:extract && npm run reference:inventory",
+    "validate:phase0": "node ./scripts/validate-phase0.mjs"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

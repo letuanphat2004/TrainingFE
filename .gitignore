@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+.vite/
+.cache/
+*.log
+.DS_Store
+Thumbs.db
+
+# Generated test output. Reference images under reference/ are committed.
+test-results/
+playwright-report/
+screenshots/actual/
+screenshots/diff/
