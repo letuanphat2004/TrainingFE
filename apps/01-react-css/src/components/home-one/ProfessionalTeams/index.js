@@ -1,0 +1,1 @@
+export { ProfessionalTeams } from "./ProfessionalTeams";

@@ -1,0 +1,138 @@
+.home-two-blog {
+  position: absolute;
+  z-index: 2;
+  top: 3030px;
+  left: 50%;
+  width: 1139px;
+  height: 750px;
+  transform: translateX(-50%);
+}
+
+.home-two-blog__wave {
+  position: absolute;
+  z-index: 0;
+  top: -143px;
+  left: 765px;
+  width: 524px;
+  height: 350.34px;
+  pointer-events: none;
+  transform: rotate(180deg);
+}
+
+.home-two-blog__heading,
+.home-two-blog__cards {
+  position: absolute;
+  z-index: 1;
+}
+
+.home-two-blog__heading {
+  top: 0;
+  left: 145px;
+  width: 848px;
+  height: 128px;
+}
+
+.home-two-blog__heading .section-heading__eyebrow {
+  position: absolute;
+  top: 0;
+  left: 389px;
+  width: 70px;
+  height: 20px;
+  color: #ff64ae;
+  font: 600 16px/1.25 "Poppins", Arial, sans-serif;
+}
+
+.home-two-blog__heading .section-heading__title {
+  position: absolute;
+  top: 32px;
+  left: 148px;
+  width: 551px;
+  height: 50px;
+  color: #091156;
+  font: 600 36px/1.25 "Poppins", Arial, sans-serif;
+}
+
+.home-two-blog__heading .section-heading__description {
+  position: absolute;
+  top: 100px;
+  left: 8;
+  width: 848px;
+  height: 34px;
+  color: #8b8b8b;
+  font: 400 16px/1 "Poppins", Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.home-two-blog__cards {
+  top: 207px;
+  left: 0;
+  display: flex;
+  gap: 49px;
+}
+
+.home-two-blog__cards .blog-card {
+  width: 347px;
+  height: 543px;
+  border-radius: 25px;
+  box-shadow: 0 25px 50px rgb(0 0 0 / 3%);
+}
+
+.home-two-blog__cards .blog-card__image {
+  height: 249px;
+  border-radius: 25px 25px 0 0;
+  object-fit: cover;
+
+  transform-origin: center;
+}
+
+.home-two-blog__cards .blog-card__title {
+  position: absolute;
+  top: 305px;
+  left: 38px;
+  width: 288px;
+  height: 58px;
+  color: #091156;
+  font: 600 18px/1.3 "Poppins", Arial, sans-serif;
+}
+
+.home-two-blog__cards .blog-card__description {
+  position: absolute;
+  top: 363px;
+  left: 38px;
+  width: 271px;
+  height: 74px;
+  color: #8b8b8b;
+  font: 400 14px/1.5 "Poppins", Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.home-two-blog__cards .blog-card__action {
+  position: absolute;
+  top: 452px;
+  left: 38px;
+  color: #ff64ae;
+  font: 600 14px/19px "Poppins", Arial, sans-serif;
+}
+
+.home-two-blog__cards .blog-card__action span {
+  margin-left: 5px;
+  font-size: 25px;
+  vertical-align: -2px;
+}
+
+.home-two-blog__cards .blog-card__action:focus-visible {
+  outline: 2px solid #ff64ae;
+  outline-offset: 3px;
+}
+
+@media (max-width: 1439px) {
+  .home-two-blog {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: min(100% - 48px, 1139px);
+    min-height: 750px;
+    margin: 158px auto 0;
+    transform: none;
+  }
+}

@@ -1,0 +1,74 @@
+.footer-brand {
+  color: #d7dbff;
+}
+
+.footer-brand__logo {
+  display: block;
+  width: 258px;
+  height: 63px;
+}
+
+.footer-brand__tagline,
+.footer-brand__address,
+.footer-brand__contact {
+  position: absolute;
+  margin: 0;
+  color: #d7dbff;
+  font-family: "Poppins", Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.footer-brand__tagline {
+  top: 100px;
+  left: 31px;
+  width: 461px;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.footer-brand__address {
+  top: 145px;
+  left: 33px;
+  width: 297px;
+  font: italic 500 14px/1 "Poppins", Arial, sans-serif;
+  transform: skewX(-10deg);
+}
+
+.footer-brand__contact {
+  top: 171px;
+  left: 31px;
+  display: flex;
+  gap: 40px;
+  font: italic 500 14px/1 "Poppins", Arial, sans-serif;
+  transform: skewX(-10deg);
+}
+
+.footer-brand__contact a {
+  color: inherit;
+}
+
+.footer-brand__contact a:last-child {
+  text-decoration: underline;
+  transform: translate(5px, 0);
+}
+
+@media (max-width: 1439px) {
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .footer-brand__tagline,
+  .footer-brand__address,
+  .footer-brand__contact {
+    position: static;
+    width: auto;
+    transform: none;
+  }
+
+  .footer-brand__contact {
+    gap: 24px;
+  }
+}

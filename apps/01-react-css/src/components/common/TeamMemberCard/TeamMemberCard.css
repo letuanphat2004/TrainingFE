@@ -1,0 +1,85 @@
+.team-member-card {
+  position: absolute;
+  z-index: 1;
+  width: var(--team-member-card-width, 270px);
+  height: var(--team-member-card-height, 439px);
+  text-align: center;
+}
+
+.team-member-card--featured::before {
+  position: absolute;
+  z-index: -1;
+  top: var(--team-member-featured-top, -91px);
+  left: var(--team-member-featured-left, -78px);
+  width: var(--team-member-featured-width, 424px);
+  height: var(--team-member-featured-height, 626px);
+  border-radius: var(--team-member-featured-radius, 42px);
+  background: #ffffff;
+  box-shadow: 0 25px 50px 25px #f6f7ff;
+  content: "";
+}
+
+.team-member-card__image {
+  position: absolute;
+  top: var(--team-member-image-top, 0);
+  left: var(--team-member-image-left, 62px);
+  width: var(--team-member-image-width, 146px);
+  height: var(--team-member-image-height, 146px);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-member-card__role {
+  position: absolute;
+  top: var(--team-member-role-top, 178px);
+  left: var(--team-member-role-left, 0);
+  width: var(--team-member-card-width, 270px);
+  margin: 0;
+  color: #ff64ae;
+  font: 600 var(--team-member-role-font-size, 16px) / var(--team-member-role-line-height, 1.25) "Poppins", Arial, sans-serif;
+  letter-spacing: var(--team-member-role-letter-spacing, 0);
+}
+
+.team-member-card__name {
+  position: absolute;
+  top: var(--team-member-name-top, 234px);
+  left: var(--team-member-name-left, 4px);
+  width: var(--team-member-name-width, 263px);
+  min-height: 37px;
+  margin: 0;
+  color: #091156;
+  font: 600 var(--team-member-name-font-size, 18px) / var(--team-member-name-line-height, 1.25) "Poppins", Arial, sans-serif;
+  letter-spacing: var(--team-member-name-letter-spacing, 0);
+}
+
+.team-member-card__description {
+  position: absolute;
+  top: var(--team-member-description-top, 277px);
+  left: var(--team-member-description-left, 0);
+  width: var(--team-member-description-width, 270px);
+  margin: 0;
+  color: #8b8b8b;
+  font: 400 var(--team-member-description-font-size, 14px) / var(--team-member-description-line-height, 1) "Poppins", Arial, sans-serif;
+  letter-spacing: var(--team-member-description-letter-spacing, 0.1em);
+  white-space: pre-line;
+}
+
+.team-member-card__description-gap {
+  display: block;
+  height: 0.5em;
+}
+
+.team-member-card__social-links {
+  position: absolute;
+  top: var(--team-member-social-top, 390px);
+  left: var(--team-member-social-left, 28px);
+}
+.team-member-card__description > span {
+  display: block;
+}
+
+.team-member-card__description-line--third {
+  display: block;
+  position: relative;
+  top: 8px;
+}

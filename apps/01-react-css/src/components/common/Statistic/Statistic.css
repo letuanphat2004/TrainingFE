@@ -1,0 +1,22 @@
+.statistic {
+  display: flex;
+  align-items: flex-start;
+}
+
+.statistic__icon {
+  display: block;
+  width: var(--statistic-icon-size, 64px);
+  height: var(--statistic-icon-size, 64px);
+  object-fit: contain;
+}
+
+.statistic__copy {
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--statistic-copy-gap, 11px);
+}
+
+.statistic__value,
+.statistic__label {
+  font-family: "Poppins", Arial, sans-serif;
+}

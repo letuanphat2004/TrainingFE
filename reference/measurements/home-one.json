@@ -1,0 +1,398 @@
+{
+  "source": {
+    "figmaFileKey": "D4GfZoq69kzblUipF6ASjE",
+    "page": "Home 1",
+    "unit": "px",
+    "retrievalPolicy": "local-reference-only"
+  },
+  "frames": {
+    "page": {
+      "left": 0,
+      "top": 0,
+      "width": 1440,
+      "height": 4989
+    },
+    "siteHeader": {
+      "left": 150,
+      "top": 41,
+      "width": 1140,
+      "height": 63
+    },
+    "mainSlider": {
+      "left": 0,
+      "top": 0,
+      "width": 1286.5,
+      "height": 805
+    },
+    "coreServices": {
+      "left": 150,
+      "top": 936,
+      "width": 1140,
+      "height": 732
+    },
+    "about": {
+      "left": 150,
+      "top": 1448,
+      "width": 1291.1458740234375,
+      "height": 1028.8857421875
+    },
+    "professionalTeam": {
+      "left": 178,
+      "top": 2344,
+      "width": 1085,
+      "height": 861
+    },
+    "contact": {
+      "left": -0.33,
+      "top": 3142,
+      "width": 1290.327392578125,
+      "height": 1072
+    },
+    "siteFooter": {
+      "left": 0,
+      "top": 4283.66,
+      "width": 1440,
+      "height": 705.342041015625
+    }
+  },
+  "siteHeaderChildren": {
+    "mainLogo": {
+      "pageLeft": 150,
+      "pageTop": 41,
+      "localLeft": 0,
+      "localTop": 0,
+      "width": 258,
+      "height": 63
+    },
+    "mainMenu": {
+      "pageLeft": 599,
+      "pageTop": 58,
+      "localLeft": 449,
+      "localTop": 17,
+      "width": 481,
+      "height": 25,
+      "borderWidth": 1
+    },
+    "contactButton": {
+      "pageLeft": 1132,
+      "pageTop": 45,
+      "localLeft": 982,
+      "localTop": 4,
+      "width": 158,
+      "height": 52,
+      "borderRadius": 50
+    }
+  },
+  "mainSliderChildren": {
+    "frameOne": {
+      "asset": "Frame 1.png",
+      "pageLeft": 685,
+      "pageTop": 263,
+      "localLeft": 685,
+      "localTop": 263,
+      "width": 601.5,
+      "height": 397.5
+    },
+    "title": {
+      "content": "Clinic & beauty consultant",
+      "pageLeft": 189,
+      "pageTop": 316,
+      "localLeft": 189,
+      "localTop": 316,
+      "width": 430,
+      "height": 128,
+      "fontFamily": "Poppins",
+      "fontWeight": 600,
+      "fontSize": 48,
+      "lineHeight": "125%",
+      "letterSpacing": "0%",
+      "color": "#091156"
+    },
+    "description": {
+      "content": "It is a long established fact that a reader will be by the readable content of a page.",
+      "pageLeft": 189,
+      "pageTop": 444,
+      "localLeft": 189,
+      "localTop": 444,
+      "width": 474,
+      "height": 54,
+      "fontFamily": "Poppins",
+      "fontWeight": 500,
+      "fontSize": 16,
+      "lineHeight": "100%",
+      "letterSpacing": "10%",
+      "color": "#091156"
+    },
+    "moreDetailsButton": {
+      "content": "More Details",
+      "pageLeft": 189,
+      "pageTop": 526,
+      "localLeft": 189,
+      "localTop": 526,
+      "width": 200,
+      "height": 58.36,
+      "borderRadius": 50
+    },
+    "slideButton": {
+      "pageLeft": 685,
+      "pageTop": 796.85,
+      "localLeft": 685,
+      "localTop": 796.85,
+      "width": 71,
+      "height": 8.15,
+      "borderRadius": 50
+    },
+    "slideBackground": {
+      "asset": "Background Bubble-1.png",
+      "pageLeft": 0,
+      "pageTop": 0,
+      "localLeft": 0,
+      "localTop": 0,
+      "width": 1266.42,
+      "height": 743,
+      "flipHorizontal": true
+    }
+  },
+  "coreServicesChildren": {
+    "titleAndDescription": {
+      "pageLeft": 296,
+      "pageTop": 936,
+      "localLeft": 146,
+      "localTop": 0,
+      "width": 848,
+      "height": 192,
+      "eyebrow": "Main Services",
+      "title": "Learn services to focus on your beauty",
+      "description": "Porta rhoncus orci condimentum vitae lobortis eu dignissim non massa. Non parturient amet, feugiat tellus sagittis, scelerisque eget nulla turpis.",
+      "eyebrowFrame": {
+        "pageLeft": 664,
+        "pageTop": 936,
+        "localLeft": 514,
+        "localTop": 0,
+        "width": 113,
+        "height": 20,
+        "fontFamily": "Poppins",
+        "fontWeight": 600,
+        "fontSize": 16,
+        "lineHeight": "125%",
+        "color": "#FF64AE"
+      },
+      "titleFrame": {
+        "pageLeft": 354,
+        "pageTop": 968,
+        "localLeft": 204,
+        "localTop": 32,
+        "width": 732,
+        "height": 97,
+        "fontFamily": "Poppins",
+        "fontWeight": 600,
+        "fontSize": 36,
+        "lineHeight": "125%",
+        "color": "#091156"
+      },
+      "descriptionFrame": {
+        "pageLeft": 296,
+        "pageTop": 1077,
+        "localLeft": 146,
+        "localTop": 141,
+        "width": 848,
+        "height": 51,
+        "fontFamily": "Poppins",
+        "fontWeight": 400,
+        "fontSize": 16,
+        "lineHeight": "100%"
+      }
+    },
+    "serviceCards": [
+      {
+        "id": "consultation",
+        "pageLeft": 150,
+        "pageTop": 1210,
+        "localLeft": 0,
+        "localTop": 274,
+        "width": 343,
+        "height": 458,
+        "asset": "Animation1-1.png",
+        "title": "Beauty consultation"
+      },
+      {
+        "id": "treatments",
+        "pageLeft": 549,
+        "pageTop": 1210,
+        "localLeft": 399,
+        "localTop": 274,
+        "width": 343,
+        "height": 458,
+        "asset": "Animation2-1.png",
+        "title": "Skin treatments"
+      },
+      {
+        "id": "product",
+        "pageLeft": 947,
+        "pageTop": 1210,
+        "localLeft": 797,
+        "localTop": 274,
+        "width": 343,
+        "height": 458,
+        "asset": "Animation3-1.png",
+        "title": "Beauty product"
+      }
+    ],
+    "innerMeasurements": {
+      "status": "pending-user-measurement"
+    }
+  },
+  "professionalTeamsChildren": {
+    "titleAndDescription": {
+      "pageLeft": 296,
+      "pageTop": 2344,
+      "localLeft": 118,
+      "localTop": 0,
+      "width": 848,
+      "height": 148
+    },
+    "eyebrow": { "pageLeft": 640, "pageTop": 2344, "width": 160, "height": 20 },
+    "title": { "pageLeft": 354, "pageTop": 2376, "width": 732, "height": 53 },
+    "description": { "pageLeft": 296, "pageTop": 2441, "width": 848, "height": 51 },
+    "members": {
+      "left": {
+        "pageLeft": 178,
+        "pageTop": 2670,
+        "width": 270,
+        "height": 439,
+        "image": { "asset": "unsplash_pTrhfmj2jDA-1.png", "pageLeft": 240, "pageTop": 2670, "width": 146, "height": 146 },
+        "name": { "content": "Briyan Nevalli", "pageLeft": 182, "pageTop": 2904, "width": 263, "height": 37, "fontFamily": "Poppins", "fontWeight": 600, "fontSize": 18, "lineHeight": "125%", "color": "#091156" },
+        "description": { "pageLeft": 178, "pageTop": 2947, "width": 270, "height": 63, "fontFamily": "Poppins", "fontWeight": 400, "fontSize": 14, "lineHeight": "100%", "letterSpacing": "10%", "color": "#8B8B8B" },
+        "socialLinks": { "pageTop": 3060, "size": "49x49", "twitterLeft": 206, "facebookLeft": 289, "instagramLeft": 372 }
+      },
+      "middleBackground": { "pageLeft": 508, "pageTop": 2579, "width": 424, "height": 626, "borderRadius": 42, "color": "#FFFFFF", "shadow": { "x": 0, "y": 25, "blur": 50, "spread": 25, "color": "#F6F7FF" } },
+      "right": { "pageLeft": 993, "pageTop": 2670, "width": 270, "height": 439, "imageAsset": "unsplash_mEZ3PoFGs_k.png" },
+      "middleImageAsset": "unsplash_FVh_yqLR9eA-1.png"
+    }
+  },
+  "siteFooterChildren": {
+    "background": { "asset": "Footer BG.png", "pageLeft": 0, "pageTop": 4283.66, "width": 1440, "height": 705.34 },
+    "brand": { "pageLeft": 150, "pageTop": 4525, "width": 492, "height": 191 },
+    "logo": { "asset": "Footer Logo.png", "pageLeft": 150, "pageTop": 4525, "width": 258, "height": 63 },
+    "tagline": { "pageLeft": 181, "pageTop": 4621, "width": 461, "height": 21 },
+    "address": { "pageLeft": 182, "pageTop": 4668, "width": 297, "height": 24 },
+    "phone": { "pageLeft": 181, "pageTop": 4693, "width": 140, "height": 23 },
+    "email": { "pageLeft": 349, "pageTop": 4693, "width": 190, "height": 23 },
+    "pages": { "pageLeft": 771, "pageTop": 4509, "width": 131, "height": 219, "rowTops": [4556, 4599, 4634, 4669, 4704] },
+    "informations": { "pageLeft": 1075, "pageTop": 4509, "width": 215, "height": 184, "rowTops": [4564, 4599, 4634, 4669] },
+    "socialLinks": { "pageLeft": 150, "pageTop": 4870, "width": 305, "height": 27.84 },
+    "toTop": { "asset": "ToTop Button.png", "pageLeft": 1339, "pageTop": 4783, "width": 36, "height": 36 },
+    "copyright": { "pageLeft": 793, "pageTop": 4868.05, "width": 497, "height": 31.18, "color": "#D7DBFF" },
+    "bottomBackground": { "pageLeft": 0, "pageTop": 4864, "width": 1440, "height": 125, "color": "#0D165C" }
+  },
+  "contactUsChildren": {
+    "titleAndDescription": { "pageLeft": 770, "pageTop": 3349, "localLeft": 770.33, "localTop": 207, "width": 497, "height": 169 },
+    "eyebrow": { "pageLeft": 771, "pageTop": 3349, "width": 90, "height": 20 },
+    "title": { "pageLeft": 770, "pageTop": 3381, "width": 404, "height": 97 },
+    "description": { "pageLeft": 770, "pageTop": 3490, "width": 497, "height": 28 },
+    "animation": { "asset": "Contact Animations-1.png", "pageLeft": 150, "pageTop": 3508, "width": 520, "height": 614 },
+    "form": {
+      "pageLeft": 770,
+      "pageTop": 3562,
+      "width": 520,
+      "height": 652,
+      "border": { "width": 1, "color": "#D9DDFE" },
+      "radius": 15,
+      "firstName": { "pageLeft": 770, "pageTop": 3562, "width": 242.21, "height": 61.58 },
+      "lastName": { "pageLeft": 1047.79, "pageTop": 3562, "width": 242.21, "height": 61.58 },
+      "email": { "pageLeft": 770, "pageTop": 3661.89, "width": 520, "height": 61.58 },
+      "subject": { "pageLeft": 770, "pageTop": 3761.79, "width": 520, "height": 61.58 },
+      "inquiry": { "pageLeft": 770, "pageTop": 3861.68, "width": 520, "height": 239.47 },
+      "submit": { "pageLeft": 771, "pageTop": 4156, "width": 248, "height": 58, "borderRadius": 50 }
+    },
+    "background": { "asset": "Background Bubble-2.png", "pageLeft": -0.33, "pageTop": 3142, "width": 1175.73, "height": 929, "figmaRotation": -180, "assetExportIncludesRotation": true }
+  },
+  "aboutUsChildren": {
+    "titleAndDescription": {
+      "pageLeft": 150,
+      "pageTop": 1802.44,
+      "localLeft": 0,
+      "localTop": 354.44,
+      "width": 664,
+      "height": 292
+    },
+    "eyebrow": {
+      "content": "About Us",
+      "pageLeft": 151,
+      "pageTop": 1802.44,
+      "localLeft": 1,
+      "localTop": 354.44,
+      "width": 73,
+      "height": 20,
+      "fontFamily": "Poppins",
+      "fontWeight": 600,
+      "fontSize": 16,
+      "lineHeight": "125%"
+    },
+    "title": {
+      "content": "We are the best beauty clinic",
+      "pageLeft": 150,
+      "pageTop": 1834.44,
+      "localLeft": 0,
+      "localTop": 386.44,
+      "width": 664,
+      "height": 52,
+      "fontFamily": "Poppins",
+      "fontWeight": 600,
+      "fontSize": 36,
+      "lineHeight": "125%",
+      "color": "#091156"
+    },
+    "description": {
+      "pageLeft": 150,
+      "pageTop": 1898.44,
+      "localLeft": 0,
+      "localTop": 450.44,
+      "width": 483,
+      "height": 196,
+      "fontFamily": "Poppins",
+      "fontWeight": 400,
+      "fontSize": 16,
+      "lineHeight": "100%",
+      "letterSpacing": "10%"
+    },
+    "learnMoreButton": {
+      "pageLeft": 150,
+      "pageTop": 2143.44,
+      "localLeft": 0,
+      "localTop": 695.44,
+      "width": 200,
+      "height": 58.36,
+      "borderRadius": 50
+    },
+    "watchVideo": {
+      "pageLeft": 394,
+      "pageTop": 2148.44,
+      "localLeft": 244,
+      "localTop": 700.44,
+      "width": 213,
+      "height": 49,
+      "playButton": { "pageLeft": 394, "pageTop": 2148.44, "width": 49, "height": 49 },
+      "label": { "pageLeft": 456, "pageTop": 2159.44, "width": 151, "height": 27, "fontFamily": "Poppins", "fontWeight": 600, "fontSize": 16, "lineHeight": "100%", "letterSpacing": "10%", "color": "#8B8B8B" }
+    },
+    "image": {
+      "asset": "unsplash_LRXYS0tSyGc.png",
+      "pageLeft": 814,
+      "pageTop": 1847,
+      "localLeft": 664,
+      "localTop": 399,
+      "width": 476,
+      "height": 350,
+      "borderRadius": 50,
+      "shadow": { "x": 0, "y": 0, "blur": 50, "spread": 25, "color": "#C4C4C4", "opacity": "not-measured" }
+    },
+    "background": {
+      "asset": "Background Bubble-3.png",
+      "pageLeft": 493,
+      "pageTop": 1448,
+      "width": 948.15,
+      "height": 1028.89,
+      "placement": "page-decoration-crosses-sections"
+    }
+  }
+}

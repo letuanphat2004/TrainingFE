@@ -1,0 +1,164 @@
+.core-services {
+  position: absolute;
+  z-index: 10;
+  top: 936px;
+  left: 150px;
+  width: 1140px;
+  height: 732px;
+}
+
+.core-services__heading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1140px;
+  height: 192px;
+}
+
+.core-services__heading .section-heading__eyebrow {
+  position: absolute;
+  top: 0;
+  left: 514px;
+  width: 113px;
+  height: 20px;
+  color: #ff64ae;
+  font: 600 16px/1.25 "Poppins", Arial, sans-serif;
+}
+
+.core-services__heading .section-heading__title {
+  position: absolute;
+  top: 32px;
+  left: 355px;
+  width: 430px;
+  height: 97px;
+  margin: 0;
+  color: #091156;
+  font: 600 36px/1.25 "Poppins", Arial, sans-serif;
+}
+
+.core-services__heading .section-heading__description {
+  position: absolute;
+  top: 145px;
+  left: 146px;
+  width: 848px;
+  height: 51px;
+  color: #8b8b8b;
+  font: 400 16px/1.32 "Poppins", Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.core-services .service-card {
+  position: absolute;
+  top: 274px;
+  left: var(--service-card-left);
+  width: 343px;
+  height: 458px;
+}
+
+.core-services .service-card__image {
+  position: absolute;
+  top: 59px;
+  left: 88.5px;
+  width: 166px;
+  height: 166px;
+}
+
+.core-services .service-card__title {
+  position: absolute;
+  top: 282px;
+  left: 24px;
+  width: 295px;
+  color: #091156;
+  font: 600 18px/1.5 "Poppins", Arial, sans-serif;
+}
+
+.core-services .service-card__description {
+  position: absolute;
+  top: 324px;
+  left: 37px;
+  width: 269px;
+  color: #8b8b8b;
+  font: 400 14px/1.5 "Poppins", Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 1439px) {
+  .core-services {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: min(calc(100% - 48px), 1140px);
+    height: auto;
+    min-height: 0;
+    margin: 96px auto 0;
+  }
+
+  .core-services__heading {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .core-services__heading .section-heading__eyebrow,
+  .core-services__heading .section-heading__title,
+  .core-services__heading .section-heading__description {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+
+  .core-services__heading .section-heading__title {
+    margin: 2px auto 20px;
+  }
+
+  .core-services__cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+    margin-top: 64px;
+  }
+
+  .core-services .service-card {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    min-height: 458px;
+    padding: 58px 24px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .core-services .service-card__image,
+  .core-services .service-card__title,
+  .core-services .service-card__description {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+
+  .core-services .service-card__image {
+    width: 166px;
+    height: 166px;
+  }
+
+  .core-services .service-card__title {
+    margin: 48px 0 0;
+  }
+
+  .core-services .service-card__description {
+    max-width: 269px;
+    margin: 18px 0 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .core-services__cards {
+    grid-template-columns: 1fr;
+    max-width: 343px;
+    margin-inline: auto;
+  }
+}

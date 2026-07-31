@@ -1,0 +1,9 @@
+.section-heading {
+  text-align: center;
+}
+
+.section-heading__eyebrow,
+.section-heading__title,
+.section-heading__description {
+  margin: 0;
+}

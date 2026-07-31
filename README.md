@@ -1,47 +1,47 @@
 # Beautice Learning Lab
 
-Repository học tập tái tạo trọn bộ website Beautice theo 7 phương pháp styling khác nhau.
-
-## Phạm vi
-
-- 7 demo công nghệ độc lập.
-- Mỗi demo có đủ 8 route: Home 1, Home 2, About, Services, Gallery, Team, Blog và Contact.
-- Tổng phạm vi nghiệm thu: 56 màn hình route ở desktop, kèm responsive.
-- Demo 01 đi qua ba mốc trong cùng một ứng dụng: HTML/CSS/JS → React JS → React TypeScript.
+Workspace học tập triển khai cùng website Beautice bằng bảy kỹ thuật styling.
+Mỗi demo cuối cùng phải có đủ tám trang.
 
 ## Trạng thái hiện tại
 
-Phase 0 đã hoàn tất. Phase 1 đã hoàn thiện Demo 01 gồm đủ 8 route bằng React TypeScript và CSS thuần. Quá trình HTML/CSS/JavaScript → React JavaScript → React TypeScript được lưu bằng commit/tag và tài liệu migration.
+- Kiến trúc monorepo và quy tắc phân tầng đã được thiết lập.
+- Chỉ Demo 01 (`React + CSS thuần`) được scaffold.
+- Home 1 đang được xây từng component; hiện có `SiteHeader` và Button dùng chung.
+- Header chưa được nghiệm thu visual desktop, nên Home 1 chưa hoàn thành.
+- Sáu demo còn lại chưa được scaffold.
 
 ## Chạy Demo 01
 
-```bash
-npm install
-npm run dev:css
+Trong PowerShell:
+
+```powershell
+npm.cmd install
+npm.cmd run dev:css
 ```
 
-## Kiểm tra Demo 01
+Build và lint:
 
-```bash
-npm run build:css
-npm run typecheck:css
-npm run lint:css
-npm run test:smoke:css
-npm run test:visual:css
+```powershell
+npm.cmd run build
+npm.cmd run lint
 ```
+
+Trang trắng cao theo frame Home 1 là trạng thái dự kiến của scaffold hiện tại,
+không phải phiên bản giao diện đã hoàn thành.
 
 ## Tài liệu
 
-- `PROJECT_PLAN.md`: phạm vi, lộ trình và tiêu chí nghiệm thu.
-- `AGENTS.md`: quy tắc bắt buộc cho các phiên Codex sau.
-- `docs/01-file-structure.md`: nhiệm vụ của từng thư mục và file.
-- `docs/02-design-inventory.md`: kiểm kê trang, route và tài nguyên.
-- `docs/02-html-to-react.md`: mapping từ HTML/JavaScript thuần sang React.
-- `docs/03-javascript-to-typescript.md`: quy tắc và kết quả chuyển TypeScript.
-- `docs/07-visual-checklist.md`: checklist đối chiếu hình ảnh.
-- `apps/01-react-css/README.md`: cách chạy và nhiệm vụ từng file của Demo 01.
-- `reference/README.md`: nguồn và cách tái tạo ảnh tham chiếu.
+- Kế hoạch: `PROJECT_PLAN.md`
+- Kiến trúc: `docs/architecture.md`
+- Quy ước thư mục: `docs/folder-structure.md`
+- Nguồn đối chiếu: `reference/`
 
-Không chỉnh sửa trực tiếp thư mục ảnh gốc:
+## Quy tắc quan trọng
 
-`Beautice - Clinic & Beauty Consultation Website Design (Community)/`
+```text
+main → app → routes/pages → layouts/components
+```
+
+Chỉ content, design token và asset mapping được phép dùng chung giữa các demo.
+React component và styling implementation phải độc lập.

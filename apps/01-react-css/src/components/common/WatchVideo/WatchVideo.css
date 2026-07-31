@@ -1,0 +1,48 @@
+.watch-video {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--watch-video-gap, 13px);
+  min-width: var(--watch-video-width, 213px);
+  min-height: var(--watch-video-height, 49px);
+}
+
+.watch-video__play {
+  display: inline-grid;
+  width: var(--watch-video-play-size, 49px);
+  height: var(--watch-video-play-size, 49px);
+  flex: 0 0 auto;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #091156;
+  cursor: pointer;
+}
+
+.watch-video__icon {
+  width: 0;
+  height: 0;
+  margin-left: 3px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 12px solid #ffffff;
+}
+
+.watch-video__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.watch-video__play:focus-visible {
+  outline: 3px solid rgb(9 17 86 / 35%);
+  outline-offset: 3px;
+}
+
+.watch-video__label {
+  color: #8b8b8b;
+  font: 600 16px/1 "Poppins", Arial, sans-serif;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}

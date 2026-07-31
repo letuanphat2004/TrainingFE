@@ -1,0 +1,27 @@
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: var(--social-links-gap, 34px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-links__link {
+  display: grid;
+  place-items: center;
+}
+
+.social-links__link:focus-visible {
+  outline: 3px solid rgb(9 17 86 / 35%);
+  outline-offset: 3px;
+}
+
+.social-links__icon {
+  display: block;
+  width: 49px;
+  height: 49px;
+  object-fit: contain;
+  transform: translate(-3px, 6px) scale(1.6);
+  transform-origin: center;
+}

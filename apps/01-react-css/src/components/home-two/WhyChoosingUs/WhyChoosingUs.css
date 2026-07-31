@@ -1,0 +1,94 @@
+.home-two-why {
+  position: absolute;
+  z-index: 1;
+  top: 2222px;
+  left: 50%;
+  width: 1440px;
+  height: 697.5px;
+  overflow: hidden;
+  transform: translateX(-50%);
+  clip-path: polygon(0 13%, 100% 0, 100% 100%, 0 86.5%);
+}
+
+.home-two-why__background,
+.home-two-why__overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.home-two-why__background {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-two-why__overlay {
+  background: rgb(9 17 86 / 60%);
+  -webkit-mask: var(--why-background-mask) center / 100% 100% no-repeat;
+  mask: var(--why-background-mask) center / 100% 100% no-repeat;
+}
+
+.home-two-why__copy {
+  position: absolute;
+  top: 290px;
+  left: 154px;
+  width: 486px;
+  height: 145px;
+}
+
+.home-two-why__title {
+  margin: 0;
+  color: #ffffff;
+  font: 600 36px/1.25 "Poppins", Arial, sans-serif;
+}
+
+.home-two-why__description {
+  margin: 25px 0 0;
+  color: #d8dcff;
+  font: 400 16px/1.25 "Poppins", Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.home-two-why__statistics {
+  position: absolute;
+  top: 272px;
+  left: 779px;
+  display: grid;
+  grid-template-columns: repeat(2, 197px);
+  gap: 43px 72px;
+}
+
+.home-two-why__statistics .statistic {
+  width: 197px;
+  height: 69px;
+}
+
+.home-two-why__statistics .statistic__value {
+  display: block;
+  width: 122px;
+  color: #ffffff;
+  font: 600 36px/1.25 "Poppins", Arial, sans-serif;
+}
+
+.home-two-why__statistics .statistic__label {
+  display: block;
+  width: 139px;
+  color: #d8dcff;
+  font: 600 16px/1.25 "Poppins", Arial, sans-serif;
+}
+
+.home-two-why__statistics .statistic:first-child .statistic__label {
+  color: #ff9acb;
+}
+
+@media (max-width: 1439px) {
+  .home-two-why {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin-top: 158px;
+    transform: none;
+  }
+}

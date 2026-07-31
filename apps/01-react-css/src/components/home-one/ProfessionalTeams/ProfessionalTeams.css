@@ -1,0 +1,156 @@
+.professional-teams {
+  position: absolute;
+  z-index: 10;
+  top: 2344px;
+  left: 178px;
+  width: 1085px;
+  height: 861px;
+}
+
+.professional-teams__heading {
+  position: absolute;
+  top: 0;
+  left: 118px;
+  width: 848px;
+  height: 148px;
+  text-align: center;
+}
+
+.professional-teams__heading .section-heading__eyebrow {
+  position: absolute;
+  top: 0;
+  left: 344px;
+  width: 160px;
+  margin: 0;
+  color: #ff64ae;
+  font: 600 16px/1.25 "Poppins", Arial, sans-serif;
+}
+
+.professional-teams__heading .section-heading__title {
+  position: absolute;
+  top: 32px;
+  left: 58px;
+  width: 732px;
+  margin: 0;
+  color: #091156;
+  font: 600 36px/1.25 "Poppins", Arial, sans-serif;
+}
+
+.professional-teams__heading .section-heading__description {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 848px;
+  margin: 0;
+  color: #8b8b8b;
+  font: 400 16px/1 "Poppins", Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.professional-teams__member {
+  top: 326px;
+  left: var(--team-member-left);
+}
+
+@media (max-width: 1439px) {
+  .professional-teams {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: min(calc(100% - 48px), 1085px);
+    height: auto;
+    margin: 96px auto;
+    gap: 64px 54px;
+  }
+
+  .professional-teams__heading,
+  .professional-teams__member {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  .professional-teams__heading {
+    flex: 0 0 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .professional-teams__heading .section-heading__eyebrow,
+  .professional-teams__heading .section-heading__title,
+  .professional-teams__heading .section-heading__description {
+    position: static;
+    width: auto;
+  }
+
+  .professional-teams__heading .section-heading__title {
+    margin-top: 12px;
+  }
+
+  .professional-teams__heading .section-heading__description {
+    margin-top: 18px;
+    line-height: 1.5;
+  }
+
+  .professional-teams__member {
+    flex: 0 1 270px;
+    margin: 0;
+    min-height: 439px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .professional-teams .team-member-card--featured::before {
+    display: none;
+  }
+
+  .professional-teams .team-member-card__image,
+  .professional-teams .team-member-card__role,
+  .professional-teams .team-member-card__name,
+  .professional-teams .team-member-card__description,
+  .professional-teams .team-member-card__social-links {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+
+  .professional-teams .team-member-card__image {
+    width: 146px;
+    height: 146px;
+  }
+
+  .professional-teams .team-member-card__role {
+    margin-top: 32px;
+  }
+
+  .professional-teams .team-member-card__name {
+    min-height: 0;
+    margin-top: 12px;
+  }
+
+  .professional-teams .team-member-card__description {
+    max-width: 270px;
+    margin-top: 18px;
+  }
+
+  .professional-teams .team-member-card__description-line--third {
+    top: auto;
+  }
+
+  .professional-teams .team-member-card__social-links {
+    margin-top: auto;
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 620px) {
+  .professional-teams__member {
+    flex-basis: 100%;
+    max-width: 270px;
+  }
+}

@@ -1,0 +1,20 @@
+.blog-card {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.blog-card__image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.blog-card__title,
+.blog-card__description {
+  margin: 0;
+}
+
+.blog-card__action {
+  text-decoration: none;
+}

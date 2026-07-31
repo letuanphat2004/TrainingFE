@@ -1,0 +1,31 @@
+.home-one-page {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, var(--page-reference-width));
+  min-height: var(--page-reference-height);
+  margin-inline: auto;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.home-one-page__services-about-background {
+  position: absolute;
+  z-index: 0;
+  top: 1448px;
+  left: 493px;
+  width: 948.15px;
+  height: 1028.89px;
+  pointer-events: none;
+}
+
+@media (max-width: 1439px) {
+  .home-one-page {
+    width: 100%;
+    min-height: 100vh;
+    overflow: clip;
+  }
+
+  .home-one-page__services-about-background {
+    display: none;
+  }
+}

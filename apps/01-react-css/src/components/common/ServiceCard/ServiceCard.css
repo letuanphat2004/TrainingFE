@@ -1,0 +1,13 @@
+.service-card {
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: var(--service-card-radius, 42px);
+  background: var(--service-card-background, #ffffff);
+  box-shadow: var(--service-card-shadow, 0 25px 50px rgb(0 0 0 / 3%));
+  text-align: center;
+}
+
+.service-card__image {
+  display: block;
+  object-fit: contain;
+}

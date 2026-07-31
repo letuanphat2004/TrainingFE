@@ -1,0 +1,39 @@
+.footer-link-group {
+  color: #ffffff;
+}
+
+.footer-link-group__title {
+  margin: 0;
+  color: inherit;
+  font: 600 18px/1 "Poppins", Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.footer-link-group__list {
+  display: grid;
+  gap: 11px;
+  margin: 25px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-link-group__list a {
+  color: #d7dbff;
+  font: 500 16px/1 "Poppins", Arial, sans-serif;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transform: translate(3px, 6px);
+}
+
+.footer-link-group__list a::before {
+  display: inline-block;
+  width: 6px;
+  height: 8px;
+  margin-right: 8px;
+  background: #ffffff;
+  clip-path: polygon(22% 0, 100% 50%, 22% 100%);
+  content: "";
+  vertical-align: -2px;
+}

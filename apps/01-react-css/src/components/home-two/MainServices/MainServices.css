@@ -1,0 +1,143 @@
+.home-two-main-services {
+  position: absolute;
+  z-index: 2;
+  top: 1593px;
+  left: 50%;
+  width: 1178px;
+  height: 685.34px;
+  overflow: visible;
+  transform: translateX(-50%);
+}
+
+.home-two-main-services__heading {
+  position: absolute;
+  top: 0;
+  left: 165px;
+  width: 848px;
+  height: 130px;
+}
+
+.home-two-main-services__heading .section-heading__eyebrow {
+  position: absolute;
+  top: 0;
+  left: 368px;
+  width: 113px;
+  height: 20px;
+  color: #ff64ae;
+  font: 600 16px/1.25 "Poppins", Arial, sans-serif;
+}
+
+.home-two-main-services__heading .section-heading__title {
+  position: absolute;
+  top: 32px;
+  left: 58px;
+  width: 732px;
+  height: 53px;
+  color: #091156;
+  font: 600 36px/1.25 "Poppins", Arial, sans-serif;
+}
+
+.home-two-main-services__heading .section-heading__description {
+  position: absolute;
+  top: 102px;
+  left: 3;
+  width: 848px;
+  height: 33px;
+  color: #8b8b8b;
+  font: 400 16px/1 "Poppins", Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.home-two-main-services__wave {
+  position: absolute;
+  z-index: -1;
+  top: 335px;
+  left: -131px;
+  width: 524px;
+  height: 350.34px;
+  pointer-events: none;
+}
+
+.home-two-main-services__cards {
+  position: absolute;
+  top: 198px;
+  left: 132px;
+  display: flex;
+  gap: 66px;
+}
+
+.home-two-main-services__cards .service-card {
+  position: relative;
+  width: 261px;
+  height: 303px;
+  border: 1px solid #e2e2e2;
+  border-radius: 25px;
+  box-shadow: none;
+  text-align: left;
+}
+
+.home-two-main-services__cards .home-two-main-services__card--skin-treatment {
+  border-color: #9ba2e0;
+}
+
+.home-two-main-services__cards .service-card__image {
+  position: absolute;
+  top: 31px;
+  left: 36px;
+  width: 64px;
+  height: 64px;
+}
+
+.home-two-main-services__cards .service-card__title {
+  position: absolute;
+  top: 120px;
+  left: 36px;
+  width: 189px;
+  height: 37px;
+  color: #091156;
+  font: 600 18px/1.25 "Poppins", Arial, sans-serif;
+}
+
+.home-two-main-services__cards .service-card__description {
+  position: absolute;
+  top: 157px;
+  left: 36px;
+  width: 189px;
+  height: 63px;
+  color: #8b8b8b;
+  font: 400 14px/1.5 "Poppins", Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.home-two-main-services__cards .service-card__action {
+  position: absolute;
+  top: 237px;
+  left: 36px;
+  color: #ff64ae;
+  font: 600 14px/19px "Poppins", Arial, sans-serif;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+.home-two-main-services__cards .service-card__action span {
+  margin-left: 5px;
+  font-size: 23px;
+  vertical-align: -2px;
+}
+
+.home-two-main-services__cards .service-card__action:focus-visible {
+  outline: 2px solid #ff64ae;
+  outline-offset: 3px;
+}
+
+@media (max-width: 1439px) {
+  .home-two-main-services {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: min(100% - 48px, 1178px);
+    min-height: 685px;
+    margin: 158px auto 0;
+    transform: none;
+  }
+}

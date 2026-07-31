@@ -1,15 +1,8 @@
-# Applications
+# Apps
 
-Mỗi thư mục con trong `apps/` sẽ là một website Beautice hoàn chỉnh gồm 8 route.
+Mỗi thư mục con là một website Beautice hoàn chỉnh bằng một kỹ thuật styling
+khác nhau.
 
-Các ứng dụng được tạo tuần tự, không scaffold đồng thời:
-
-1. `01-react-css`
-2. `02-react-tailwind`
-3. `03-react-mui`
-4. `04-react-styled-components`
-5. `05-react-emotion-mui`
-6. `06-react-twin-emotion`
-7. `07-react-twin-mui`
-
-Phase 0 chưa tạo ứng dụng. Demo tiếp theo chỉ được tạo khi demo trước đã đạt tiêu chí nghiệm thu trong `PROJECT_PLAN.md`.
+Chỉ `01-react-css` được scaffold trong giai đoạn hiện tại. Các app còn lại chỉ
+được tạo sau khi demo liền trước hoàn thành đủ tám trang và vượt qua gate trong
+`PROJECT_PLAN.md`.

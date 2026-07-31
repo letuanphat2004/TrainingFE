@@ -1,0 +1,156 @@
+.about-us {
+  position: absolute;
+  z-index: 10;
+  top: 1448px;
+  left: 150px;
+  width: 1291.15px;
+  height: 1028.89px;
+}
+
+.about-us__heading {
+  position: absolute;
+  top: 354.44px;
+  left: 0;
+  width: 664px;
+  height: 292px;
+  text-align: left;
+}
+
+.about-us__heading .section-heading__eyebrow {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 73px;
+  min-height: 20px;
+  margin: 0;
+  color: #ff64ae;
+  font: 600 16px/1.25 "Poppins", Arial, sans-serif;
+}
+
+.about-us__heading .section-heading__title {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 664px;
+  margin: 0;
+  color: #091156;
+  font: 600 36px/1.25 "Poppins", Arial, sans-serif;
+}
+
+.about-us__heading .section-heading__description {
+  position: absolute;
+  top: 96px;
+  left: 0;
+  width: 483px;
+  margin: 0;
+  color: #8b8b8b;
+  font: 400 16px/1.5 "Poppins", Arial, sans-serif;
+  letter-spacing: 0.1em;
+  white-space: pre-line;
+}
+
+.about-us__button {
+  position: absolute;
+  top: 695.44px;
+  left: 0;
+  --button-width: 200px;
+  --button-height: 58.36px;
+}
+
+.about-us__watch-video {
+  position: absolute;
+  top: 700.44px;
+  left: 244px;
+}
+
+.about-us__image-frame {
+  position: absolute;
+  top: 399px;
+  left: 664px;
+  width: 476px;
+  height: 350px;
+  border-radius: 50px;
+  box-shadow: 0 0 50px 25px rgb(196 196 196 / 20%);
+  overflow: hidden;
+}
+
+.about-us__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.32);
+  transform-origin: center;
+}
+
+@media (max-width: 1439px) {
+  .about-us {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: grid;
+    width: min(calc(100% - 48px), 664px);
+    grid-template-columns: max-content max-content;
+    height: auto;
+    margin: 96px auto;
+    gap: 28px;
+  }
+
+  .about-us__heading,
+  .about-us__button,
+  .about-us__watch-video,
+  .about-us__image-frame {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  .about-us__heading {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: auto;
+  }
+
+  .about-us__heading .section-heading__eyebrow,
+  .about-us__heading .section-heading__title,
+  .about-us__heading .section-heading__description {
+    position: static;
+    width: auto;
+  }
+
+  .about-us__heading .section-heading__title {
+    margin-top: 12px;
+  }
+
+  .about-us__heading .section-heading__description {
+    margin-top: 18px;
+    line-height: 1.55;
+  }
+
+  .about-us__button {
+    width: max-content;
+  }
+
+  .about-us__image-frame {
+    grid-column: 1 / -1;
+    order: -1;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 476 / 350;
+  }
+
+  .about-us__watch-video {
+    align-self: center;
+  }
+}
+
+@media (max-width: 540px) {
+  .about-us {
+    grid-template-columns: 1fr;
+  }
+
+  .about-us__button,
+  .about-us__watch-video {
+    grid-column: 1;
+  }
+}

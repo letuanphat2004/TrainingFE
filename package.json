@@ -1,32 +1,19 @@
 {
   "name": "beautice-learning-lab",
-  "version": "0.1.0",
   "private": true,
-  "description": "Seven complete implementations of the Beautice website using different React styling approaches.",
-  "type": "module",
+  "version": "0.0.0",
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "scripts": {
-    "assets:sync:css": "npm run assets:sync --workspace @beautice/react-css",
     "dev:css": "npm run dev --workspace @beautice/react-css",
     "build:css": "npm run build --workspace @beautice/react-css",
-    "typecheck:css": "npm run typecheck --workspace @beautice/react-css",
     "lint:css": "npm run lint --workspace @beautice/react-css",
-    "test:smoke:css": "node ./scripts/smoke-demo.mjs",
-    "test:visual:css": "node ./scripts/capture-visual.mjs",
-    "reference:extract": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/extract-reference-screens.ps1",
-    "reference:inventory": "node ./scripts/build-asset-manifest.mjs",
-    "reference:build": "npm run reference:extract && npm run reference:inventory",
-    "validate:phase0": "node ./scripts/validate-phase0.mjs"
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present"
   },
   "engines": {
     "node": ">=20.19.0"
-  },
-  "devDependencies": {
-    "pixelmatch": "^7.2.0",
-    "playwright-core": "^1.62.0",
-    "pngjs": "^7.0.0"
   }
 }
