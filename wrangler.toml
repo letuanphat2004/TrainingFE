@@ -1,0 +1,6 @@
+main = "apps/01-react-css/dist/index.html"
+build = { command = "cd apps/01-react-css && npm run build" }
+compatibility_date = "2024-01-01"
+
+[env.production]
+name = "beautice-pages"
