@@ -5,6 +5,7 @@ import "@fontsource/poppins/500.css";
 import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
 import { App } from "./app/App";
+import { AppProviders } from "./app/AppProviders";
 import "./styles/reset.css";
 import "./styles/global.css";
 const rootElement = document.getElementById("root");
@@ -14,5 +15,7 @@ if (!rootElement) {
 }
 
 createRoot(rootElement).render(<StrictMode>
-    <App />
+    <AppProviders>
+      <App />
+    </AppProviders>
   </StrictMode>);
