@@ -22,7 +22,6 @@ const fields: ContactField[] = [
 ];
 export function ContactUs() {
     return (<section className="contact-us" id="contact" aria-labelledby="contact-us-title">
-      <img className="contact-us__background" src={assets.homeOne.contactBackground} alt="" aria-hidden="true"/>
       <img className="contact-us__animation" src={assets.homeOne.contactAnimation} alt="" aria-hidden="true"/>
       <SectionHeading className="contact-us__heading" eyebrow="Contact Us" title="Send your inquiry to our expert team" titleId="contact-us-title" description="Lorem ipsum dolor sit amet nulla turapis tellus."/>
       <form className="contact-us__form" onSubmit={(event) => event.preventDefault()}>

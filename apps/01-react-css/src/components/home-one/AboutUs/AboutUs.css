@@ -7,71 +7,82 @@
   height: 1028.89px;
 }
 
-.about-us__heading {
+.about-us__responsive-background {
+  display: none;
+}
+
+/*
+ * The Figma frame is retained at desktop. Inside it, layout is Grid: content
+ * and actions occupy the left column while the clinic illustration occupies
+ * the right column.
+ */
+.about-us__layout {
   position: absolute;
   top: 354.44px;
   left: 0;
-  width: 664px;
-  height: 292px;
+  display: grid;
+  grid-template-columns: 664px 476px;
+  grid-template-rows: auto auto;
+  column-gap: 0;
+  width: 1140px;
+}
+
+.about-us__content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.about-us__heading {
   text-align: left;
 }
 
 .about-us__heading .section-heading__eyebrow {
-  position: absolute;
-  top: 0;
-  left: 1px;
   width: 73px;
   min-height: 20px;
-  margin: 0;
   color: #ff64ae;
   font: 600 16px/1.25 "Poppins", Arial, sans-serif;
 }
 
 .about-us__heading .section-heading__title {
-  position: absolute;
-  top: 32px;
-  left: 0;
   width: 664px;
-  margin: 0;
+  margin-top: 12px;
   color: #091156;
   font: 600 36px/1.25 "Poppins", Arial, sans-serif;
 }
 
 .about-us__heading .section-heading__description {
-  position: absolute;
-  top: 96px;
-  left: 0;
   width: 483px;
-  margin: 0;
+  margin-top: 18px;
   color: #8b8b8b;
   font: 400 16px/1.5 "Poppins", Arial, sans-serif;
   letter-spacing: 0.1em;
   white-space: pre-line;
 }
 
+.about-us__actions {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  margin-top: 49.44px;
+}
+
 .about-us__button {
-  position: absolute;
-  top: 695.44px;
-  left: 0;
   --button-width: 200px;
   --button-height: 58.36px;
 }
 
-.about-us__watch-video {
-  position: absolute;
-  top: 700.44px;
-  left: 244px;
-}
-
 .about-us__image-frame {
-  position: absolute;
-  top: 399px;
-  left: 664px;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: start;
   width: 476px;
   height: 350px;
+  margin-top: 44.56px;
+  overflow: hidden;
   border-radius: 50px;
   box-shadow: 0 0 50px 25px rgb(196 196 196 / 20%);
-  overflow: hidden;
 }
 
 .about-us__image {
@@ -88,69 +99,87 @@
     position: relative;
     top: auto;
     left: auto;
-    display: grid;
-    width: min(calc(100% - 48px), 664px);
-    grid-template-columns: max-content max-content;
+    width: min(calc(100% - 48px), 1140px);
     height: auto;
     margin: 96px auto;
-    gap: 28px;
   }
 
-  .about-us__heading,
-  .about-us__button,
-  .about-us__watch-video,
-  .about-us__image-frame {
+  .about-us__responsive-background {
+    position: absolute;
+    z-index: 0;
+    top: -96px;
+    right: -12%;
+    display: block;
+    width: min(70%, 948.15px);
+    height: auto;
+    pointer-events: none;
+  }
+
+  .about-us__layout {
     position: relative;
+    z-index: 1;
     top: auto;
     left: auto;
-  }
-
-  .about-us__heading {
-    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    gap: 28px 64px;
     width: 100%;
-    height: auto;
   }
 
-  .about-us__heading .section-heading__eyebrow,
   .about-us__heading .section-heading__title,
   .about-us__heading .section-heading__description {
-    position: static;
     width: auto;
   }
 
-  .about-us__heading .section-heading__title {
-    margin-top: 12px;
-  }
-
   .about-us__heading .section-heading__description {
-    margin-top: 18px;
+    max-width: 483px;
     line-height: 1.55;
   }
 
-  .about-us__button {
-    width: max-content;
+  .about-us__actions {
+    margin-top: 0;
   }
 
   .about-us__image-frame {
-    grid-column: 1 / -1;
-    order: -1;
+    align-self: center;
     width: 100%;
     height: auto;
+    margin-top: 0;
     aspect-ratio: 476 / 350;
   }
+}
 
-  .about-us__watch-video {
-    align-self: center;
+@media (max-width: 800px) {
+  .about-us__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-us__content,
+  .about-us__actions,
+  .about-us__image-frame {
+    grid-column: 1;
+  }
+
+  .about-us__content {
+    grid-row: 2;
+  }
+
+  .about-us__actions {
+    grid-row: 3;
+    flex-wrap: wrap;
+  }
+
+  .about-us__image-frame {
+    grid-row: 1;
   }
 }
 
 @media (max-width: 540px) {
   .about-us {
-    grid-template-columns: 1fr;
+    width: min(calc(100% - 48px), 1140px);
   }
 
-  .about-us__button,
-  .about-us__watch-video {
-    grid-column: 1;
+  .about-us__actions {
+    gap: 20px;
   }
 }

@@ -11,72 +11,78 @@
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 1140px;
-  height: 192px;
+  min-height: 192px;
 }
 
 .core-services__heading .section-heading__eyebrow {
-  position: absolute;
-  top: 0;
-  left: 514px;
+  position: static;
   width: 113px;
-  height: 20px;
+  min-height: 20px;
+  margin: 0;
   color: #ff64ae;
   font: 600 16px/1.25 "Poppins", Arial, sans-serif;
 }
 
 .core-services__heading .section-heading__title {
-  position: absolute;
-  top: 32px;
-  left: 355px;
+  position: static;
   width: 430px;
-  height: 97px;
-  margin: 0;
+  min-height: 97px;
+  margin: 12px 0 0;
   color: #091156;
   font: 600 36px/1.25 "Poppins", Arial, sans-serif;
 }
 
 .core-services__heading .section-heading__description {
-  position: absolute;
-  top: 145px;
-  left: 146px;
+  position: static;
   width: 848px;
-  height: 51px;
+  min-height: 51px;
+  margin: 16px 0 0;
   color: #8b8b8b;
   font: 400 16px/1.32 "Poppins", Arial, sans-serif;
   letter-spacing: 0.1em;
 }
 
-.core-services .service-card {
+.core-services__cards {
   position: absolute;
   top: 274px;
-  left: var(--service-card-left);
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 343px);
+  column-gap: 55.5px;
+  width: 1140px;
+}
+
+.core-services .service-card {
   width: 343px;
   height: 458px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 59px 24px 0;
 }
 
 .core-services .service-card__image {
-  position: absolute;
-  top: 59px;
-  left: 88.5px;
+  position: static;
   width: 166px;
   height: 166px;
 }
 
 .core-services .service-card__title {
-  position: absolute;
-  top: 282px;
-  left: 24px;
+  position: static;
   width: 295px;
+  margin: 57px 0 0;
   color: #091156;
   font: 600 18px/1.5 "Poppins", Arial, sans-serif;
 }
 
 .core-services .service-card__description {
-  position: absolute;
-  top: 324px;
-  left: 37px;
+  position: static;
   width: 269px;
+  margin: 15px 0 0;
   color: #8b8b8b;
   font: 400 14px/1.5 "Poppins", Arial, sans-serif;
   letter-spacing: 0.1em;
@@ -104,7 +110,6 @@
   .core-services__heading .section-heading__eyebrow,
   .core-services__heading .section-heading__title,
   .core-services__heading .section-heading__description {
-    position: static;
     width: auto;
     height: auto;
   }
@@ -114,16 +119,16 @@
   }
 
   .core-services__cards {
-    display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 32px;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
     margin-top: 64px;
   }
 
   .core-services .service-card {
-    position: relative;
-    top: auto;
-    left: auto;
     width: 100%;
     min-height: 458px;
     padding: 58px 24px 36px;
@@ -135,7 +140,6 @@
   .core-services .service-card__image,
   .core-services .service-card__title,
   .core-services .service-card__description {
-    position: static;
     width: auto;
     height: auto;
   }

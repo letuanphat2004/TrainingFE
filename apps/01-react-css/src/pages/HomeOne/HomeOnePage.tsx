@@ -1,5 +1,4 @@
-import { Header } from "../../components/layout/Header";
-import { MainSlider } from "../../components/home-one/MainSlider";
+import { HomeHero } from "../../components/home-one/HomeHero";
 import { CoreServices } from "../../components/home-one/CoreServices";
 import { AboutUs } from "../../components/home-one/AboutUs";
 import { ProfessionalTeams } from "../../components/home-one/ProfessionalTeams";
@@ -15,13 +14,23 @@ export function HomeOnePage() {
         "--page-reference-height": `${homeOneFrames.page.height}px`,
     };
     return (<main className="home-one-page" data-page="home-one" style={pageStyle}>
-      <Header activePage="home"/>
-      <MainSlider />
-      <img className="home-one-page__services-about-background" src={assets.homeOne.servicesAboutBackground} alt="" aria-hidden="true"/>
-      <CoreServices />
-      <AboutUs />
-      <ProfessionalTeams />
-      <ContactUs />
-      <Footer />
+      <HomeHero />
+      <div className="home-one-page__content-stage">
+        <img className="home-one-page__services-about-background" src={assets.homeOne.servicesAboutBackground} alt="" aria-hidden="true" />
+        <CoreServices />
+        <AboutUs />
+        <ProfessionalTeams />
+        <img className="home-one-page__team-contact-background" src={assets.homeOne.contactBackground} alt="" aria-hidden="true" />
+        <ContactUs />
+      </div>
+      <div className="home-one-page__footer-stage">
+        <img
+          className="home-one-page__footer-background"
+          src={assets.footer.background}
+          alt=""
+          aria-hidden="true"
+        />
+        <Footer />
+      </div>
     </main>);
 }

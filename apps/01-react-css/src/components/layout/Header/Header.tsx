@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { assets } from "../../../constants/assets";
 import { Button } from "../../common/Button";
 import "./Header.css";
@@ -17,13 +18,19 @@ interface HeaderProps {
 }
 
 export function Header({ activePage, variant, logo = assets.brand.mainLogo }: HeaderProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <header className={`site-header page-component${variant ? ` site-header--${variant}` : ""}`}>
+    <header className={`site-header container page-component${variant ? ` site-header--${variant}` : ""}`}>
       <a className="site-header__brand" href="#home" aria-label="Beautice home">
         <img src={logo} width="258" height="63" alt="Beautice" />
       </a>
 
-      <nav className="site-header__navigation" aria-label="Primary navigation">
+      <nav
+        className={`site-header__navigation${isMenuOpen ? " site-header__navigation--open" : ""}`}
+        id="primary-navigation"
+        aria-label="Primary navigation"
+      >
         <ul className="site-header__navigation-list">
           {navigationItems.map((item) => (
             <li
@@ -46,11 +53,27 @@ export function Header({ activePage, variant, logo = assets.brand.mainLogo }: He
             </li>
           ))}
         </ul>
+        <Button className="site-header__mobile-contact" href="#contact">
+          Contact
+        </Button>
       </nav>
 
       <Button className="site-header__contact" href="#contact">
         Contact
       </Button>
+
+      <button
+        className="site-header__menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-controls="primary-navigation"
+        aria-expanded={isMenuOpen}
+        onClick={() => setIsMenuOpen((current) => !current)}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
     </header>
   );
 }

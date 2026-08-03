@@ -149,3 +149,40 @@ Không cố giữ tọa độ desktop cố định trên màn hình nhỏ.
 - Không dùng MUI cho mọi phần chỉ vì đã cài MUI.
 - Không dùng đồng thời Emotion và styled-components.
 - Không để nhiều cơ chế cùng ghi đè một style property.
+HomeOnePage
+├── MainSlider
+│   ├── Header
+│   │   ├── Logo
+│   │   ├── Navigation
+│   │   └── Contact Button
+│   ├── Hero content
+│   │   ├── Title + description
+│   │   └── More Details button
+│   ├── Hero illustration
+│   └── SliderPagination
+├── CoreServices
+│   ├── SectionHeading
+│   └── ServiceCard grid (3 thẻ)
+├── AboutUs
+│   ├── Illustration
+│   └── Content
+│       ├── SectionHeading
+│       └── Action row: Button + WatchVideo
+├── ProfessionalTeams
+│   ├── SectionHeading
+│   └── TeamMemberCard grid (3 thẻ)
+├── ContactUs
+│   ├── Contact illustration
+│   └── Contact content
+│       ├── SectionHeading
+│       └── Form
+│           ├── First name + Last name
+│           ├── Email
+│           ├── Subject
+│           ├── Inquiry textarea
+│           └── Send button
+└── Footer
+    ├── Brand information
+    ├── Pages links
+    ├── Information links
+    └── Bottom row: social links + copyright + back-to-top

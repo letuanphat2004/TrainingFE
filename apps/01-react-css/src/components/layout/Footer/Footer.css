@@ -1,60 +1,53 @@
 .site-footer {
-  position: absolute;
-  z-index: 10;
-  top: 4283.66px;
-  left: 0;
-  width: 1440px;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 492px 129px 131px 173px 215px;
+  grid-template-rows: 219px 137.34px 27.84px;
+  grid-template-areas:
+    "brand . pages . information"
+    ". . . . ."
+    "social . copyright copyright copyright";
+  width: 1140px;
   height: 705.34px;
-  overflow: hidden;
-}
-
-.site-footer__background {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
+  margin-inline: auto;
+  padding: 230px 0 91.16px;
 }
 
 .site-footer__brand,
 .site-footer__pages,
 .site-footer__information,
 .site-footer > .footer-social-links,
-.site-footer__to-top,
 .site-footer__copyright {
-  position: absolute;
-  z-index: 1;
+  position: relative;
 }
 
 .site-footer__brand {
-  top: 241.34px;
-  left: 150px;
+  grid-area: brand;
   width: 492px;
-  height: 191px;
+  transform: translateY(11.34px);
 }
 
 .site-footer__pages {
-  top: 230px;
-  left: 771px;
+  grid-area: pages;
   width: 131px;
-  height: 219px;
 }
 
 .site-footer__information {
-  top: 230px;
-  left: 1075px;
+  grid-area: information;
   width: 215px;
-  height: 184px;
 }
 
 .site-footer > .footer-social-links {
-  top: 586.34px;
-  left: 150px;
+  grid-area: social;
 }
 
 .site-footer__to-top {
+  position: absolute;
+  z-index: 1;
   top: 499.34px;
-  left: 1339px;
+  left: 1189px;
   width: 36px;
   height: 36px;
   padding: 0;
@@ -75,61 +68,50 @@
 }
 
 .site-footer__copyright {
-  top: 590px;
-  left: 793px;
+  grid-area: copyright;
   width: 497px;
   margin: 0;
   color: #d7dbff;
-  font:  400 16px/1 "Poppins", Arial, sans-serif;
+  font: 400 16px/1 "Poppins", Arial, sans-serif;
   letter-spacing: 0.1em;
   text-align: right;
+  justify-self: end;
+  transform: translateY(3.66px);
 }
 
 @media (max-width: 1439px) {
   .site-footer {
-    position: relative;
-    top: auto;
-    left: auto;
-    display: grid;
-    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas:
+      "brand brand"
+      "pages information"
+      "social social"
+      "copyright copyright";
+    width: min(100%, 1140px);
     height: auto;
     min-height: 740px;
+    margin-inline: auto;
     padding: 96px 24px 48px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 48px 32px;
-  }
-
-  .site-footer__background {
-    object-fit: cover;
   }
 
   .site-footer__brand,
   .site-footer__pages,
   .site-footer__information,
   .site-footer > .footer-social-links,
-  .site-footer__to-top,
   .site-footer__copyright {
-    position: relative;
-    top: auto;
-    left: auto;
-  }
-
-  .site-footer__brand {
-    grid-column: 1 / -1;
-  }
-
-  .site-footer > .footer-social-links,
-  .site-footer__copyright {
-    grid-column: 1 / -1;
+    width: auto;
+    transform: none;
   }
 
   .site-footer__copyright {
-    width: 100%;
     text-align: left;
+    justify-self: stretch;
   }
 
   .site-footer__to-top {
-    position: absolute;
+    top: auto;
     right: 24px;
     bottom: 48px;
     left: auto;
@@ -138,14 +120,15 @@
 
 @media (max-width: 600px) {
   .site-footer {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "brand"
+      "pages"
+      "information"
+      "social"
+      "copyright";
     min-height: 0;
     padding: 72px 24px 96px;
-    grid-template-columns: 1fr;
     gap: 36px;
-  }
-
-  .site-footer__pages,
-  .site-footer__information {
-    grid-column: 1;
   }
 }
