@@ -10,10 +10,11 @@
 }
 
 .footer-link-group__list {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 11px;
   margin: 25px 0 0;
-  padding: 0;
+  padding: 6px 0 0;
   list-style: none;
 }
 
@@ -24,7 +25,7 @@
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  transform: translate(3px, 6px);
+  margin-left: 3px;
 }
 
 .footer-link-group__list a::before {

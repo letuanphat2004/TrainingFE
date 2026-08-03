@@ -13,6 +13,9 @@ export function HomeOnePage() {
         "--page-reference-width": `${homeOneFrames.page.width}px`,
         "--page-reference-height": `${homeOneFrames.page.height}px`,
     };
+    const footerStageStyle: CssVariableStyle = {
+        "--footer-stage-background": `url("${assets.footer.background}")`,
+    };
     return (<main className="home-one-page" data-page="home-one" style={pageStyle}>
       <HomeHero />
       <div className="home-one-page__content-stage">
@@ -23,13 +26,7 @@ export function HomeOnePage() {
         <img className="home-one-page__team-contact-background" src={assets.homeOne.contactBackground} alt="" aria-hidden="true" />
         <ContactUs />
       </div>
-      <div className="home-one-page__footer-stage">
-        <img
-          className="home-one-page__footer-background"
-          src={assets.footer.background}
-          alt=""
-          aria-hidden="true"
-        />
+      <div className="home-one-page__footer-stage" style={footerStageStyle}>
         <Footer />
       </div>
     </main>);

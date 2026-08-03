@@ -1,21 +1,20 @@
-import { assets } from "../../../constants/assets";
 import { Header } from "../../layout/Header";
 import { MainSlider } from "../MainSlider";
+import { assets } from "../../../constants/assets";
+import type { CSSProperties } from "react";
 import "./HomeHero.css";
 
 /**
- * Owns the visual background shared by the site header and Home 1 hero.
- * Header remains a reusable layout component; MainSlider owns only slider content.
+ * Owns the hero visual layer shared by the reusable Header and MainSlider.
+ * Bubble 1 belongs here because it sits behind both components in the design.
  */
 export function HomeHero() {
   return (
-    <section className="home-hero page-component" aria-label="Beautice introduction">
-      <img
-        alt=""
-        aria-hidden="true"
-        className="home-hero__background"
-        src={assets.homeOne.slideBackground}
-      />
+    <section
+      className="home-hero page-component"
+      aria-label="Beautice introduction"
+      style={{ "--home-hero-bubble": `url(${assets.homeOne.slideBackground})` } as CSSProperties}
+    >
       <Header activePage="home" />
       <MainSlider />
     </section>

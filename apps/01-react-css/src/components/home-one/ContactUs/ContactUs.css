@@ -1,75 +1,76 @@
 .contact-us {
-  position: absolute;
   z-index: 10;
-  top: 3142px;
-  left: -0.33px;
-  width: 1290.33px;
-  height: 1072px;
+  display: grid;
+  grid-template-columns: 520px 520px;
+  grid-template-rows: 169px 652px;
+  column-gap: 100px;
+  row-gap: 44px;
+  width: 1140px;
+  min-height: 1072px;
+  margin: 33px auto 0;
+  padding-top: 207px;
 }
 
 .contact-us__animation {
-  position: absolute;
   z-index: 1;
-  top: 366px;
-  left: 150.33px;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: start;
   width: 520px;
   height: 614px;
+  margin-top: 159px;
   object-fit: contain;
 }
 
 .contact-us__heading {
-  position: absolute;
   z-index: 1;
-  top: 207px;
-  left: 770.33px;
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
   width: 497px;
   height: 169px;
   text-align: left;
 }
 
 .contact-us__heading .section-heading__eyebrow {
-  position: absolute;
-  top: 0;
-  left: 1px;
   width: 90px;
   min-height: 20px;
+  margin-left: 1px;
   color: var(--color-accent);
   font: 600 16px/1.25 "Poppins", Arial, sans-serif;
 }
 
 .contact-us__heading .section-heading__title {
-  position: absolute;
-  top: 32px;
-  left: 0;
   width: 404px;
-  margin: 0;
+  margin: 12px 0 0;
   color: var(--color-primary);
   font: 600 36px/1.25 "Poppins", Arial, sans-serif;
 }
 
 .contact-us__heading .section-heading__description {
-  position: absolute;
-  top: 145px;
-  left: 0;
   width: 497px;
-  margin: 0;
+  margin: 18px 0 0;
   color: var(--color-text-muted);
   font: 400 16px/1 "Poppins", Arial, sans-serif;
   letter-spacing: 0.1em;
 }
 
 .contact-us__form {
-  position: absolute;
   z-index: 1;
-  top: 420px;
-  left: 770.33px;
+  grid-column: 2;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 242.21px 242.21px;
+  grid-template-rows: 61.58px 61.58px 61.58px 239.47px 58px;
+  column-gap: 35.58px;
+  row-gap: 38.31px;
   width: 520px;
   height: 652px;
 }
 
 .contact-us__field {
-  position: absolute;
-  width: 520px;
+  width: 100%;
   height: 61.58px;
   padding: 0 24px;
   border: 1px solid var(--color-border);
@@ -81,136 +82,80 @@
   letter-spacing: 0.1em;
 }
 
-.contact-us__field::placeholder {
-  color: var(--color-placeholder);
-  opacity: 1;
-}
+.contact-us__field::placeholder { color: var(--color-placeholder); opacity: 1; }
+.contact-us__field:focus { border-color: var(--color-border-focus); }
 
-.contact-us__field:focus {
-  border-color: var(--color-border-focus);
-}
-
-.contact-us__field--first-name {
-  top: 0;
-  left: 0;
-  width: 242.21px;
-}
-
-.contact-us__field--last-name {
-  top: 0;
-  left: 277.79px;
-  width: 242.21px;
-}
-
-.contact-us__field--email {
-  top: 99.89px;
-  left: 0;
-}
-
-.contact-us__field--subject {
-  top: 199.79px;
-  left: 0;
-}
+.contact-us__field--first-name { grid-column: 1; grid-row: 1; }
+.contact-us__field--last-name { grid-column: 2; grid-row: 1; }
+.contact-us__field--email { grid-column: 1 / -1; grid-row: 2; }
+.contact-us__field--subject { grid-column: 1 / -1; grid-row: 3; }
 
 .contact-us__field--inquiry {
-  top: 299.68px;
-  left: 0;
+  grid-column: 1 / -1;
+  grid-row: 4;
   height: 239.47px;
   padding-top: 20px;
   resize: vertical;
 }
 
 .contact-us__submit {
-  position: absolute;
-  top: 594px;
-  left: 1px;
+  grid-column: 1 / -1;
+  grid-row: 5;
+  align-self: start;
+  justify-self: start;
+  margin-left: 1px;
   --button-width: 248px;
   --button-height: 58px;
 }
 
 @media (max-width: 1439px) {
   .contact-us {
-    position: relative;
-    top: auto;
-    left: auto;
-    display: grid;
     grid-template-areas:
       "animation heading"
       "animation form";
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto auto;
     align-items: center;
     width: min(calc(100% - 48px), 1140px);
-    height: auto;
+    min-height: 0;
     margin: 96px auto;
+    padding-top: 0;
     column-gap: 64px;
     row-gap: 32px;
   }
 
-  .contact-us__animation,
-  .contact-us__heading,
-  .contact-us__form {
-    position: relative;
-    top: auto;
-    left: auto;
-    width: 100%;
-    height: auto;
-  }
-
   .contact-us__animation {
     grid-area: animation;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
     aspect-ratio: 520 / 614;
   }
 
-  .contact-us__heading {
-    grid-area: heading;
-  }
-
+  .contact-us__heading { grid-area: heading; width: 100%; height: auto; }
   .contact-us__form {
     grid-area: form;
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+    gap: 20px;
   }
 
   .contact-us__heading .section-heading__eyebrow,
   .contact-us__heading .section-heading__title,
-  .contact-us__heading .section-heading__description {
-    position: static;
-    width: auto;
-  }
+  .contact-us__heading .section-heading__description { width: auto; }
 
-  .contact-us__heading .section-heading__title {
-    margin-top: 12px;
-  }
+  .contact-us__heading .section-heading__title { margin-top: 12px; }
+  .contact-us__heading .section-heading__description { margin-top: 18px; line-height: 1.5; }
 
-  .contact-us__heading .section-heading__description {
-    margin-top: 18px;
-    line-height: 1.5;
-  }
-
-  .contact-us__form {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-  }
-
-  .contact-us__field,
-  .contact-us__submit {
-    position: static;
-    width: 100%;
-  }
-
+  .contact-us__field { width: 100%; }
   .contact-us__field--email,
   .contact-us__field--subject,
   .contact-us__field--inquiry,
-  .contact-us__submit {
-    grid-column: 1 / -1;
-  }
-
-  .contact-us__field--inquiry {
-    min-height: 180px;
-  }
-
-  .contact-us__submit {
-    width: max-content;
-  }
+  .contact-us__submit { grid-column: 1 / -1; }
+  .contact-us__field--inquiry { min-height: 180px; }
+  .contact-us__submit { width: max-content; }
 }
 
 @media (max-width: 560px) {
@@ -223,12 +168,7 @@
     row-gap: 28px;
   }
 
-  .contact-us__form {
-    grid-template-columns: 1fr;
-  }
-
+  .contact-us__form { grid-template-columns: 1fr; }
   .contact-us__field--first-name,
-  .contact-us__field--last-name {
-    grid-column: 1 / -1;
-  }
+  .contact-us__field--last-name { grid-column: 1 / -1; }
 }

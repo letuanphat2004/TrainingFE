@@ -1,16 +1,12 @@
 .core-services {
-  position: absolute;
   z-index: 10;
-  top: 936px;
-  left: 150px;
+  display: flex;
+  flex-direction: column;
   width: 1140px;
-  height: 732px;
+  margin: 131px auto 0;
 }
 
 .core-services__heading {
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +15,6 @@
 }
 
 .core-services__heading .section-heading__eyebrow {
-  position: static;
   width: 113px;
   min-height: 20px;
   margin: 0;
@@ -28,7 +23,6 @@
 }
 
 .core-services__heading .section-heading__title {
-  position: static;
   width: 430px;
   min-height: 97px;
   margin: 12px 0 0;
@@ -37,7 +31,6 @@
 }
 
 .core-services__heading .section-heading__description {
-  position: static;
   width: 848px;
   min-height: 51px;
   margin: 16px 0 0;
@@ -47,13 +40,11 @@
 }
 
 .core-services__cards {
-  position: absolute;
-  top: 274px;
-  left: 0;
   display: grid;
   grid-template-columns: repeat(3, 343px);
   column-gap: 55.5px;
   width: 1140px;
+  margin-top: 82px;
 }
 
 .core-services .service-card {
@@ -66,13 +57,11 @@
 }
 
 .core-services .service-card__image {
-  position: static;
   width: 166px;
   height: 166px;
 }
 
 .core-services .service-card__title {
-  position: static;
   width: 295px;
   margin: 57px 0 0;
   color: var(--color-primary);
@@ -80,7 +69,6 @@
 }
 
 .core-services .service-card__description {
-  position: static;
   width: 269px;
   margin: 15px 0 0;
   color: var(--color-text-muted);
@@ -90,9 +78,6 @@
 
 @media (max-width: 1439px) {
   .core-services {
-    position: relative;
-    top: auto;
-    left: auto;
     width: min(calc(100% - 48px), 1140px);
     height: auto;
     min-height: 0;
@@ -100,9 +85,6 @@
   }
 
   .core-services__heading {
-    position: relative;
-    top: auto;
-    left: auto;
     width: 100%;
     height: auto;
   }
@@ -121,9 +103,6 @@
   .core-services__cards {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 32px;
-    position: relative;
-    top: auto;
-    left: auto;
     width: 100%;
     margin-top: 64px;
   }

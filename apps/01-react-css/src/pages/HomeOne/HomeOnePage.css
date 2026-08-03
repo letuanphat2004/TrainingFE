@@ -1,6 +1,8 @@
 .home-one-page {
   position: relative;
   isolation: isolate;
+  display: flex;
+  flex-direction: column;
   width: min(100%, var(--page-reference-width));
   min-height: var(--page-reference-height);
   margin-inline: auto;
@@ -8,10 +10,24 @@
   background: var(--color-surface);
 }
 
+/* Normal-flow owner for the four content sections. Only its two decorative
+   bubbles are taken out of flow. */
+.home-one-page__content-stage {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.home-one-page__content-stage > section {
+  z-index: 1;
+}
+
 .home-one-page__services-about-background {
   position: absolute;
   z-index: 0;
-  top: 1448px;
+  top: 643px;
   left: 493px;
   width: 948.15px;
   height: 1028.89px;
@@ -21,7 +37,7 @@
 .home-one-page__team-contact-background {
   position: absolute;
   z-index: 0;
-  top: 3142px;
+  top: 2337px;
   left: -0.33px;
   width: 1175.73px;
   height: 929px;
@@ -29,23 +45,18 @@
 }
 
 .home-one-page__footer-stage {
-  position: absolute;
-  z-index: 10;
-  top: 4283.66px;
-  left: 0;
-  width: 1440px;
-  height: 705.34px;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.home-one-page__footer-background {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+  display: flex;
   width: 100%;
-  height: 100%;
-  pointer-events: none;
+  min-height: 705.34px;
+  overflow: hidden;
+  /* Footer BG already contains the navy footer and its bottom wave.
+     Keep transparent pixels transparent instead of filling them with an
+     extra primary-colour rectangle. */
+  background-color: transparent;
+  background-image: var(--footer-stage-background);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 @media (max-width: 1439px) {
@@ -53,11 +64,6 @@
     width: 100%;
     min-height: 100vh;
     overflow: clip;
-  }
-
-  .home-one-page__content-stage {
-    position: relative;
-    display: flow-root;
   }
 
   .home-one-page__services-about-background {
@@ -74,19 +80,10 @@
   }
 
   .home-one-page__footer-stage {
-    position: relative;
-    top: auto;
-    left: auto;
     width: 100%;
-    height: auto;
-    min-height: 0;
+    min-height: 740px;
     overflow: hidden;
-    background: var(--color-primary);
-  }
-
-  .home-one-page__footer-background {
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
+    /* `cover` crops the Figma artwork at narrow widths. */
+    background-size: 100% 100%;
   }
 }

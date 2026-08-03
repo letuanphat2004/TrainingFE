@@ -1,59 +1,70 @@
 .main-slider {
-  position: relative;
   z-index: 1;
+  display: grid;
+  grid-template-columns: 189px 474px 22px 601.5px;
+  grid-template-rows: 263px 397.5px 144.5px;
   width: 1286.5px;
   height: 805px;
 }
 
 .hero-copy,
-.main-slider__frame-one,
+.main-slider__illustration,
 .slider-pagination {
-  position: absolute;
   z-index: 1;
 }
 
+.hero-copy {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 53px;
+}
+
 .hero-copy__title {
-  position: absolute;
-  top: 316px;
-  left: 189px;
   width: 430px;
-  height: 128px;
   color: var(--color-primary);
   font: 600 48px/1.25 "Poppins", Arial, sans-serif;
   letter-spacing: 0;
 }
 
 .hero-copy__description {
-  position: absolute;
-  top: 450px;
-  left: 189px;
   width: 474px;
-  height: 54px;
+  margin-top: 14px;
   color: var(--color-primary);
   font: 500 16px/1.2 "Poppins", Arial, sans-serif;
   letter-spacing: 0.1em;
 }
 
 .hero-copy__button {
-  position: absolute;
-  top: 526px;
-  left: 189px;
+  margin-top: 18px;
   --button-width: 200px;
   --button-height: 58.36px;
   --button-radius: 50px;
 }
 
+.main-slider__illustration {
+  grid-column: 4;
+  grid-row: 2;
+  align-self: start;
+  display: flex;
+  align-items: flex-start;
+}
+
 .main-slider__frame-one {
-  top: 263px;
-  left: 685px;
+  display: block;
   width: 601.5px;
   height: 397.5px;
   pointer-events: none;
 }
 
 .slider-pagination {
-  top: 796.85px;
-  left: 685px;
+  grid-column: 4;
+  grid-row: 3;
+  align-self: end;
+  justify-self: start;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,9 +95,9 @@
 
 @media (max-width: 1439px) {
   .main-slider {
-    position: relative;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto auto;
     align-items: center;
     gap: 32px;
     width: 100%;
@@ -95,24 +106,24 @@
   }
 
   .hero-copy,
-  .main-slider__frame-one,
+  .main-slider__illustration,
   .slider-pagination {
-    position: relative;
-    top: auto;
-    left: auto;
+    z-index: 1;
   }
 
   .hero-copy {
+    grid-column: auto;
+    grid-row: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     min-width: 0;
+    padding-top: 0;
   }
 
   .hero-copy__title,
   .hero-copy__description,
   .hero-copy__button {
-    position: static;
     width: auto;
     height: auto;
     margin: 0;
@@ -133,6 +144,13 @@
     margin-top: 28px;
   }
 
+  .main-slider__illustration {
+    grid-column: auto;
+    grid-row: auto;
+    align-self: center;
+    justify-content: center;
+  }
+
   .main-slider__frame-one {
     width: 100%;
     height: auto;
@@ -142,6 +160,7 @@
     grid-column: 1 / -1;
     justify-self: center;
   }
+
 }
 
 @media (max-width: 720px) {

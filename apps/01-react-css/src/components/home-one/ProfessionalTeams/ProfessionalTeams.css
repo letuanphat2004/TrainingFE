@@ -1,17 +1,16 @@
 .professional-teams {
-  position: absolute;
   z-index: 10;
-  top: 2344px;
-  left: 178px;
+  display: flex;
+  flex-direction: column;
   width: 1085px;
-  height: 861px;
+  margin: 192px auto 0;
 }
 
 .professional-teams__heading {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 118px;
+  margin-inline: auto;
   width: 848px;
   height: 148px;
   text-align: center;
@@ -40,37 +39,24 @@
 }
 
 .professional-teams__members {
-  position: absolute;
-  top: 326px;
-  left: 0;
   display: grid;
   grid-template-columns: repeat(3, 270px);
   column-gap: 137.5px;
   width: 1085px;
+  margin-top: 178px;
 }
 
 @media (max-width: 1439px) {
   .professional-teams {
-    position: relative;
-    top: auto;
-    left: auto;
-    display: block;
     width: min(calc(100% - 48px), 1085px);
     height: auto;
     margin: 96px auto;
   }
 
-  .professional-teams__heading,
-  .professional-teams__members {
-    position: relative;
-    top: auto;
-    left: auto;
-  }
-
   .professional-teams__heading {
     width: 100%;
     height: auto;
-    margin-left: 0;
+    margin-inline: auto;
   }
 
   .professional-teams__heading .section-heading__eyebrow,
@@ -94,6 +80,7 @@
     justify-content: center;
     gap: 64px 54px;
     width: 100%;
+    margin-top: 64px;
   }
 
   .professional-teams .team-member-card--featured::before {
