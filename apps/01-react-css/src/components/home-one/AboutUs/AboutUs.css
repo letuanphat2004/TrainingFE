@@ -39,21 +39,21 @@
 .about-us__heading .section-heading__eyebrow {
   width: 73px;
   min-height: 20px;
-  color: #ff64ae;
+  color: var(--color-accent);
   font: 600 16px/1.25 "Poppins", Arial, sans-serif;
 }
 
 .about-us__heading .section-heading__title {
   width: 664px;
   margin-top: 12px;
-  color: #091156;
+  color: var(--color-primary);
   font: 600 36px/1.25 "Poppins", Arial, sans-serif;
 }
 
 .about-us__heading .section-heading__description {
   width: 483px;
   margin-top: 18px;
-  color: #8b8b8b;
+  color: var(--color-text-muted);
   font: 400 16px/1.5 "Poppins", Arial, sans-serif;
   letter-spacing: 0.1em;
   white-space: pre-line;
@@ -81,7 +81,7 @@
   height: 350px;
   margin-top: 44.56px;
   overflow: hidden;
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   box-shadow: 0 0 50px 25px rgb(196 196 196 / 20%);
 }
 

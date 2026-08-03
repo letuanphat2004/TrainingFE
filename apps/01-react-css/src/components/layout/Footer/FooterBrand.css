@@ -1,5 +1,5 @@
 .footer-brand {
-  color: #d7dbff;
+  color: var(--color-footer-text);
 }
 
 .footer-brand__logo {
@@ -13,7 +13,7 @@
 .footer-brand__contact {
   position: absolute;
   margin: 0;
-  color: #d7dbff;
+  color: var(--color-footer-text);
   font-family: "Poppins", Arial, sans-serif;
   letter-spacing: 0.1em;
 }

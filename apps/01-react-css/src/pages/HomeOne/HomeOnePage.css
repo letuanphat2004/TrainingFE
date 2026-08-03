@@ -5,7 +5,7 @@
   min-height: var(--page-reference-height);
   margin-inline: auto;
   overflow: hidden;
-  background: #ffffff;
+  background: var(--color-surface);
 }
 
 .home-one-page__services-about-background {
@@ -81,7 +81,7 @@
     height: auto;
     min-height: 0;
     overflow: hidden;
-    background: #091156;
+    background: var(--color-primary);
   }
 
   .home-one-page__footer-background {

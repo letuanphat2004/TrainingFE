@@ -6,10 +6,10 @@
   min-height: var(--button-height, 52px);
   padding: 0 var(--button-horizontal-padding, 20px);
   border: 0;
-  border-radius: var(--button-radius, 50px);
-  background: var(--button-background, #ff64ae);
-  box-shadow: var(--button-shadow, 0 12px 24px rgb(255 100 174 / 25%));
-  color: var(--button-color, #ffffff);
+  border-radius: var(--button-radius, var(--radius-pill));
+  background: var(--button-background, var(--color-accent));
+  box-shadow: var(--button-shadow, var(--shadow-button));
+  color: var(--button-color, var(--color-surface));
   cursor: pointer;
   font: 600 16px/1.5 "Poppins", Arial, sans-serif;
   letter-spacing: 0.1em;
@@ -19,13 +19,13 @@
 }
 
 .button:hover {
-  background: var(--button-hover-background, #f554a1);
-  box-shadow: var(--button-hover-shadow, 0 14px 28px rgb(255 100 174 / 32%));
+  background: var(--button-hover-background, var(--color-accent-hover));
+  box-shadow: var(--button-hover-shadow, var(--shadow-button-hover));
   transform: translateY(-1px);
 }
 
 .button:focus-visible {
-  outline: 3px solid rgb(9 17 86 / 35%);
+  outline: var(--outline-focus);
   outline-offset: 3px;
 }
 

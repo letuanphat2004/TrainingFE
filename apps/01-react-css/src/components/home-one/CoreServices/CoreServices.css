@@ -23,7 +23,7 @@
   width: 113px;
   min-height: 20px;
   margin: 0;
-  color: #ff64ae;
+  color: var(--color-accent);
   font: 600 16px/1.25 "Poppins", Arial, sans-serif;
 }
 
@@ -32,7 +32,7 @@
   width: 430px;
   min-height: 97px;
   margin: 12px 0 0;
-  color: #091156;
+  color: var(--color-primary);
   font: 600 36px/1.25 "Poppins", Arial, sans-serif;
 }
 
@@ -41,7 +41,7 @@
   width: 848px;
   min-height: 51px;
   margin: 16px 0 0;
-  color: #8b8b8b;
+  color: var(--color-text-muted);
   font: 400 16px/1.32 "Poppins", Arial, sans-serif;
   letter-spacing: 0.1em;
 }
@@ -75,7 +75,7 @@
   position: static;
   width: 295px;
   margin: 57px 0 0;
-  color: #091156;
+  color: var(--color-primary);
   font: 600 18px/1.5 "Poppins", Arial, sans-serif;
 }
 
@@ -83,7 +83,7 @@
   position: static;
   width: 269px;
   margin: 15px 0 0;
-  color: #8b8b8b;
+  color: var(--color-text-muted);
   font: 400 14px/1.5 "Poppins", Arial, sans-serif;
   letter-spacing: 0.1em;
 }

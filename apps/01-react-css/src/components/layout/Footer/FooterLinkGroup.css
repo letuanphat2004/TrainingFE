@@ -1,5 +1,5 @@
 .footer-link-group {
-  color: #ffffff;
+  color: var(--color-surface);
 }
 
 .footer-link-group__title {
@@ -18,7 +18,7 @@
 }
 
 .footer-link-group__list a {
-  color: #d7dbff;
+  color: var(--color-footer-text);
   font: 500 16px/1 "Poppins", Arial, sans-serif;
   letter-spacing: 0.1em;
   text-decoration: none;
@@ -32,7 +32,7 @@
   width: 6px;
   height: 8px;
   margin-right: 8px;
-  background: #ffffff;
+  background: var(--color-surface);
   clip-path: polygon(22% 0, 100% 50%, 22% 100%);
   content: "";
   vertical-align: -2px;

@@ -1,9 +1,9 @@
 .service-card {
   box-sizing: border-box;
   overflow: hidden;
-  border-radius: var(--service-card-radius, 42px);
-  background: var(--service-card-background, #ffffff);
-  box-shadow: var(--service-card-shadow, 0 25px 50px rgb(0 0 0 / 3%));
+  border-radius: var(--service-card-radius, var(--radius-card));
+  background: var(--service-card-background, var(--color-surface));
+  box-shadow: var(--service-card-shadow, var(--shadow-card));
   text-align: center;
 }
 

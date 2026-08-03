@@ -18,7 +18,7 @@
   left: 189px;
   width: 430px;
   height: 128px;
-  color: #091156;
+  color: var(--color-primary);
   font: 600 48px/1.25 "Poppins", Arial, sans-serif;
   letter-spacing: 0;
 }
@@ -29,7 +29,7 @@
   left: 189px;
   width: 474px;
   height: 54px;
-  color: #091156;
+  color: var(--color-primary);
   font: 500 16px/1.2 "Poppins", Arial, sans-serif;
   letter-spacing: 0.1em;
 }
@@ -67,18 +67,18 @@
   padding: 0;
   border: 0;
   border-radius: 50px;
-  background: #eeeef1;
+  background: var(--color-pagination-muted);
   cursor: pointer;
 }
 
 .slider-pagination__indicator[aria-current="true"] {
   width: 25px;
   height: 5px;
-  background: #41487f;
+  background: var(--color-pagination);
 }
 
 .slider-pagination__indicator:focus-visible {
-  outline: 2px solid #091156;
+  outline: 2px solid var(--color-primary);
   outline-offset: 3px;
 }
 

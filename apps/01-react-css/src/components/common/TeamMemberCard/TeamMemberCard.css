@@ -16,9 +16,9 @@
   left: -77px;
   width: 424px;
   height: 626px;
-  border-radius: 42px;
-  background: #ffffff;
-  box-shadow: 0 25px 50px 25px #f6f7ff;
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: 0 25px 50px 25px var(--color-card-shadow);
   content: "";
 }
 
@@ -33,7 +33,7 @@
 .team-member-card__role {
   width: 100%;
   margin: 53px 0 0;
-  color: #ff64ae;
+  color: var(--color-accent);
   font: 600 16px/1.25 "Poppins", Arial, sans-serif;
 }
 
@@ -41,14 +41,14 @@
   width: 263px;
   min-height: 37px;
   margin: 16px 0 0;
-  color: #091156;
+  color: var(--color-primary);
   font: 600 18px/1.25 "Poppins", Arial, sans-serif;
 }
 
 .team-member-card__description {
   width: 270px;
   margin: 1px 0 0;
-  color: #8b8b8b;
+  color: var(--color-text-muted);
   font: 400 14px/1 "Poppins", Arial, sans-serif;
   letter-spacing: 0.1em;
   white-space: pre-line;

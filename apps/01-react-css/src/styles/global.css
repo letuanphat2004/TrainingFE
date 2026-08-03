@@ -1,6 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  color: #091156;
-  background: #ffffff;
+  /* Design tokens: shared visual values for the CSS implementation. */
+  --color-primary: #091156;
+  --color-accent: #ff64ae;
+  --color-accent-hover: #f554a1;
+  --color-text-muted: #8b8b8b;
+  --color-surface: #ffffff;
+  --color-footer-text: #d7dbff;
+  --color-border: #d9ddfe;
+  --color-placeholder: #d0d0d0;
+  --color-border-focus: #7b87d9;
+  --color-pagination: #41487f;
+  --color-pagination-muted: #eeeef1;
+  --color-card-shadow: #f6f7ff;
+
+  --radius-pill: 50px;
+  --radius-card: 42px;
+  --shadow-button: 0 12px 24px rgb(255 100 174 / 25%);
+  --shadow-button-hover: 0 14px 28px rgb(255 100 174 / 32%);
+  --shadow-card: 0 25px 50px rgb(0 0 0 / 3%);
+  --outline-focus: 3px solid rgb(9 17 86 / 35%);
+
+  color: var(--color-primary);
+  background: var(--color-surface);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -8,7 +33,7 @@
 
 body {
   min-width: 320px;
-  background: #ffffff;
+  background: var(--color-surface);
 }
 
 #root {

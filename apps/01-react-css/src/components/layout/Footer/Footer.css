@@ -63,7 +63,7 @@
 }
 
 .site-footer__to-top:focus-visible {
-  outline: 2px solid #ffffff;
+  outline: 2px solid var(--color-surface);
   outline-offset: 3px;
 }
 
@@ -71,7 +71,7 @@
   grid-area: copyright;
   width: 497px;
   margin: 0;
-  color: #d7dbff;
+  color: var(--color-footer-text);
   font: 400 16px/1 "Poppins", Arial, sans-serif;
   letter-spacing: 0.1em;
   text-align: right;

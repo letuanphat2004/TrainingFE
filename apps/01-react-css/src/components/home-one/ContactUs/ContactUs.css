@@ -33,7 +33,7 @@
   left: 1px;
   width: 90px;
   min-height: 20px;
-  color: #ff64ae;
+  color: var(--color-accent);
   font: 600 16px/1.25 "Poppins", Arial, sans-serif;
 }
 
@@ -43,7 +43,7 @@
   left: 0;
   width: 404px;
   margin: 0;
-  color: #091156;
+  color: var(--color-primary);
   font: 600 36px/1.25 "Poppins", Arial, sans-serif;
 }
 
@@ -53,7 +53,7 @@
   left: 0;
   width: 497px;
   margin: 0;
-  color: #8b8b8b;
+  color: var(--color-text-muted);
   font: 400 16px/1 "Poppins", Arial, sans-serif;
   letter-spacing: 0.1em;
 }
@@ -72,22 +72,22 @@
   width: 520px;
   height: 61.58px;
   padding: 0 24px;
-  border: 1px solid #d9ddfe;
+  border: 1px solid var(--color-border);
   border-radius: 15px;
   outline: none;
-  background: #ffffff;
-  color: #8b8b8b;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
   font: 400 16px/1 "Poppins", Arial, sans-serif;
   letter-spacing: 0.1em;
 }
 
 .contact-us__field::placeholder {
-  color: #d0d0d0;
+  color: var(--color-placeholder);
   opacity: 1;
 }
 
 .contact-us__field:focus {
-  border-color: #7b87d9;
+  border-color: var(--color-border-focus);
 }
 
 .contact-us__field--first-name {
