@@ -10,80 +10,110 @@
   background: var(--color-surface);
 }
 
-/* Normal-flow owner for the four content sections. Only its two decorative
-   bubbles are taken out of flow. */
-.home-one-page__content-stage {
+.home-one-page__background-layer {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+}
+
+.home-one-page__content {
   position: relative;
-  isolation: isolate;
-  display: flex;
-  flex-direction: column;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: 805px auto auto auto auto auto;
   width: 100%;
 }
 
-.home-one-page__content-stage > section {
-  z-index: 1;
+/* Header and MainSlider are independent page blocks sharing the first grid row. */
+.home-one-page__content > .site-header {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: start;
+  justify-self: center;
+  margin-top: 41px;
+  z-index: 2;
 }
 
-.home-one-page__services-about-background {
+.home-one-page__content > .main-slider {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+}
+
+.home-one-page__content > .core-services {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.home-one-page__content > .about-us {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.home-one-page__content > .professional-teams {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+.home-one-page__content > .contact-us {
+  grid-column: 1;
+  grid-row: 5;
+}
+
+.home-one-page__content > .site-footer {
+  grid-column: 1;
+  grid-row: 6;
+}
+
+.home-one-page__background {
   position: absolute;
-  z-index: 0;
-  top: 643px;
+  display: block;
+  max-width: none;
+  pointer-events: none;
+}
+
+/* Decorative artwork belongs to the page-level layer, never to a content block. */
+.home-one-page__background--bubble-1 {
+  top: 0;
+  left: 0;
+  width: 1266.42px;
+  height: 743px;
+  transform: scaleX(-1);
+  transform-origin: center;
+}
+
+.home-one-page__background--bubble-3 {
+  top: 1448px;
   left: 493px;
   width: 948.15px;
   height: 1028.89px;
-  pointer-events: none;
 }
 
-.home-one-page__team-contact-background {
-  position: absolute;
-  z-index: 0;
-  top: 2337px;
+.home-one-page__background--bubble-2 {
+  top: 3142px;
   left: -0.33px;
   width: 1175.73px;
   height: 929px;
-  pointer-events: none;
+  transform: rotate(180deg);
+  transform-origin: center;
 }
 
-.home-one-page__footer-stage {
-  display: flex;
-  width: 100%;
-  min-height: 705.34px;
-  overflow: hidden;
-  /* Footer BG already contains the navy footer and its bottom wave.
-     Keep transparent pixels transparent instead of filling them with an
-     extra primary-colour rectangle. */
-  background-color: transparent;
-  background-image: var(--footer-stage-background);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+.home-one-page__background--footer {
+  top: 4283.66px;
+  left: 0;
+  width: 1440px;
+  height: 705.34px;
 }
 
 @media (max-width: 1439px) {
-  .home-one-page {
-    width: 100%;
-    min-height: 100vh;
-    overflow: clip;
+  .home-one-page__content {
+    display: flex;
+    flex-direction: column;
   }
 
-  .home-one-page__services-about-background {
-    display: none;
-  }
-
-  .home-one-page__team-contact-background {
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: auto;
-    width: min(100%, 1175.73px);
-    height: auto;
-  }
-
-  .home-one-page__footer-stage {
-    width: 100%;
-    min-height: 740px;
-    overflow: hidden;
-    /* `cover` crops the Figma artwork at narrow widths. */
-    background-size: 100% 100%;
+  .home-one-page__content > .site-header {
+    margin-top: 0;
   }
 }
