@@ -20,51 +20,19 @@
 .home-one-page__content {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: 805px auto auto auto auto auto;
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
-/* Header and MainSlider are independent page blocks sharing the first grid row. */
+/* Each visible section is a normal-flow block. */
 .home-one-page__content > .site-header {
-  grid-column: 1;
-  grid-row: 1;
-  align-self: start;
-  justify-self: center;
-  margin-top: 41px;
+  flex: 0 0 auto;
   z-index: 2;
 }
 
 .home-one-page__content > .main-slider {
-  grid-column: 1;
-  grid-row: 1;
-  justify-self: center;
-}
-
-.home-one-page__content > .core-services {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.home-one-page__content > .about-us {
-  grid-column: 1;
-  grid-row: 3;
-}
-
-.home-one-page__content > .professional-teams {
-  grid-column: 1;
-  grid-row: 4;
-}
-
-.home-one-page__content > .contact-us {
-  grid-column: 1;
-  grid-row: 5;
-}
-
-.home-one-page__content > .site-footer {
-  grid-column: 1;
-  grid-row: 6;
+  flex: 0 0 auto;
 }
 
 .home-one-page__background {
@@ -96,8 +64,6 @@
   left: -0.33px;
   width: 1175.73px;
   height: 929px;
-  transform: rotate(180deg);
-  transform-origin: center;
 }
 
 .home-one-page__background--footer {
@@ -105,15 +71,4 @@
   left: 0;
   width: 1440px;
   height: 705.34px;
-}
-
-@media (max-width: 1439px) {
-  .home-one-page__content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .home-one-page__content > .site-header {
-    margin-top: 0;
-  }
 }

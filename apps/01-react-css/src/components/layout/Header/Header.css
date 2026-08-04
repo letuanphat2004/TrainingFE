@@ -2,8 +2,11 @@
   z-index: 20;
   display: flex;
   align-items: center;
-  width: 1140px;
-  height: 63px;
+  width: 100%;
+  min-height: 63px;
+  margin-top: 41px;
+  padding-inline: 150px;
+  box-sizing: border-box;
 }
 
 .site-header__brand {
@@ -16,22 +19,21 @@
 
 .site-header__brand img {
   display: block;
-  width: 262px;
-  height: auto;
+  width: 258px;
+  height: 63px;
+  object-fit: contain;
 }
 
 .site-header__navigation {
-  align-self: flex-start;
-  flex: 0 0 481px;
-  width: 481px;
-  margin: 17px 0 0 191px;
+  flex: 0 1 auto;
+  margin-left: auto;
 }
 
 .site-header__navigation-list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: flex-end;
+  gap: clamp(24px, 3.33vw, 48px);
   min-height: 25px;
   margin: 0;
   padding: 0;
@@ -70,10 +72,9 @@
 }
 
 .site-header__contact {
-  align-self: flex-start;
   flex: 0 0 158px;
   width: 158px;
-  margin: 4px 0 0 auto;
+  margin-left: clamp(24px, 3.61vw, 52px);
   --button-width: 158px;
   --button-height: 52px;
 }
@@ -85,26 +86,23 @@
 
 @media (max-width: 1439px) {
   .site-header {
-    width: min(1140px, calc(100% - 48px));
-    min-height: 63px;
-    margin: 24px auto 0;
+    margin-top: 41px;
+    padding-inline: 48px;
   }
 
   .site-header__navigation {
-    align-self: center;
-    margin: 0 0 0 auto;
+    margin-left: auto;
   }
 
   .site-header__contact {
-    align-self: center;
-    margin: 0 0 0 32px;
+    margin-left: 32px;
   }
 }
 
 @media (max-width: 1050px) {
   .site-header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .site-header__contact {
@@ -151,8 +149,8 @@
 
   .site-header__navigation--open {
     display: flex;
-    grid-column: 1 / -1;
-    grid-row: 2;
+    flex: 1 0 100%;
+    order: 3;
     flex-direction: column;
     align-items: stretch;
     gap: 20px;
@@ -183,8 +181,8 @@
 
 @media (max-width: 540px) {
   .site-header {
-    width: min(1140px, calc(100% - 32px));
     margin-top: 16px;
+    padding-inline: 16px;
   }
 
   .site-header__brand,

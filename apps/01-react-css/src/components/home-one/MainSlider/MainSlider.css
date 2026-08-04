@@ -1,26 +1,35 @@
 .main-slider {
   z-index: 1;
-  display: grid;
-  grid-template-columns: 189px 474px 22px 601.5px;
-  grid-template-rows: 263px 397.5px 144.5px;
-  width: 1286.5px;
-  height: 805px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 701px;
+  padding: px 150px 0;
+  box-sizing: border-box;
 }
 
+.main-slider__content,
 .hero-copy,
 .main-slider__illustration,
+.main-slider__pagination-area,
 .slider-pagination {
   z-index: 1;
 }
 
+.main-slider__content {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
 .hero-copy {
-  grid-column: 2;
-  grid-row: 2;
-  align-self: start;
+  flex: 0 0 535px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-left: 39px;
   padding-top: 53px;
+  box-sizing: border-box;
 }
 
 .hero-copy__title {
@@ -46,9 +55,7 @@
 }
 
 .main-slider__illustration {
-  grid-column: 4;
-  grid-row: 2;
-  align-self: start;
+  flex: 0 1 601.5px;
   display: flex;
   align-items: flex-start;
 }
@@ -60,11 +67,13 @@
   pointer-events: none;
 }
 
+.main-slider__pagination-area {
+  align-self:center;
+  display: flex;
+  margin-top: 135px;
+}
+
 .slider-pagination {
-  grid-column: 4;
-  grid-row: 3;
-  align-self: end;
-  justify-self: start;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -95,14 +104,14 @@
 
 @media (max-width: 1439px) {
   .main-slider {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    grid-template-rows: auto auto;
-    align-items: center;
-    gap: 32px;
     width: 100%;
     min-height: 620px;
     padding: 72px 48px 56px;
+  }
+
+  .main-slider__content {
+    align-items: center;
+    gap: 32px;
   }
 
   .hero-copy,
@@ -112,12 +121,12 @@
   }
 
   .hero-copy {
-    grid-column: auto;
-    grid-row: auto;
+    flex: 1 1 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     min-width: 0;
+    padding-left: 0;
     padding-top: 0;
   }
 
@@ -145,9 +154,7 @@
   }
 
   .main-slider__illustration {
-    grid-column: auto;
-    grid-row: auto;
-    align-self: center;
+    flex: 1 1 0;
     justify-content: center;
   }
 
@@ -156,18 +163,22 @@
     height: auto;
   }
 
-  .slider-pagination {
-    grid-column: 1 / -1;
-    justify-self: center;
+  .main-slider__pagination-area {
+    align-self: center;
+    flex-basis: auto;
+    margin: 40px 0 0;
   }
 
 }
 
 @media (max-width: 720px) {
   .main-slider {
-    grid-template-columns: 1fr;
     min-height: 0;
     padding: 48px 24px 40px;
+  }
+
+  .main-slider__content {
+    flex-direction: column;
   }
 
   .hero-copy__title {

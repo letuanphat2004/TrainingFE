@@ -21,7 +21,7 @@ export function Header({ activePage, variant, logo = assets.brand.mainLogo }: He
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className={`site-header container page-component${variant ? ` site-header--${variant}` : ""}`}>
+    <header className={`site-header page-component${variant ? ` site-header--${variant}` : ""}`}>
       <a className="site-header__brand" href="#home" aria-label="Beautice home">
         <img src={logo} width="258" height="63" alt="Beautice" />
       </a>

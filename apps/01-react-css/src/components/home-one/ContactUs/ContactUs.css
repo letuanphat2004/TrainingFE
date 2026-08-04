@@ -5,10 +5,10 @@
   grid-template-rows: 169px 652px;
   column-gap: 100px;
   row-gap: 44px;
-  width: 1140px;
+  width: 100%;
   min-height: 1072px;
-  margin: 33px auto 0;
-  padding-top: 207px;
+  padding: 235px 150px 0;
+  box-sizing: border-box;
 }
 
 .contact-us__animation {
