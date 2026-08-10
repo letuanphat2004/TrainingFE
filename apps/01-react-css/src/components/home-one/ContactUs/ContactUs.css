@@ -119,7 +119,7 @@
     width: min(calc(100% - 48px), 1140px);
     min-height: 0;
     margin: 96px auto;
-    padding-top: 0;
+    padding: 0;
     column-gap: 64px;
     row-gap: 32px;
   }
