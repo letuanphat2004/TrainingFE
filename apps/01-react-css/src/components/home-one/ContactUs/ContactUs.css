@@ -155,7 +155,11 @@
   .contact-us__field--inquiry,
   .contact-us__submit { grid-column: 1 / -1; }
   .contact-us__field--inquiry { min-height: 180px; }
-  .contact-us__submit { width: max-content; }
+  .contact-us__submit {
+    width: min(248px, 100%);
+    min-width: 0;
+    --button-width: 0;
+  }
 }
 
 @media (max-width: 560px) {
@@ -168,7 +172,4 @@
     row-gap: 28px;
   }
 
-  .contact-us__form { grid-template-columns: 1fr; }
-  .contact-us__field--first-name,
-  .contact-us__field--last-name { grid-column: 1 / -1; }
 }

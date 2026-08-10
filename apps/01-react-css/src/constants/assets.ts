@@ -1,5 +1,6 @@
 import mainLogo from "../assets/images/brand/Main Logo.svg";
 import frameOne from "../assets/images/home-one/Frame 1.png";
+import slideButton from "../assets/images/home-one/Slide Button.png";
 import slideBackground from "../assets/images/home-one/Background Bubble-1.png";
 import animationOne from "../assets/images/home-one/Animation1-1.png";
 import animationTwo from "../assets/images/home-one/Animation2-1.png";
@@ -28,6 +29,7 @@ export const assets = Object.freeze({
     },
     homeOne: {
         frameOne,
+        slideButton,
         slideBackground,
         animationOne,
         animationTwo,
