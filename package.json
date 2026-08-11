@@ -8,8 +8,11 @@
   ],
   "scripts": {
     "dev:css": "npm run dev --workspace @beautice/react-css",
+    "dev:tailwind": "npm run dev --workspace @beautice/react-tailwind",
     "build:css": "npm run build --workspace @beautice/react-css",
+    "build:tailwind": "npm run build --workspace @beautice/react-tailwind",
     "lint:css": "npm run lint --workspace @beautice/react-css",
+    "lint:tailwind": "npm run lint --workspace @beautice/react-tailwind",
     "build": "npm run build --workspaces --if-present",
     "lint": "npm run lint --workspaces --if-present"
   },
