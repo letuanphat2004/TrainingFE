@@ -10,18 +10,18 @@ export function AboutUs() {
       <div className="grid w-full grid-cols-1 gap-7 min-[801px]:grid-cols-2 min-[801px]:gap-x-16 desktop:grid-cols-[664px_476px] desktop:gap-0">
         <div className="order-2 min-[801px]:order-1 min-[801px]:col-start-1 min-[801px]:row-start-1">
           <SectionHeading
-            className="text-left"
+            className="desktop:text-left"
             eyebrow="About Us"
-            eyebrowClassName="w-[73px]"
+            eyebrowClassName="mx-auto w-[73px] desktop:mx-0"
             title="We are the best beauty clinic"
             titleId="about-us-title"
-            titleClassName="mt-3 w-full"
+            titleClassName="mx-auto mt-3 w-full desktop:mx-0"
             description={description}
-            descriptionClassName="mt-[18px] max-w-[483px] whitespace-pre-line leading-[1.55] desktop:leading-[1.5]"
+            descriptionClassName="mx-auto mt-[18px] max-w-[483px] whitespace-pre-line leading-[1.55] desktop:mx-0 desktop:leading-[1.5]"
           />
         </div>
 
-        <div className="order-3 flex flex-wrap items-center gap-5 min-[801px]:col-start-1 min-[801px]:row-start-2 min-[801px]:flex-nowrap min-[801px]:gap-11 desktop:mt-[49.44px]">
+        <div className="order-3 flex flex-wrap items-center justify-center gap-5 min-[801px]:col-start-1 min-[801px]:row-start-2 min-[801px]:flex-nowrap min-[801px]:gap-11 desktop:mt-[49.44px] desktop:justify-start">
           <Button className="h-[58.36px] w-[200px]" href="#contact">Learn More</Button>
           <a href="#video" className="inline-flex min-w-[213px] items-center gap-[13px] font-semibold tracking-[0.1em] text-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary">
             <span className="flex h-[49px] w-[49px] items-center justify-center rounded-full bg-primary shadow-card">

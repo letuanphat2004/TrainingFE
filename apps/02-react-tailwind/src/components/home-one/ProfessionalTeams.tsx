@@ -15,7 +15,7 @@ const members = [
 
 export function ProfessionalTeams() {
   return (
-    <section id="team" aria-labelledby="professional-team-title" className="relative z-10 mx-auto my-24 flex w-[calc(100%-48px)] max-w-[1085px] flex-col px-[150px] pt-[147px] desktop:my-0 desktop:w-full desktop:max-w-none">
+    <section id="team" aria-labelledby="professional-team-title" className="relative z-10 mx-auto my-24 flex w-[calc(100%-48px)] max-w-[1085px] flex-col pt-[147px] desktop:my-0 desktop:w-full desktop:max-w-none desktop:px-[150px]">
       <SectionHeading
         className="mx-auto flex w-full max-w-[848px] flex-col items-center desktop:h-[148px]"
         eyebrow="Professional Teams"
@@ -27,11 +27,11 @@ export function ProfessionalTeams() {
         descriptionClassName="mt-[18px] leading-6 desktop:w-[848px] desktop:leading-none"
       />
 
-      <div className="mx-auto mt-16 grid w-full max-w-[1085px] grid-cols-1 justify-items-center gap-x-[54px] gap-y-16 min-[621px]:grid-cols-2 min-[901px]:grid-cols-3 desktop:mt-[178px] desktop:grid-cols-[repeat(3,270px)] desktop:gap-x-[137.5px]">
+      <div className="mx-auto mt-16 flex w-full max-w-[1085px] flex-wrap justify-center gap-x-[54px] gap-y-16 desktop:mt-[178px] desktop:grid desktop:grid-cols-[repeat(3,270px)] desktop:gap-x-[137.5px] desktop:gap-y-0">
         {members.map((member) => (
           <article
             key={member.id}
-            className={`relative z-10 flex h-[439px] w-[270px] flex-col items-center text-center ${member.featured ? "desktop:-mx-[77px] desktop:-mb-[96px] desktop:-mt-[91px] desktop:h-[626px] desktop:w-[424px] desktop:rounded-[42px] desktop:bg-white desktop:px-[77px] desktop:pb-24 desktop:pt-[91px] desktop:shadow-card" : ""}`}
+            className={`relative z-10 flex h-[439px] w-[270px] shrink-0 flex-col items-center text-center ${member.featured ? "desktop:-mx-[77px] desktop:-mb-[96px] desktop:-mt-[91px] desktop:h-[626px] desktop:w-[424px] desktop:rounded-[42px] desktop:bg-white desktop:px-[77px] desktop:pb-24 desktop:pt-[91px] desktop:shadow-card" : ""}`}
           >
             <img src={member.image} alt={member.name} className="h-[146px] w-[146px] rounded-full object-cover" />
             <p className="mt-[53px] w-full text-base font-semibold leading-5 text-accent">{member.role}</p>
@@ -41,8 +41,8 @@ export function ProfessionalTeams() {
             </p>
             <div className="mt-auto flex items-center gap-[34px]">
               {socialLinks.map((social) => (
-                <a key={social.label} href={social.href} aria-label={social.label} className="flex h-[49px] w-[49px] items-center justify-center rounded-full bg-white shadow-card transition hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary">
-                  <img src={social.icon} alt="" className="h-[49px] w-[49px] object-contain" />
+                <a key={social.label} href={social.href} aria-label={social.label} className="grid h-[49px] w-[49px] place-items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-[3px]">
+                  <img src={social.icon} alt="" className="h-[49px] w-[49px] origin-center translate-x-[-3px] translate-y-[6px] scale-[1.6] object-contain" />
                 </a>
               ))}
             </div>

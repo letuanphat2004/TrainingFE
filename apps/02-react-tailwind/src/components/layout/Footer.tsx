@@ -29,8 +29,8 @@ function FooterLinks({ title, links }: { title: string; links: string[] }) {
 
 export function Footer() {
   return (
-    <footer className="relative isolate mx-auto mt-[69px] grid min-h-0 w-full max-w-[1140px] grid-cols-1 gap-9 px-6 pb-24 pt-[72px] min-[601px]:min-h-[740px] min-[601px]:grid-cols-2 min-[601px]:gap-x-8 min-[601px]:gap-y-12 min-[601px]:pb-12 min-[601px]:pt-24 desktop:h-[705.34px] desktop:min-h-0 desktop:max-w-none desktop:grid-cols-[150px_492px_129px_131px_173px_215px_150px] desktop:grid-rows-[225.34px_219px_55px_36px_49px_27.84px_93.16px] desktop:gap-0 desktop:p-0">
-      <img src={assets.footer.background} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 h-full w-full" />
+    <footer className="relative isolate mx-auto mt-[69px] grid min-h-0 w-full max-w-[1140px] grid-cols-1 gap-9 bg-[#17267C] px-6 pb-24 pt-[72px] min-[601px]:min-h-[740px] min-[601px]:grid-cols-2 min-[601px]:gap-x-8 min-[601px]:gap-y-12 min-[601px]:pb-12 min-[601px]:pt-24 min-[1141px]:bg-transparent desktop:h-[705.34px] desktop:min-h-0 desktop:max-w-none desktop:grid-cols-[150px_492px_129px_131px_173px_215px_150px] desktop:grid-rows-[225.34px_219px_55px_36px_49px_27.84px_93.16px] desktop:gap-0 desktop:p-0">
+      <img src={assets.footer.background} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 hidden h-full w-full min-[1141px]:block" />
 
       <div className="flex min-h-[194.59px] flex-col items-start gap-4 min-[601px]:col-span-2 min-[601px]:min-h-0 desktop:col-span-1 desktop:col-start-2 desktop:row-start-2 desktop:mt-4 desktop:w-[492px] desktop:gap-0">
         <img src={assets.footer.logo} alt="Beautice" className="h-[63px] w-[258px]" />
@@ -47,7 +47,7 @@ export function Footer() {
       <div className="desktop:col-start-4 desktop:row-start-2 desktop:w-[131px]"><FooterLinks title="Pages" links={pageLinks} /></div>
       <div className="desktop:col-start-6 desktop:row-start-2 desktop:w-[215px]"><FooterLinks title="Informations" links={informationLinks} /></div>
 
-      <div className="flex h-[27.84px] items-center justify-between min-[601px]:col-span-2 desktop:col-span-1 desktop:col-start-2 desktop:row-start-6 desktop:w-[305px]">
+      <div className="flex h-[27.84px] w-full max-w-[305px] items-center justify-between justify-self-start min-[601px]:col-span-2 desktop:col-span-1 desktop:col-start-2 desktop:row-start-6">
         {socialLinks.map((social) => (
           <a key={social.label} href={`#${social.label.toLowerCase()}`} aria-label={social.label} className="flex h-7 w-7 items-center justify-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-white">
             <img src={social.icon} alt="" className="max-h-7 max-w-7 object-contain" />
