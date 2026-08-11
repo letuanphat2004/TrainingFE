@@ -7,10 +7,6 @@
   box-sizing: border-box;
 }
 
-.about-us__responsive-background {
-  display: none;
-}
-
 /*
  * The Figma frame is retained at desktop. Inside it, layout is Grid: content
  * and actions occupy the left column while the clinic illustration occupies

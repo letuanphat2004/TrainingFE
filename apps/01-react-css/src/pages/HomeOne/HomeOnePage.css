@@ -10,16 +10,7 @@
   background: var(--color-surface);
 }
 
-.home-one-page__background-layer {
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-  pointer-events: none;
-}
-
 .home-one-page__content {
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -35,41 +26,108 @@
   flex: 0 0 auto;
 }
 
-.home-one-page__background {
-  position: absolute;
-  display: block;
-  max-width: none;
-  pointer-events: none;
+.hero-region {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Decorative artwork belongs to the page-level layer, never to a content block. */
-.home-one-page__background--bubble-1 {
+.hero-region__background {
+  position: absolute;
+  z-index: 0;
   top: 0;
   left: 0;
-  width: calc(1266.42px * var(--background-reference-scale, 1));
-  height: calc(743px * var(--background-reference-scale, 1));
+  display: block;
+  width: 1266.42px;
+  height: 743px;
+  max-width: none;
+  pointer-events: none;
   transform: scaleX(-1);
   transform-origin: center;
 }
 
-.home-one-page__background--bubble-3 {
-top: var(--bubble-3-anchor-top, 1448px);
-  left: calc(493px * var(--background-reference-scale, 1));
-  width: calc(948.15px * var(--background-reference-scale, 1));
-  height: calc(1028.89px * var(--background-reference-scale, 1));
+.hero-region > :not(.hero-region__background) {
+  position: relative;
+  z-index: 1;
 }
 
-.home-one-page__background--bubble-2 {
-  top: var(--bubble-2-anchor-top, 3142px);
-  left: calc(-0.33px * var(--background-reference-scale, 1));
-  width: calc(1175.73px * var(--background-reference-scale, 1));
-  height: calc(929px * var(--background-reference-scale, 1));
-  transform-origin: center;
+.services-about-region {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
 }
 
-.home-one-page__background--footer {
-  top: var(--footer-background-anchor-top, 4283.66px);
-  left: 0;
-  width: 100%;
-  height: var(--footer-background-rendered-height, 705.34px);
+.services-about-region__background-anchor {
+  position: relative;
+  z-index: 0;
+  height: 0;
+}
+
+.services-about-region__background {
+  position: absolute;
+  top: -230px;
+  right: 0;
+  display: block;
+  width: 948.15px;
+  height: 1028.89px;
+  max-width: none;
+  pointer-events: none;
+}
+
+.services-about-region > :not(.services-about-region__background-anchor) {
+  position: relative;
+  z-index: 1;
+}
+
+.teams-contact-region {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+}
+
+.teams-contact-region__background-anchor {
+  position: relative;
+  z-index: 0;
+  height: 0;
+}
+
+.teams-contact-region__background {
+  position: absolute;
+  top: 30px;
+  left: -0.33px;
+  display: block;
+  width: 1175.73px;
+  height: 929px;
+  max-width: none;
+  pointer-events: none;
+}
+
+.teams-contact-region > :not(.teams-contact-region__background-anchor) {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1439px) {
+  .home-one-page {
+    min-height: 0;
+  }
+
+  .hero-region__background {
+    width: min(1266.42px, 100%);
+    height: auto;
+  }
+
+  .services-about-region__background {
+    width: min(948.15px, 100%);
+    height: auto;
+  }
+
+  .teams-contact-region__background {
+    left: 0;
+    width: min(1175.73px, 100%);
+    height: auto;
+  }
 }

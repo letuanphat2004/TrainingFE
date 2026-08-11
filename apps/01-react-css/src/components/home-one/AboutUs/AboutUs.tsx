@@ -7,7 +7,6 @@ const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. El
 export function AboutUs() {
   return (
     <section className="about-us" id="about" aria-labelledby="about-us-title">
-      <img className="about-us__responsive-background" src={assets.homeOne.servicesAboutBackground} alt="" aria-hidden="true" />
       <div className="about-us__layout">
         <div className="about-us__content">
           <SectionHeading

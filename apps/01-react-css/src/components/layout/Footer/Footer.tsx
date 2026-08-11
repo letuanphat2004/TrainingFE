@@ -31,6 +31,7 @@ interface FooterProps {
 export function Footer({ className = "" }: FooterProps) {
     const classes = ["site-footer", className].filter(Boolean).join(" ");
     return (<footer className={classes}>
+      <img className="site-footer__background" src={assets.footer.background} alt="" aria-hidden="true" />
       <FooterBrand className="site-footer__brand" logo={assets.footer.logo}/>
       <FooterLinkGroup className="site-footer__pages" title="Pages" links={pageLinks}/>
       <FooterLinkGroup className="site-footer__information" title="Informations" links={informationLinks}/>

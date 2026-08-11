@@ -1,10 +1,27 @@
 .site-footer {
+  position: relative;
+  isolation: isolate;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 150px 492px 129px 131px 173px 215px 150px;
-  grid-template-rows: 300.34px 219px 55px 36px 49px 27.84px 93.16px;
+  grid-template-rows: 225.34px 219px 55px 36px 49px 27.84px 93.16px;
   width: 100%;
   height: 705.34px;
+  margin-top: 69px;
+}
+
+.site-footer__background {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.site-footer > :not(.site-footer__background) {
+  position: relative;
+  z-index: 1;
 }
 
 .site-footer__brand {
