@@ -6,41 +6,39 @@ const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. El
 
 export function AboutUs() {
   return (
-    <section id="about" aria-labelledby="about-us-title" className="relative isolate mx-auto flex w-[calc(100%-48px)] max-w-[1140px] flex-col px-6 pt-24 desktop:w-full desktop:max-w-none desktop:px-[150px] desktop:pt-[134.44px]">
-      <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+    <section id="about" aria-labelledby="about-us-title" className="w-full">
+      <div className="relative isolate z-0 mx-auto flex w-full max-w-[1440px] flex-col px-6 pt-24 sm:px-12 xl:px-[calc((100%_-_1140px)_/_2)] xl:pt-[134.44px]">
         <img
           src={assets.homeOne.servicesAboutBackground}
           alt=""
-          className="absolute right-0 top-0 h-auto w-full max-w-[948.15px] -translate-y-[230px] desktop:left-[493px] desktop:right-auto desktop:h-[1028.89px] desktop:w-[948.15px] desktop:max-w-none desktop:-translate-y-[249px]"
+          aria-hidden="true"
+          className="pointer-events-none absolute right-0 top-0 -z-10 h-auto w-full max-w-[948.15px] -translate-y-[21.382%] xl:left-[493px] xl:right-auto xl:h-[1028.89px] xl:w-[948.15px] xl:max-w-none"
         />
-      </div>
 
-      <div className="grid w-full grid-cols-1 gap-7 min-[801px]:grid-cols-2 min-[801px]:gap-x-16 desktop:grid-cols-[664px_476px] desktop:gap-0">
-        <div className="order-2 min-[801px]:order-1 min-[801px]:col-start-1 min-[801px]:row-start-1">
-          <SectionHeading
-            className="desktop:text-left"
-            eyebrow="About Us"
-            eyebrowClassName="mx-auto w-[73px] desktop:mx-0"
-            title="We are the best beauty clinic"
-            titleId="about-us-title"
-            titleClassName="mx-auto mt-3 w-full desktop:mx-0"
-            description={description}
-            descriptionClassName="mx-auto mt-[18px] max-w-[483px] whitespace-pre-line leading-[1.55] desktop:mx-0 desktop:leading-[1.5]"
-          />
-        </div>
+        <div className="grid w-full grid-cols-1 gap-12 md:grid-cols-2 md:gap-8 xl:grid-cols-[664px_476px] xl:gap-0">
+          <div className="flex min-w-0 flex-col items-center md:items-start">
+            <SectionHeading
+              className="flex w-full max-w-[664px] flex-col items-center gap-3 md:items-start md:text-left xl:h-[292px] xl:w-[664px] xl:max-w-none"
+              eyebrow="About Us"
+              eyebrowClassName="h-5 w-[73px] md:mx-0 xl:ml-px"
+              title="We are the best beauty clinic"
+              titleId="about-us-title"
+              titleClassName="w-full max-w-[664px] xl:h-[52px]"
+              description={description}
+              descriptionClassName="w-full max-w-[483px] whitespace-pre-line leading-[1.5] xl:h-[196px]"
+            />
 
-        <div className="order-3 flex flex-wrap items-center justify-center gap-5 min-[801px]:col-start-1 min-[801px]:row-start-2 min-[801px]:flex-nowrap min-[801px]:gap-11 desktop:mt-[49.44px] desktop:justify-start">
-          <Button className="h-[58.36px] w-[200px]" href="#contact">Learn More</Button>
-          <a href="#video" className="inline-flex min-w-[213px] items-center gap-[13px] font-semibold tracking-[0.1em] text-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary">
-            <span className="flex h-[49px] w-[49px] items-center justify-center rounded-full bg-primary shadow-card">
-              <span className="ml-1 h-0 w-0 border-y-[7px] border-l-[11px] border-y-transparent border-l-white" />
-            </span>
-            Watch Video
-          </a>
-        </div>
+            <div className="mt-12 flex w-full flex-wrap items-start justify-center gap-5 md:justify-start xl:mt-[49px] xl:flex-nowrap xl:gap-11">
+              <Button className="h-[58.36px] w-[200px] shrink-0" href="#contact">Learn More</Button>
+              <a href="#video" className="mt-1 block h-[49px] w-[213px] shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary xl:mt-[5px]">
+                <img src={assets.homeOne.playButton} alt="Watch Video" className="h-[49px] w-[213px] object-contain" />
+              </a>
+            </div>
+          </div>
 
-        <div className="order-1 overflow-hidden rounded-[50px] shadow-[0_0_50px_25px_rgb(196_196_196_/_20%)] min-[801px]:order-2 min-[801px]:col-start-2 min-[801px]:row-span-2 min-[801px]:row-start-1 min-[801px]:self-center desktop:mt-[44.56px] desktop:h-[350px] desktop:w-[476px] desktop:self-start">
-          <img src={assets.homeOne.aboutClinic} alt="Modern beauty clinic interior" className="aspect-[476/350] h-full w-full scale-[1.32] object-cover" />
+          <div className="overflow-hidden rounded-[50px] shadow-[0_0_50px_25px_rgb(196_196_196_/_20%)] md:mt-12 xl:mt-[44.56px] xl:h-[350px] xl:w-[476px]">
+            <img src={assets.homeOne.aboutClinic} alt="Modern beauty clinic interior" className="aspect-[476/350] h-full w-full scale-[1.32] object-cover" />
+          </div>
         </div>
       </div>
     </section>

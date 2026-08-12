@@ -26,7 +26,7 @@ const serviceDesktopMargins = ["", "xl:ml-[56px]", "xl:ml-[55px]"];
 
 export function CoreServices() {
   return (
-    <section id="services" aria-labelledby="services-title" className="mx-auto mt-24 flex w-full max-w-[1440px] flex-col px-6 sm:px-12 xl:mt-[131px] xl:px-[calc((100%_-_1140px)_/_2)]">
+    <section id="services" aria-labelledby="services-title" className="z-10 mx-auto mt-24 flex w-full max-w-[1440px] flex-col px-6 sm:px-12 xl:mt-[131px] xl:px-[calc((100%_-_1140px)_/_2)]">
       <SectionHeading
         className="mx-auto flex w-full max-w-[848px] flex-col items-center gap-3 xl:h-[192px] xl:w-[848px] xl:max-w-none"
         eyebrow="Main Services"
