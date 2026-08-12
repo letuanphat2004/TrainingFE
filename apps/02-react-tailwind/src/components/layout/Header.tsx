@@ -16,22 +16,22 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="z-20 mt-4 min-h-[63px] w-full px-4 sm:mt-[41px] sm:px-12">
-      <div className="mx-auto grid w-full max-w-[1140px] grid-cols-[minmax(0,1fr)_auto] grid-rows-[63px_0px] items-center lg:flex lg:flex-nowrap">
+    <header className="z-20 mt-4 min-h-[63px] w-full px-6 sm:mt-[41px] sm:px-8 lg:px-6">
+      <div className="mx-auto grid w-full max-w-[1140px] grid-cols-[minmax(0,1fr)_auto] grid-rows-[63px_0px] items-center lg:flex">
         <a href="#home" aria-label="Beautice home" className="col-start-1 row-start-1 shrink-0">
-          <img src={assets.brand.mainLogo} width="258" height="63" alt="Beautice" className="h-[63px] w-[min(258px,calc(100vw-112px))] object-contain sm:w-[258px]" />
+          <img src={assets.brand.mainLogo} width="258" height="63" alt="Beautice" className="h-[63px] w-[min(258px,calc(100vw-112px))] object-contain" />
         </a>
 
         <nav
           id="primary-navigation"
           aria-label="Primary navigation"
-          className={`${isOpen ? "flex" : "hidden"} col-span-2 row-start-2 mt-3 w-fit min-w-[220px] max-w-full justify-self-end self-start flex-col rounded-3xl bg-white p-5 shadow-card lg:ml-auto lg:mt-0 lg:flex lg:w-auto lg:min-w-0 lg:max-w-none lg:flex-row lg:items-center lg:justify-self-auto lg:self-auto lg:bg-transparent lg:p-0 lg:shadow-none xl:ml-[191px] xl:w-[481px] xl:flex-none`}
+          className={`${isOpen ? "flex" : "hidden"} col-span-2 row-start-2 flex-col max-lg:mt-3 max-lg:w-fit max-lg:min-w-[220px] max-lg:justify-self-end max-lg:self-start max-lg:rounded-3xl max-lg:bg-white max-lg:p-5 max-lg:shadow-card lg:ml-auto lg:flex lg:min-w-0 lg:flex-row lg:items-center xl:ml-[191px] xl:w-[481px]`}
         >
-          <ul className="m-0 flex list-none flex-col gap-4 p-0 lg:flex-row lg:items-center lg:gap-6 xl:w-full xl:gap-0">
+          <ul className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-6 xl:gap-0">
             {navigationItems.map((item, index) => (
               <li key={item.id} className={`${navigationDesktopMargins[index]} ${item.id === "about" ? "xl:-translate-y-px" : ""}`}>
                 <a
-                  className={`inline-flex items-center text-base leading-none tracking-widest transition ${item.id === "home" ? "font-semibold text-[#414880] hover:text-[#414880]" : "font-medium text-muted hover:text-primary"}`}
+                  className={`inline-flex items-center text-base leading-none tracking-widest transition ${item.id === "home" ? "font-semibold text-[#414880]" : "font-medium text-muted hover:text-primary"}`}
                   href={item.href}
                   aria-current={item.id === "home" ? "page" : undefined}
                 >
@@ -47,7 +47,7 @@ export function Header() {
         <Button className="ml-8 hidden h-[52px] w-[158px] shrink-0 lg:inline-flex xl:ml-[52px]" href="#contact">Contact</Button>
 
         <button
-          className="col-start-2 row-start-1 ml-auto flex h-12 w-12 flex-col items-center justify-center gap-1.5 border-0 bg-transparent p-0 lg:hidden"
+          className="col-start-2 row-start-1 ml-auto flex h-12 w-12 flex-col items-center justify-center gap-1.5 lg:hidden"
           type="button"
           aria-label="Toggle navigation"
           aria-controls="primary-navigation"
