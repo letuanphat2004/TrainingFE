@@ -21,9 +21,7 @@ const services = [
     description: "Non parturient amet, feugiat tellus sagittis, scelerisque eget nulla turpis.",
   },
 ];
-
-const serviceDesktopMargins = ["", "xl:ml-[56px]", "xl:ml-[55px]"];
-
+7
 export function CoreServices() {
   return (
     <section id="services" aria-labelledby="services-title" className="z-10 mx-auto mt-24 flex w-full max-w-[1440px] flex-col px-6 sm:px-12 xl:mt-[131px] xl:px-[calc((100%_-_1140px)_/_2)]">
@@ -38,9 +36,9 @@ export function CoreServices() {
         descriptionClassName="w-full max-w-[848px] leading-6 xl:h-[51px]"
       />
 
-      <div className="mx-auto mt-16 flex w-full max-w-[1140px] flex-col items-center gap-8 md:flex-row md:flex-wrap md:items-stretch md:justify-center xl:mt-[82px] xl:flex-nowrap xl:gap-0">
-        {services.map((service, index) => (
-          <article key={service.id} className={`${serviceDesktopMargins[index]} flex min-h-[458px] w-full max-w-[343px] flex-col items-center overflow-hidden rounded-[42px] bg-white px-6 pb-9 pt-[59px] text-center shadow-card xl:h-[458px] xl:flex-[0_0_343px] xl:pb-0`}>
+      <div className="mx-auto mt-16 flex w-full max-w-[1140px] flex-col items-center gap-8 md:flex-row md:flex-wrap md:items-stretch md:justify-center xl:mt-[82px] xl:flex-nowrap xl:justify-between xl:gap-0">
+        {services.map((service) => (
+          <article key={service.id} className="flex min-h-[458px] w-full max-w-[343px] flex-col items-center overflow-hidden rounded-[42px] bg-white px-6 pb-9 pt-[59px] text-center shadow-card xl:h-[458px] xl:flex-[0_0_343px] xl:pb-0">
             <img src={service.asset} alt="" aria-hidden="true" className="h-[166px] w-[166px] object-contain" />
             <h3 className="m-0 mt-[58px] h-[37px] w-full max-w-[263px] text-center text-lg font-semibold leading-tight text-primary">{service.title}</h3>
             <p className="m-0 mt-1.5 h-20 w-full max-w-[274px] text-sm font-normal leading-[1.5] tracking-widest text-muted">{service.description}</p>
