@@ -1,4 +1,5 @@
 import mainLogo from "../assets/images/brand/Main Logo.svg";
+import plusIcon from "../../../../Beautice - Clinic & Beauty Consultation Website Design (Community)/Plus Icon.png";
 import frameOne from "../assets/images/home-one/Frame 1.png";
 import slideButton from "../assets/images/home-one/Slide Button.png";
 import slideBackground from "../assets/images/home-one/Background Bubble-1.png";
@@ -25,7 +26,7 @@ import footerTwitter from "../assets/images/footer/twitter.svg";
 import footerInstagram from "../assets/images/footer/instagram.svg";
 
 export const assets = Object.freeze({
-  brand: { mainLogo },
+  brand: { mainLogo, plusIcon },
   homeOne: {
     frameOne,
     slideButton,

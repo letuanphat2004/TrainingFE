@@ -2,13 +2,15 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
-    screens: {
-      mobile: "560px",
-      tablet: "800px",
-      laptop: "1100px",
-      desktop: "1440px",
-    },
     extend: {
+      // Temporary legacy aliases. New work uses Tailwind's default
+      // sm/md/lg/xl/2xl breakpoints; remove these as sections are migrated.
+      screens: {
+        mobile: "560px",
+        tablet: "800px",
+        laptop: "1100px",
+        desktop: "1440px",
+      },
       colors: {
         primary: "#091156",
         accent: "#FF64AE",
