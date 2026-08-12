@@ -15,33 +15,33 @@ const members = [
 
 export function ProfessionalTeams() {
   return (
-    <section id="team" aria-labelledby="professional-team-title" className="relative z-10 mx-auto my-24 flex w-[calc(100%-48px)] max-w-[1085px] flex-col pt-[147px] desktop:my-0 desktop:w-full desktop:max-w-none desktop:px-[150px]">
+    <section id="team" aria-labelledby="professional-team-title" className="z-10 mx-auto mt-24 flex w-[calc(100%-48px)] max-w-[1085px] flex-col sm:w-[calc(100%-96px)] xl:mt-[142.2px] xl:w-full">
       <SectionHeading
-        className="mx-auto flex w-full max-w-[848px] flex-col items-center desktop:h-[148px]"
+        className="flex w-full max-w-[848px] self-center flex-col items-center gap-3 xl:h-[148px] xl:w-[848px] xl:max-w-none"
         eyebrow="Professional Teams"
-        eyebrowClassName="desktop:w-[160px]"
+        eyebrowClassName="h-5 w-full max-w-40"
         title="The Professional expert"
         titleId="professional-team-title"
-        titleClassName="mt-3 desktop:w-[732px]"
+        titleClassName="w-full max-w-[732px] xl:h-[53px]"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam."
-        descriptionClassName="mt-[18px] leading-6 desktop:w-[848px] desktop:leading-none"
+        descriptionClassName="w-full max-w-[848px] leading-6 xl:h-[51px]"
       />
 
-      <div className="mx-auto mt-16 flex w-full max-w-[1085px] flex-wrap justify-center gap-x-[54px] gap-y-16 desktop:mt-[178px] desktop:grid desktop:grid-cols-[repeat(3,270px)] desktop:gap-x-[137.5px] desktop:gap-y-0">
+      <div className="mt-16 flex w-full flex-col items-center gap-16 lg:h-[626px] lg:flex-row lg:items-start lg:justify-between lg:gap-0 xl:mt-[87px]">
         {members.map((member) => (
           <article
             key={member.id}
-            className={`relative z-10 flex h-[439px] w-[270px] shrink-0 flex-col items-center text-center ${member.featured ? "desktop:-mx-[77px] desktop:-mb-[96px] desktop:-mt-[91px] desktop:h-[626px] desktop:w-[424px] desktop:rounded-[42px] desktop:bg-white desktop:px-[77px] desktop:pb-24 desktop:pt-[91px] desktop:shadow-card" : ""}`}
+            className={`z-10 flex w-full shrink-0 flex-col items-center text-center lg:min-w-0 ${member.featured ? "max-w-[424px] rounded-[42px] bg-white py-16 shadow-card lg:h-[626px] lg:flex-[0_1_424px] lg:py-0 lg:pb-24 lg:pt-[91px] xl:w-[424px] xl:flex-none" : "h-[439px] max-w-[270px] lg:mt-[91px] lg:flex-[0_1_270px] xl:w-[270px] xl:flex-none"}`}
           >
-            <img src={member.image} alt={member.name} className="h-[146px] w-[146px] rounded-full object-cover" />
-            <p className="mt-[53px] w-full text-base font-semibold leading-5 text-accent">{member.role}</p>
-            <h3 className="mt-4 min-h-[37px] w-[263px] text-lg font-semibold leading-[1.25] text-primary">{member.name}</h3>
-            <p className="mt-px w-[270px] text-sm leading-4 tracking-[0.1em] text-muted">
-              Lorem ipsum dolor sit amet,<br /><br />consectetur adipiscing elit ut<br /><span className="mt-2 block">aliquam, purus sit</span>
+            <img src={member.image} alt={member.name} className="h-[146px] w-[146px] shrink-0 rounded-full object-cover" />
+            <p className="m-0 mt-[53px] h-5 w-fit text-base font-semibold leading-5 text-accent">{member.role}</p>
+            <h3 className="m-0 mt-[15px] h-[37px] w-full max-w-[263px] text-lg font-semibold leading-tight text-primary">{member.name}</h3>
+            <p className="m-0 mt-1.5 h-[63px] w-full max-w-[270px] text-sm font-normal leading-[1.5] tracking-widest text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit
             </p>
-            <div className="mt-auto flex items-center gap-[34px]">
+            <div className="mt-[50px] flex h-[49px] w-[215px] items-center justify-between">
               {socialLinks.map((social) => (
-                <a key={social.label} href={social.href} aria-label={social.label} className="grid h-[49px] w-[49px] place-items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-[3px]">
+                <a key={social.label} href={social.href} aria-label={social.label} className="grid h-[49px] w-[49px] place-items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-primary">
                   <img src={social.icon} alt="" className="h-[49px] w-[49px] origin-center translate-x-[-3px] translate-y-[6px] scale-[1.6] object-contain" />
                 </a>
               ))}

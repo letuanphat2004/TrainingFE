@@ -21,7 +21,6 @@ const services = [
     description: "Non parturient amet, feugiat tellus sagittis, scelerisque eget nulla turpis.",
   },
 ];
-7
 export function CoreServices() {
   return (
     <section id="services" aria-labelledby="services-title" className="z-10 mx-auto mt-24 flex w-full max-w-[1440px] flex-col px-6 sm:px-12 xl:mt-[131px] xl:px-[calc((100%_-_1140px)_/_2)]">
