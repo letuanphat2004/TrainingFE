@@ -12,13 +12,29 @@ const socialLinks = [
 
 function FooterLinks({ title, links }: { title: string; links: string[] }) {
   return (
-    <nav aria-label={`${title} links`} className={`${title === "Pages" ? "min-h-[218px]" : "min-h-[182px]"} min-[601px]:min-h-[218px]`}>
-      <h2 className="m-0 text-lg font-semibold leading-none tracking-[0.1em] text-white">{title}</h2>
-      <ul className="mt-[25px] flex list-none flex-col gap-[11px] p-0 pt-[6px]">
+    <nav
+      aria-label={`${title} links`}
+      className={`${title === "Pages" ? "min-h-[218px]" : "min-h-[182px]"} sm:min-h-[218px]`}
+    >
+      <h2
+        className={`${title === "Pages" ? "xl:w-48" : "xl:w-[175px]"} text-lg font-semibold leading-6 tracking-widest xl:h-[31px]`}
+      >
+        {title}
+      </h2>
+      <ul className="mt-6 flex list-none flex-col gap-[11px] p-0">
         {links.map((link) => (
-          <li key={link}>
-            <a href={`#${link.toLowerCase().replaceAll(" ", "-")}`} className="ml-3 inline-flex items-center text-base font-medium leading-none tracking-[0.1em] text-[#D7DBFF] transition hover:text-white">
-              <span aria-hidden="true" className="mr-2 h-2 w-1.5 bg-white [clip-path:polygon(0_0,100%_50%,0_100%)]" />{link}
+          <li key={link} className="xl:h-6">
+            <a
+              href={`#${link.toLowerCase().replaceAll(" ", "-")}`}
+              className="inline-flex items-center gap-2 text-base font-normal leading-none tracking-widest xl:h-6"
+            >
+              <img
+                src={assets.footer.caretRight}
+                alt=""
+                aria-hidden="true"
+                className="size-[13px] shrink-0"
+              />
+              {link}
             </a>
           </li>
         ))}
@@ -29,41 +45,74 @@ function FooterLinks({ title, links }: { title: string; links: string[] }) {
 
 export function Footer() {
   return (
-    <footer className="mx-auto mt-[69px] w-full max-w-[1140px] desktop:max-w-none">
-      <div className="relative isolate w-full">
-        <img src={assets.footer.background} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 h-full w-full max-w-none" />
+    <footer className="mx-auto mt-[69.66px] w-full max-w-[1440px] text-[#D7DBFF]">
+      <div className="relative isolate grid w-full bg-footer px-6 sm:px-8 lg:px-12 xl:bg-transparent xl:px-[calc((100%_-_1140px)_/_2)]">
+        <img
+          src={assets.footer.background}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 -z-10 hidden size-full xl:block"
+        />
 
-        <div className="grid min-h-0 w-full grid-cols-1 gap-9 bg-transparent px-6 pb-24 pt-[72px] min-[601px]:min-h-[740px] min-[601px]:grid-cols-2 min-[601px]:gap-x-8 min-[601px]:gap-y-12 min-[601px]:pb-12 min-[601px]:pt-24 desktop:min-h-[705.342041015625px] desktop:grid-cols-[150px_492px_129px_131px_173px_215px_150px] desktop:grid-rows-[225.34px_219px_55px_36px_49px_27.84px_93.16px] desktop:gap-0 desktop:p-0">
+        <div className="col-start-1 row-start-1 mx-auto grid min-h-0 w-full max-w-[1140px] grid-cols-1 gap-9 pb-24 pt-[72px] sm:min-h-[740px] sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 sm:pb-12 sm:pt-24 xl:min-h-[705.34px] xl:grid-cols-[492px_129px_131px_173px_215px] xl:grid-rows-[225.34px_219px_55px_36px_49px_27.84px_93.16px] xl:gap-0 xl:py-0">
+          <div className="flex min-h-[194.59px] flex-col items-start gap-4 sm:col-span-2 sm:min-h-0 xl:col-span-1 xl:col-start-1 xl:row-start-2 xl:mt-4 xl:w-[492px] xl:gap-0">
+            <img src={assets.footer.logo} alt="Beautice" className="h-[63px] w-[258px]" />
+            <p className="m-0 text-base font-normal leading-none tracking-widest xl:ml-[31px] xl:mt-[37px] xl:h-[21px] xl:w-[461px]">
+              <strong className="font-bold">Beautice</strong> is a Beauty Clinic WordPress Theme.
+            </p>
+            <address className="m-0 text-sm font-medium italic leading-none tracking-widest xl:ml-[31px] xl:mt-[26px] xl:h-6 xl:w-[297px]">
+              Baker Steet 101, NY, United States.
+            </address>
+            <div className="flex items-start gap-6 text-sm font-medium italic leading-none tracking-widest xl:ml-[31px] xl:mt-px xl:h-6 xl:gap-7">
+              <a href="tel:+5215698966" className="shrink-0 xl:h-[23px] xl:w-[140px]">
+                +521 569 8966.
+              </a>
+              <a href="mailto:mail@company.com" className="inline-flex shrink-0 xl:h-[23px] xl:w-[190px]">
+                <span className="underline decoration-auto decoration-solid underline-offset-1">mail@company.com</span>
+                <span>.</span>
+              </a>
+            </div>
+          </div>
 
-      <div className="flex min-h-[194.59px] flex-col items-start gap-4 min-[601px]:col-span-2 min-[601px]:min-h-0 desktop:col-span-1 desktop:col-start-2 desktop:row-start-2 desktop:mt-4 desktop:w-[492px] desktop:gap-0">
-        <img src={assets.footer.logo} alt="Beautice" className="h-[63px] w-[258px]" />
-        <p className="m-0 text-base leading-[1.3] tracking-[0.1em] text-[#D7DBFF] desktop:ml-[31px] desktop:mt-[37px] desktop:w-[461px]"><strong className="font-semibold text-white">Beautice</strong> is a Beauty Clinic WordPress Theme.</p>
-        <address className="m-0 text-sm font-medium italic leading-none tracking-[0.1em] text-[#D7DBFF] desktop:ml-[33px] desktop:mt-6 desktop:w-[297px]">
-          Baker Steet 101, NY, United States.
-        </address>
-        <div className="flex gap-6 text-sm font-medium italic leading-none tracking-[0.1em] text-[#D7DBFF] desktop:ml-[31px] desktop:mt-3 desktop:gap-10">
-          <a href="tel:+5215698966">+521 569 8966.</a>
-          <a href="mailto:mail@company.com" className="underline desktop:ml-[5px]">mail@company.com.</a>
+          <div className="xl:col-start-3 xl:row-start-2 xl:w-[131px]">
+            <FooterLinks title="Pages" links={pageLinks} />
+          </div>
+          <div className="xl:col-start-5 xl:row-start-2 xl:w-[215px]">
+            <FooterLinks title="Informations" links={informationLinks} />
+          </div>
+
+          <div className="flex h-[27.84px] w-full max-w-[305px] items-center justify-between justify-self-start sm:col-span-2 xl:col-span-1 xl:col-start-1 xl:row-start-6">
+            {socialLinks.map((social) => (
+              <a
+                key={social.label}
+                href={`#${social.label.toLowerCase()}`}
+                aria-label={social.label}
+                className="flex size-7 items-center justify-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
+              >
+                <img src={social.icon} alt="" className="max-h-7 max-w-7 object-contain" />
+              </a>
+            ))}
+          </div>
+
+          <p className="text-left text-base font-normal leading-6 tracking-widest sm:col-span-2 xl:col-start-3 xl:col-end-6 xl:row-start-6 xl:w-[497px] xl:justify-self-end xl:self-start xl:text-right">
+            {"\u00A9"} AltDesain Studio 2021 - All right reserved.
+          </p>
         </div>
-      </div>
 
-      <div className="desktop:col-start-4 desktop:row-start-2 desktop:w-[131px]"><FooterLinks title="Pages" links={pageLinks} /></div>
-      <div className="desktop:col-start-6 desktop:row-start-2 desktop:w-[215px]"><FooterLinks title="Informations" links={informationLinks} /></div>
-
-      <div className="flex h-[27.84px] w-full max-w-[305px] items-center justify-between justify-self-start min-[601px]:col-span-2 desktop:col-span-1 desktop:col-start-2 desktop:row-start-6">
-        {socialLinks.map((social) => (
-          <a key={social.label} href={`#${social.label.toLowerCase()}`} aria-label={social.label} className="flex h-7 w-7 items-center justify-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-white">
-            <img src={social.icon} alt="" className="max-h-7 max-w-7 object-contain" />
-          </a>
-        ))}
-      </div>
-
-      <button type="button" aria-label="Back to top" className="h-9 w-9 justify-self-end bg-transparent p-0 min-[601px]:col-start-2 desktop:col-start-7 desktop:row-start-4 desktop:ml-[49px] desktop:justify-self-start" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-        <img src={assets.footer.toTop} alt="" className="h-full w-full" />
-      </button>
-
-      <p className="text-left text-base leading-none tracking-[0.1em] text-[#D7DBFF] min-[601px]:col-span-2 desktop:col-start-4 desktop:col-end-7 desktop:row-start-6 desktop:mt-[3.66px] desktop:w-[497px] desktop:justify-self-end desktop:self-start desktop:text-right">© AltDesain Studio 2021 - All right reserved.</p>
-        </div>
+        <button
+          type="button"
+          aria-label="Back to top"
+          className="col-start-1 row-start-1 mb-6 size-9 self-end justify-self-end p-0 sm:mb-1.5 xl:mr-[max(-85px,calc(594px_-_50vw))] xl:mb-0 xl:mt-[499.34px] xl:self-start"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <img
+            src={assets.footer.toTop}
+            alt=""
+            width={36}
+            height={36}
+            className="size-9"
+          />
+        </button>
       </div>
     </footer>
   );

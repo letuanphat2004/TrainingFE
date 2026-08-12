@@ -20,6 +20,7 @@ import instagram from "../assets/images/social-instagram.png";
 import footerBackground from "../assets/images/footer/Footer BG.png";
 import footerLogo from "../assets/images/footer/Footer Logo.png";
 import footerToTop from "../assets/images/footer/ToTop Button.png";
+import footerCaretRight from "../assets/images/footer/caret-right.png";
 import footerFacebook from "../assets/images/footer/facebook-f.png";
 import footerYoutube from "../assets/images/footer/youtube.png";
 import footerLinkedin from "../assets/images/footer/linkedin-in.png";
@@ -49,6 +50,7 @@ export const assets = Object.freeze({
     background: footerBackground,
     logo: footerLogo,
     toTop: footerToTop,
+    caretRight: footerCaretRight,
     facebook: footerFacebook,
     youtube: footerYoutube,
     linkedin: footerLinkedin,
