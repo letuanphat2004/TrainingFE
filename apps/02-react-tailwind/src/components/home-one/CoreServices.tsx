@@ -22,26 +22,28 @@ const services = [
   },
 ];
 
+const serviceDesktopMargins = ["", "xl:ml-[56px]", "xl:ml-[55px]"];
+
 export function CoreServices() {
   return (
-    <section id="services" aria-labelledby="services-title" className="relative z-10 mx-auto flex w-[calc(100%-48px)] max-w-[1140px] flex-col pt-24 desktop:w-full desktop:max-w-none desktop:px-[150px] desktop:pt-[131px]">
+    <section id="services" aria-labelledby="services-title" className="mx-auto mt-24 flex w-full max-w-[1440px] flex-col px-6 sm:px-12 xl:mt-[131px] xl:px-[calc((100%_-_1140px)_/_2)]">
       <SectionHeading
-        className="mx-auto flex min-h-[192px] w-full max-w-[1140px] flex-col items-center"
+        className="mx-auto flex w-full max-w-[848px] flex-col items-center gap-3 xl:h-[192px] xl:w-[848px] xl:max-w-none"
         eyebrow="Main Services"
-        eyebrowClassName="w-full max-w-[113px]"
-        title="Learn services to focus on your beauty"
+        eyebrowClassName="h-5 w-[113px]"
+        title={"Learn services to focus\non your beauty"}
         titleId="services-title"
-        titleClassName="mb-5 mt-0.5 min-h-[97px] w-full max-w-[430px] desktop:mb-0 desktop:mt-3"
+        titleClassName="w-full max-w-[732px] whitespace-pre-line leading-tight xl:h-[97px] xl:w-[732px] xl:max-w-none"
         description="Porta rhoncus orci condimentum vitae lobortis eu dignissim non massa. Non parturient amet, feugiat tellus sagittis, scelerisque eget nulla turpis."
-        descriptionClassName="mt-4 min-h-[51px] w-full max-w-[848px] leading-[1.32]"
+        descriptionClassName="w-full max-w-[848px] leading-none xl:h-[51px]"
       />
 
-      <div className="mx-auto mt-16 flex w-full max-w-[1140px] flex-wrap justify-center gap-8 desktop:mt-[82px] desktop:gap-[55.5px]">
-        {services.map((service) => (
-          <article key={service.id} className="flex min-h-[458px] w-full max-w-[343px] flex-[0_1_343px] flex-col items-center overflow-hidden rounded-[42px] bg-white px-6 pb-9 pt-[58px] text-center shadow-card min-[1101px]:max-w-none min-[1101px]:flex-1 desktop:h-[458px] desktop:max-w-[343px] desktop:flex-[0_0_343px] desktop:pb-0 desktop:pt-[59px]">
+      <div className="mx-auto mt-16 flex w-full max-w-[1140px] flex-col items-center gap-8 md:flex-row md:flex-wrap md:items-stretch md:justify-center xl:mt-[82px] xl:flex-nowrap xl:gap-0">
+        {services.map((service, index) => (
+          <article key={service.id} className={`${serviceDesktopMargins[index]} flex min-h-[458px] w-full max-w-[343px] flex-col items-center overflow-hidden rounded-[42px] bg-white px-6 pb-9 pt-[59px] text-center shadow-card xl:h-[458px] xl:flex-[0_0_343px] xl:pb-0`}>
             <img src={service.asset} alt="" aria-hidden="true" className="h-[166px] w-[166px] object-contain" />
-            <h3 className="mt-12 text-lg font-semibold leading-[1.5] text-primary desktop:mt-[57px] desktop:w-[295px]">{service.title}</h3>
-            <p className="mt-[18px] max-w-[269px] text-sm leading-[1.5] tracking-[0.1em] text-muted desktop:mt-[15px] desktop:w-[269px]">{service.description}</p>
+            <h3 className="m-0 mt-[58px] h-[37px] w-full max-w-[263px] text-center text-lg font-semibold leading-tight text-primary">{service.title}</h3>
+            <p className="m-0 mt-1.5 h-20 w-full max-w-[274px] text-sm font-normal leading-none tracking-widest text-muted">{service.description}</p>
           </article>
         ))}
       </div>

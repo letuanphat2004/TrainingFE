@@ -22,8 +22,8 @@ export function SectionHeading({
   return (
     <div className={`text-center ${className}`}>
       {eyebrow ? <p className={`m-0 text-base font-semibold leading-5 text-accent ${eyebrowClassName}`}>{eyebrow}</p> : null}
-      <h2 className={`m-0 text-4xl font-semibold leading-[1.25] text-primary ${titleClassName}`} id={titleId}>{title}</h2>
-      {description ? <p className={`m-0 text-base font-normal tracking-[0.1em] text-muted ${descriptionClassName}`}>{description}</p> : null}
+      <h2 className={`m-0 text-4xl font-semibold leading-tight text-primary ${titleClassName}`} id={titleId}>{title}</h2>
+      {description ? <p className={`m-0 text-base font-normal tracking-widest text-muted ${descriptionClassName}`}>{description}</p> : null}
     </div>
   );
 }
