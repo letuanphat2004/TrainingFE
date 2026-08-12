@@ -29,8 +29,11 @@ function FooterLinks({ title, links }: { title: string; links: string[] }) {
 
 export function Footer() {
   return (
-    <footer className="relative isolate mx-auto mt-[69px] grid min-h-0 w-full max-w-[1140px] grid-cols-1 gap-9 bg-[#17267C] px-6 pb-24 pt-[72px] min-[601px]:min-h-[740px] min-[601px]:grid-cols-2 min-[601px]:gap-x-8 min-[601px]:gap-y-12 min-[601px]:pb-12 min-[601px]:pt-24 min-[1141px]:bg-transparent desktop:h-[705.34px] desktop:min-h-0 desktop:max-w-none desktop:grid-cols-[150px_492px_129px_131px_173px_215px_150px] desktop:grid-rows-[225.34px_219px_55px_36px_49px_27.84px_93.16px] desktop:gap-0 desktop:p-0">
-      <img src={assets.footer.background} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 hidden h-full w-full min-[1141px]:block" />
+    <footer className="mx-auto mt-[69px] w-full max-w-[1140px] desktop:max-w-none">
+      <div className="relative isolate w-full">
+        <img src={assets.footer.background} alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 h-full w-full max-w-none" />
+
+        <div className="grid min-h-0 w-full grid-cols-1 gap-9 bg-transparent px-6 pb-24 pt-[72px] min-[601px]:min-h-[740px] min-[601px]:grid-cols-2 min-[601px]:gap-x-8 min-[601px]:gap-y-12 min-[601px]:pb-12 min-[601px]:pt-24 desktop:min-h-[705.342041015625px] desktop:grid-cols-[150px_492px_129px_131px_173px_215px_150px] desktop:grid-rows-[225.34px_219px_55px_36px_49px_27.84px_93.16px] desktop:gap-0 desktop:p-0">
 
       <div className="flex min-h-[194.59px] flex-col items-start gap-4 min-[601px]:col-span-2 min-[601px]:min-h-0 desktop:col-span-1 desktop:col-start-2 desktop:row-start-2 desktop:mt-4 desktop:w-[492px] desktop:gap-0">
         <img src={assets.footer.logo} alt="Beautice" className="h-[63px] w-[258px]" />
@@ -60,6 +63,8 @@ export function Footer() {
       </button>
 
       <p className="text-left text-base leading-none tracking-[0.1em] text-[#D7DBFF] min-[601px]:col-span-2 desktop:col-start-4 desktop:col-end-7 desktop:row-start-6 desktop:mt-[3.66px] desktop:w-[497px] desktop:justify-self-end desktop:self-start desktop:text-right">© AltDesain Studio 2021 - All right reserved.</p>
+        </div>
+      </div>
     </footer>
   );
 }

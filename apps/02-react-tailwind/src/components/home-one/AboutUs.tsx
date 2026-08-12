@@ -6,7 +6,15 @@ const description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. El
 
 export function AboutUs() {
   return (
-    <section id="about" aria-labelledby="about-us-title" className="relative z-10 mx-auto flex w-[calc(100%-48px)] max-w-[1140px] flex-col px-6 pt-24 desktop:w-full desktop:max-w-none desktop:px-[150px] desktop:pt-[134.44px]">
+    <section id="about" aria-labelledby="about-us-title" className="relative isolate mx-auto flex w-[calc(100%-48px)] max-w-[1140px] flex-col px-6 pt-24 desktop:w-full desktop:max-w-none desktop:px-[150px] desktop:pt-[134.44px]">
+      <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+        <img
+          src={assets.homeOne.servicesAboutBackground}
+          alt=""
+          className="absolute right-0 top-0 h-auto w-full max-w-[948.15px] -translate-y-[230px] desktop:left-[493px] desktop:right-auto desktop:h-[1028.89px] desktop:w-[948.15px] desktop:max-w-none desktop:-translate-y-[249px]"
+        />
+      </div>
+
       <div className="grid w-full grid-cols-1 gap-7 min-[801px]:grid-cols-2 min-[801px]:gap-x-16 desktop:grid-cols-[664px_476px] desktop:gap-0">
         <div className="order-2 min-[801px]:order-1 min-[801px]:col-start-1 min-[801px]:row-start-1">
           <SectionHeading
