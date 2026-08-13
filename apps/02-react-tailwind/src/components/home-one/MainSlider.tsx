@@ -14,17 +14,17 @@ export function MainSlider() {
 
         <div className="flex w-full flex-col items-center gap-8 md:flex-row md:items-center xl:items-start xl:gap-0">
           <div className="flex min-w-0 flex-1 flex-col items-start xl:flex-[0_0_535px] xl:pl-[39px] xl:pt-[53px]">
-            <h1 id="home-title" className="max-w-[430px] text-[clamp(34px,10vw,42px)] font-semibold leading-tight text-primary md:text-[clamp(36px,4vw,48px)] xl:h-[128px] xl:w-[430px] xl:text-[48px]">
+            <h1 id="home-title" className="w-full max-w-[430px] text-[clamp(34px,10vw,42px)] font-semibold leading-tight text-primary md:text-[clamp(36px,4vw,48px)] xl:h-[128px] xl:text-[48px]">
               Clinic & beauty consultant
             </h1>
-            <p className="mt-5 w-full max-w-[474px] text-base font-medium leading-[1.45] tracking-widest text-primary xl:mt-0 xl:h-[54px] xl:w-[474px] xl:leading-6">
+            <p className="mt-5 w-full max-w-[474px] text-base font-medium leading-[1.45] tracking-widest text-primary xl:mt-0 xl:h-[54px] xl:leading-6">
               It is a long established fact that a reader will be by the readable content of a page.
             </p>
             <Button className="mt-7 h-[58.36px] w-[200px]" href="#services">More Details</Button>
           </div>
 
           <div className="flex min-w-0 flex-1 justify-center xl:flex-[0_1_601.5px] xl:justify-start">
-            <img src={assets.homeOne.frameOne} alt="" aria-hidden="true" className="w-full max-w-[601.5px] object-contain xl:h-[397.5px] xl:w-[601.5px]" />
+            <img src={assets.homeOne.frameOne} alt="" aria-hidden="true" className="w-full max-w-[601.5px] object-contain xl:h-[397.5px]" />
           </div>
         </div>
 

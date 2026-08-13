@@ -18,14 +18,14 @@ export function Header() {
   return (
     <header className="z-20 mt-4 min-h-[63px] w-full px-6 sm:mt-[41px] sm:px-8 lg:px-6">
       <div className="mx-auto grid w-full max-w-[1140px] grid-cols-[minmax(0,1fr)_auto] grid-rows-[63px_0px] items-center lg:flex">
-        <a href="#home" aria-label="Beautice home" className="col-start-1 row-start-1 shrink-0">
-          <img src={assets.brand.mainLogo} width="258" height="63" alt="Beautice" className="h-[63px] w-[min(258px,calc(100vw-112px))] object-contain" />
+        <a href="#home" aria-label="Beautice home" className="col-start-1 row-start-1 w-full max-w-[258px] shrink-0">
+          <img src={assets.brand.mainLogo} width="258" height="63" alt="Beautice" className="h-auto w-full object-contain" />
         </a>
 
         <nav
           id="primary-navigation"
           aria-label="Primary navigation"
-          className={`${isOpen ? "flex" : "hidden"} col-span-2 row-start-2 flex-col max-lg:mt-3 max-lg:w-fit max-lg:min-w-[220px] max-lg:justify-self-end max-lg:self-start max-lg:rounded-3xl max-lg:bg-white max-lg:p-5 max-lg:shadow-card lg:ml-auto lg:flex lg:min-w-0 lg:flex-row lg:items-center xl:ml-[191px] xl:w-[481px]`}
+          className={`${isOpen ? "flex" : "hidden"} col-span-2 row-start-2 flex-col max-lg:mt-3 max-lg:w-fit max-lg:min-w-[220px] max-lg:justify-self-end max-lg:self-start max-lg:rounded-3xl max-lg:bg-white max-lg:p-5 max-lg:shadow-card lg:ml-auto lg:flex lg:min-w-0 lg:flex-row lg:items-center xl:ml-[191px] xl:w-auto xl:max-w-[481px]`}
         >
           <ul className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-6 xl:gap-0">
             {navigationItems.map((item, index) => (

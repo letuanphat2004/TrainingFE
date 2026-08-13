@@ -46,7 +46,7 @@ function FooterLinks({ title, links }: { title: string; links: string[] }) {
 export function Footer() {
   return (
     <footer className="mx-auto mt-[69.66px] w-full max-w-[1440px] text-[#D7DBFF]">
-      <div className="relative isolate grid w-full bg-footer px-6 sm:px-8 lg:px-12 xl:bg-transparent xl:px-[calc((100%_-_1140px)_/_2)]">
+      <div className="relative isolate grid w-full grid-cols-[minmax(0,1fr)] bg-footer px-6 sm:px-8 lg:px-12 xl:bg-transparent xl:px-[calc((100%_-_1140px)_/_2)]">
         <img
           src={assets.footer.background}
           alt=""
@@ -55,12 +55,12 @@ export function Footer() {
         />
 
         <div className="col-start-1 row-start-1 mx-auto grid min-h-0 w-full max-w-[1140px] grid-cols-1 gap-9 pb-24 pt-[72px] sm:min-h-[740px] sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 sm:pb-12 sm:pt-24 xl:min-h-[705.34px] xl:grid-cols-[492px_129px_131px_173px_215px] xl:grid-rows-[225.34px_219px_55px_36px_49px_27.84px_93.16px] xl:gap-0 xl:py-0">
-          <div className="flex min-h-[194.59px] flex-col items-start gap-4 sm:col-span-2 sm:min-h-0 xl:col-span-1 xl:col-start-1 xl:row-start-2 xl:mt-4 xl:w-[492px] xl:gap-0">
-            <img src={assets.footer.logo} alt="Beautice" className="h-[63px] w-[258px]" />
-            <p className="m-0 text-base font-normal leading-none tracking-widest xl:ml-[31px] xl:mt-[37px] xl:h-[21px] xl:w-[461px]">
+          <div className="flex min-h-[194.59px] w-full max-w-[492px] flex-col items-start gap-4 sm:col-span-2 sm:min-h-0 xl:col-span-1 xl:col-start-1 xl:row-start-2 xl:mt-4 xl:gap-0">
+            <img src={assets.footer.logo} alt="Beautice" className="h-auto w-full max-w-[258px]" />
+            <p className="w-full max-w-[461px] text-base font-normal leading-none tracking-widest xl:ml-[31px] xl:mt-[37px] xl:h-[21px]">
               <strong className="font-bold">Beautice</strong> is a Beauty Clinic WordPress Theme.
             </p>
-            <address className="m-0 text-sm font-medium italic leading-none tracking-widest xl:ml-[31px] xl:mt-[26px] xl:h-6 xl:w-[297px]">
+            <address className="w-full max-w-[297px] text-sm font-medium italic leading-none tracking-widest xl:ml-[31px] xl:mt-[26px] xl:h-6">
               Baker Steet 101, NY, United States.
             </address>
             <div className="flex items-start gap-6 text-sm font-medium italic leading-none tracking-widest xl:ml-[31px] xl:mt-px xl:h-6 xl:gap-7">
@@ -74,10 +74,10 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="xl:col-start-3 xl:row-start-2 xl:w-[131px]">
+          <div className="xl:col-start-3 xl:row-start-2">
             <FooterLinks title="Pages" links={pageLinks} />
           </div>
-          <div className="xl:col-start-5 xl:row-start-2 xl:w-[215px]">
+          <div className="xl:col-start-5 xl:row-start-2">
             <FooterLinks title="Informations" links={informationLinks} />
           </div>
 
@@ -94,7 +94,7 @@ export function Footer() {
             ))}
           </div>
 
-          <p className="text-left text-base font-normal leading-6 tracking-widest sm:col-span-2 xl:col-start-3 xl:col-end-6 xl:row-start-6 xl:w-[497px] xl:justify-self-end xl:self-start xl:text-right">
+          <p className="w-full max-w-[497px] text-left text-base font-normal leading-6 tracking-widest sm:col-span-2 xl:col-start-3 xl:col-end-6 xl:row-start-6 xl:justify-self-end xl:self-start xl:text-right">
             {"\u00A9"} AltDesain Studio 2021 - All right reserved.
           </p>
         </div>
@@ -102,7 +102,7 @@ export function Footer() {
         <button
           type="button"
           aria-label="Back to top"
-          className="col-start-1 row-start-1 mb-6 size-9 self-end justify-self-end p-0 sm:mb-1.5 xl:mr-[max(-85px,calc(594px_-_50vw))] xl:mb-0 xl:mt-[499.34px] xl:self-start"
+          className="col-start-1 row-start-1 mb-6 size-9 self-end justify-self-end p-0 sm:mb-1.5 xl:mb-0 xl:mt-[499.34px] xl:translate-x-[min(85px,calc((100vw_-_1188px)_/_2))] xl:self-start"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <img

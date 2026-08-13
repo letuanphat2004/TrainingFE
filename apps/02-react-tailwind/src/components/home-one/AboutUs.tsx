@@ -36,7 +36,7 @@ export function AboutUs() {
             </div>
           </div>
 
-          <div className="aspect-[476/350] w-full max-w-[476px] self-start justify-self-center overflow-hidden rounded-[50px] shadow-[0_0_50px_25px_rgb(196_196_196_/_20%)] lg:mt-12 lg:justify-self-end xl:mt-[44.56px] xl:h-[350px] xl:w-[476px]">
+          <div className="aspect-[476/350] w-full max-w-[476px] self-start justify-self-center overflow-hidden rounded-[50px] shadow-[0_0_50px_25px_rgb(196_196_196_/_20%)] lg:mt-12 lg:justify-self-end xl:mt-[44.56px]">
             <img src={assets.homeOne.aboutClinic} alt="Modern beauty clinic interior" className="h-full w-full scale-[1.32] object-cover" />
           </div>
         </div>

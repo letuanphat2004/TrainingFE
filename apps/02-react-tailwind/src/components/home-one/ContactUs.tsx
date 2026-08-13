@@ -14,7 +14,7 @@ export function ContactUs() {
         src={assets.homeOne.contactBackground}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute left-0 top-0 -z-10 w-full max-w-[1175.73px] -translate-y-24 xl:left-[-0.33px] xl:h-[929px] xl:-translate-y-[207px]"
+        className="pointer-events-none absolute left-0 top-0 -z-10 h-auto w-full max-w-[1175.73px] -translate-y-24 xl:left-[-0.33px] xl:-translate-y-[207px]"
       />
 
       <div className="grid w-full grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-[100px]">
@@ -22,7 +22,7 @@ export function ContactUs() {
           src={assets.homeOne.contactAnimation}
           alt=""
           aria-hidden="true"
-          className="w-full max-w-[520px] justify-self-center object-contain lg:justify-self-start xl:mt-[159px] xl:h-[614px]"
+          className="h-auto w-full max-w-[520px] justify-self-center object-contain lg:justify-self-start xl:mt-[159px]"
         />
 
         <div className="flex w-full max-w-[520px] flex-col justify-self-center lg:justify-self-end">
